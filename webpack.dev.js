@@ -34,11 +34,11 @@ module.exports = {
           exclude: /node_modules/, 
           loader: "babel-loader",
           options: {
-            presets: ['env', 'react'],
-            plugins: ["transform-class-properties"]
+            presets: ['@babel/preset-env', '@babel/preset-react']
+            // plugins: ["transform-class-properties"]
           }  
         },
-      //   {test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader"},
+        // {test: /\.jsx$/, exclude: /node_modules/, loader: "babel-loader"},
         
       {
           test: /\.scss$/,

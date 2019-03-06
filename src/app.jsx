@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './sass/base'
+import './sass/base.scss'
 
 class App extends React.Component {
     render() {

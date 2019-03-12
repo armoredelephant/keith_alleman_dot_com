@@ -1,0 +1,45 @@
+
+/**********************************************************
+    BASE
+***********************************************************/
+
+.a-section,
+.a-section-no-padding {
+    height: 100vh;
+    width: 100%;
+}
+
+.a-section {
+    padding-top: 70px;
+
+}
+
+.a-section-no-padding {
+    padding-top: 70px;
+}
+
+
+
+
+/**********************************************************
+    ABOUT
+***********************************************************/
+
+#about {
+    background: #594F4F;
+}
+
+.section-about-header {
+    height: 100px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+
+    h2 {
+        margin: 0 auto;
+        font-family: Helvetica, sans-serif;
+        letter-spacing: 1.4px;
+        color: #FFF;
+        font-size: 32px;
+    }
+}

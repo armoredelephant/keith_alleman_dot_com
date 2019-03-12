@@ -1,4 +1,6 @@
 
+@import './header.scss';
+@import './homepage.scss';
 
 /**********************************************************
     BASE
@@ -15,5 +17,10 @@
     height: 100%;
     width: 100%;
     margin: 0;
+    padding: 0;
     position: relative;
+}
+
+main {
+    margin-top: -70px;
 }

@@ -29,17 +29,32 @@
     background: #594F4F;
 }
 
+.section-about-right {
+    margin: 0 auto;
+}
+
 .section-about-header {
     height: 100px;
     display: flex;
-    margin: auto;
-    align-items: center;
+    // margin: 0 auto;
 
     h2 {
-        margin: 0 auto;
-        font-family: Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         letter-spacing: 1.4px;
         color: #FFF;
         font-size: 32px;
     }
+}
+
+.section-about {
+    width: 100%;
+    display: flex;
+    flex: flex-row;
+}
+
+.section-about-left {
+    width: 40.2%;
+    display: grid;
+    grid-template-columns: repeat(5, 15vmin);
+    grid-template-rows: repeat(6, 15vmin);
 }

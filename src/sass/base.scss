@@ -24,3 +24,9 @@
 main {
     margin-top: -70px;
 }
+
+@media (max-width: 720px) {
+    .center-header-wrapper {
+        visibility: hidden;
+    }
+}

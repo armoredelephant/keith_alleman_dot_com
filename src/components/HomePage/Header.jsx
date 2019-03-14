@@ -1,17 +1,32 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
+
+import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo';
+import FadeInLargeLogo from '../Header-Styled/FadeInLargeLogo';
+import FadeInNavList from '../Header-Styled/FadeInNavList';
+import HeaderListItem from './HeaderListItem';
+
 
 class HomePageHeader extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            activeSandwich: false
+        };
         
         this.handleScroll = this.handleScroll.bind(this);
+        this.handleAnimation = this.handleAnimation.bind(this);
     }
 
     handleScroll() {
         this.setState({ scroll: window.scrollY });
+    }
+
+    handleAnimation() {
+        const { activeSandwich } = this.state;
+        this.setState(prevState => ({
+            activeSandwich: !prevState.activeSandwich 
+        }));
     }
 
     componentDidMount() {
@@ -31,44 +46,26 @@ class HomePageHeader extends React.Component {
 
     render() {
         const windowHashLowerCase = window.location.hash.toLowerCase();
-
+        console.log(this.state.activeSandwich)
         return (
             <nav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
                 <div className="left-header-wrapper">
-                    <div className='header-logo'>KA</div>
-                    <div className="header-external-links">
-                        <Link to="https://github.com/armoredelephant" className="external-link">
-                            <i className="fab fa-github-square"></i>
-                        </Link>
-                        <Link to="https://www.linkedin.com/in/keith-alleman-b9b14487" className="external-link">
-                            <i className="fab fa-linkedin"></i>
-                        </Link>
-                    </div>
+                    <FadeInSmallLogo>KA</FadeInSmallLogo>
+                    <FadeInLargeLogo>Keith Alleman</FadeInLargeLogo>
                 </div>
-                <div className='nav-wrapper'>
-                    <ul className='nav-list'>
-                        <li>
-                            <Link smooth to="/#about" className={windowHashLowerCase.includes('#about') ? 
-                                'section-link-active' : 'section-link'}>
-                                About
-                            </Link>
-                            <span>&#x2022;</span>
-                        </li>
-                        <li>
-                            <Link smooth to="/#projects" className={windowHashLowerCase.includes('#projects') ? 
-                                'section-link-active' : 'section-link'} >
-                                Projects
-                            </Link>
-                            <span>&#x2022;</span>
-                        </li>
-                        <li>
-                            <Link smooth to="/#work" className={windowHashLowerCase.includes('#work') ? 
-                                'section-link-active' : 'section-link'} >
-                                Work
-                            </Link>
-                        </li>
-                    </ul>
+                <div className='center-header-wrapper'>
+                    <FadeInNavList>
+                        <HeaderListItem name="About" />
+                        <HeaderListItem name="Projects" />
+                        <HeaderListItem name="Work" />
+                    </FadeInNavList>
                 </div>
+                {/** onClick that sets state to active */}
+                <a onClick={this.handleAnimation} className={this.state.activeSandwich ? "nav-bar-active" : "nav-bar-animation"}>
+                    <div className="bar-one"></div>
+                    <div className="bar-two"></div>
+                    <div id="bar-three" className="bar-three"></div>
+                </a>
             </nav>
         )
     }

@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 
 import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo';
 import FadeInLargeLogo from '../Header-Styled/FadeInLargeLogo';
@@ -23,7 +22,6 @@ class HomePageHeader extends React.Component {
     }
 
     handleAnimation() {
-        const { activeSandwich } = this.state;
         this.setState(prevState => ({
             activeSandwich: !prevState.activeSandwich 
         }));
@@ -45,14 +43,14 @@ class HomePageHeader extends React.Component {
     }
 
     render() {
-        const windowHashLowerCase = window.location.hash.toLowerCase();
-        console.log(this.state.activeSandwich)
         return (
             <nav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
+                {/** left-side logos */}
                 <div className="left-header-wrapper">
                     <FadeInSmallLogo>KA</FadeInSmallLogo>
                     <FadeInLargeLogo>Keith Alleman</FadeInLargeLogo>
                 </div>
+                {/** middle nav */}
                 <div className='center-header-wrapper'>
                     <FadeInNavList>
                         <HeaderListItem name="About" />
@@ -60,7 +58,7 @@ class HomePageHeader extends React.Component {
                         <HeaderListItem name="Work" />
                     </FadeInNavList>
                 </div>
-                {/** onClick that sets state to active */}
+                {/** nav sandwich button */}
                 <a onClick={this.handleAnimation} className={this.state.activeSandwich ? "nav-bar-active" : "nav-bar-animation"}>
                     <div className="bar-one"></div>
                     <div className="bar-two"></div>

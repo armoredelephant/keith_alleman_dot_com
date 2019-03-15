@@ -5,12 +5,16 @@
 
 .a-section,
 .a-section-no-padding {
-    height: 100vh;
+    min-height: 920px;
     width: 100%;
 }
 
 .a-section {
     padding-top: 70px;
+
+    &:first-of-type {
+        padding-top: 70px;
+    }
 
 }
 
@@ -18,12 +22,29 @@
     padding-top: 70px;
 }
 
-
-
-
 /**********************************************************
     ABOUT
 ***********************************************************/
+
+@media (max-width: 670px) {
+
+    .section-about {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+    }
+
+    .section-about-right {
+        order: 1;
+    }
+
+    .section-about-left {
+        order: 2;
+        white-space: nowrap;
+    }
+}
+
+/**********************************************************/
 
 #about {
     background: #594F4F;
@@ -57,4 +78,24 @@
     display: grid;
     grid-template-columns: repeat(5, 15vmin);
     grid-template-rows: repeat(6, 15vmin);
+}
+
+/**********************************************************
+    Projects
+***********************************************************/
+
+#projects {
+    background-color: #FFF;
+
+    h2 {
+        margin: 0;
+    }
+}
+
+/**********************************************************
+    Projects
+***********************************************************/
+
+#work {
+    background-color: #594F4F;
 }

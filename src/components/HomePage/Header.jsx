@@ -10,7 +10,8 @@ class HomePageHeader extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeSandwich: false
+            activeSandwich: false,
+            showModal: false
         };
         
         this.handleScroll = this.handleScroll.bind(this);
@@ -21,9 +22,11 @@ class HomePageHeader extends React.Component {
         this.setState({ scroll: window.scrollY });
     }
 
+    // Needs to reset the transform on the sandwich
     handleAnimation() {
         this.setState(prevState => ({
-            activeSandwich: !prevState.activeSandwich 
+            activeSandwich: !prevState.activeSandwich,
+            showModal: !prevState.showModal
         }));
     }
 

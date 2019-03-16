@@ -16,7 +16,7 @@ const AboutSection = () => {
                     </div>
                     <div className="section-about-paragraph">
                         <p>
-                            Random Stuffs.
+                            {/** About para. */}
                         </p>
                     </div>
                 </div>

@@ -186,7 +186,8 @@ nav {
             margin-right: 5px;
         }
     }
-
+    // Currently keeping the hover effect in mobile, for bar-one and bar-two.
+    // Reset hover in mobile? Interaction with hover in mobile.
     &:hover {
 
         .bar-one {

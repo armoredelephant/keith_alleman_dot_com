@@ -3,24 +3,25 @@
     BASE
 ***********************************************************/
 
+// parameters instead of hash links. Possibly more accurate on moving nav to location.
+
 .a-section,
 .a-section-no-padding {
-    min-height: 920px;
+    min-height: 1000px;
+    max-height: 1000px;
     width: 100%;
+    overflow: hidden;
 }
 
-.a-section {
-    padding-top: 70px;
-
-    &:first-of-type {
-        padding-top: 70px;
-    }
-
-}
-
+.a-section,
 .a-section-no-padding {
     padding-top: 70px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
 }
+
 
 /**********************************************************
     ABOUT
@@ -46,10 +47,6 @@
 
 /**********************************************************/
 
-#about {
-    background: #594F4F;
-}
-
 .section-about-right {
     margin: 0 auto;
 }
@@ -71,6 +68,7 @@
     width: 100%;
     display: flex;
     flex: flex-row;
+    background: #594F4F;
 }
 
 .section-about-left {
@@ -84,7 +82,8 @@
     Projects
 ***********************************************************/
 
-#projects {
+.section-projects {
+    display: flex;
     background-color: #FFF;
 
     h2 {
@@ -96,6 +95,7 @@
     Projects
 ***********************************************************/
 
-#work {
+.section-work {
+    display: flex;
     background-color: #594F4F;
 }

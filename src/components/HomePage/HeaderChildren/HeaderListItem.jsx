@@ -1,13 +1,12 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 const HeaderListItem = (props) => {
-    const windowHash = window.location.hash.toLowerCase();
-    const section = props.name.toLowerCase();
+    const page = props.name.toLowerCase();
     return (
         <li className="header-list-item">
-            <Link smooth to={`/#${section}`} 
-                className={windowHash.includes(`#${section}`) ?
+            <Link to={`/${page}`}
+                className={window.location.path === `${page}` ?
                 'section-link-active'
                 : 'section-link'}>
             {props.name}

@@ -1,15 +1,15 @@
 import React from 'react';
 
-const WorkSection = () => {
+const WorkPage= () => {
     return (
         <React.Fragment>
-            <section id="work" className="a-section">
+            <main role='main' id="work" className="a-section section-work">
                 <div className="section-header">
                     <h2> The work section</h2>
                 </div>
-            </section>
+            </main>
         </React.Fragment>
     )
 }
 
-export default WorkSection;
+export default WorkPage;

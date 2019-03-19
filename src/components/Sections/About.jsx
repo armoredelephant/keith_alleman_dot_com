@@ -1,9 +1,9 @@
 import React from 'react';
 
-const AboutSection = () => {
+const AboutPage = () => {
     return (
         <React.Fragment>
-            <section id="about" className="a-section section-about">
+            <main role='main' id="about" className="a-section section-about">
                 <div className="section-about-left">
                     {/** will have an image over two blocks behind it */}
                     <div className="block-one"></div>
@@ -20,10 +20,9 @@ const AboutSection = () => {
                         </p>
                     </div>
                 </div>
-                
-            </section>
+            </main>
         </React.Fragment>
     )
 }
 
-export default AboutSection;
+export default AboutPage;

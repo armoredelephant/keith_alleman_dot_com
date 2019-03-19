@@ -27,11 +27,13 @@ nav {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    
     background-color: #594F4F;
     font-family: "Arial";
     top: 0;
+    z-index: 2;
+    position: fixed;
 }
+
 
 .fixed-nav {
     position: fixed;
@@ -186,25 +188,6 @@ nav {
             margin-right: 5px;
         }
     }
-    // Currently keeping the hover effect in mobile, for bar-one and bar-two.
-    // Reset hover in mobile? Interaction with hover in mobile.
-    &:hover {
-
-        .bar-one {
-            transform: translateY(6px) rotate(90deg);
-            -webkit-transform: translateY(6px) rotate(90deg);
-            width: 30px;
-        }
-
-        .bar-two {
-            width: 30px;
-        }
-
-        #bar-three {
-            width: 0;
-            margin-left: auto;
-        }
-    }
 }
 
 .nav-bar-active {
@@ -261,27 +244,30 @@ nav {
 }
 
 /**********************************************************
-    EXTERNAL LINKS
+    MEDIA QUERY TO FIX MOBILE
 ***********************************************************/
 
-// .header-external-links { 
-//     margin: auto 0 auto 15px;
-// }
+@media (min-width: 900px) {
+    .nav-bar-animation {
 
-// .external-link {
-//     text-decoration: none;
-//     font-size: 25px;
-//     color: #FFF;
-//     min-width: 70px;
+        &:hover {
 
-//     &:hover,
-//     &:active,
-//     &:visited {
-//         color: #FFF;
-//     }
+            .bar-one {
+                transform: translateY(6px) rotate(90deg);
+                -webkit-transform: translateY(6px) rotate(90deg);
+                width: 30px;
+            }
+    
+            .bar-two {
+                width: 30px;
+            }
+    
+            #bar-three {
+                width: 0;
+                margin-left: auto;
+            }
+        }
+    }
+}
 
-//     &:last-of-type {
-//         padding-left: 8px;
-//     }
-// }
 

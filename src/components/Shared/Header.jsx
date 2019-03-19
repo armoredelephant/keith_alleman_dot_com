@@ -1,12 +1,11 @@
 import React from 'react';
 
-import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo';
+import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo'
 import FadeInLargeLogo from '../Header-Styled/FadeInLargeLogo';
 import FadeInNavList from '../Header-Styled/FadeInNavList';
-import HeaderListItem from './HeaderListItem';
+import HeaderListItem from '../HomePage/HeaderChildren/HeaderListItem';
 
-
-class HomePageHeader extends React.Component {
+class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -22,7 +21,6 @@ class HomePageHeader extends React.Component {
         this.setState({ scroll: window.scrollY });
     }
 
-    // Needs to reset the transform on the sandwich
     handleAnimation() {
         this.setState(prevState => ({
             activeSandwich: !prevState.activeSandwich,
@@ -32,10 +30,12 @@ class HomePageHeader extends React.Component {
 
     componentDidMount() {
         const el = document.querySelector('nav');
+
         this.setState({
             top: el.offsetTop,
-            height: el.offsetHeight,
+            height: el.offsetHeight
         });
+
         window.addEventListener('scroll', this.handleScroll)
     }
 
@@ -50,8 +50,8 @@ class HomePageHeader extends React.Component {
             <nav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
                 {/** left-side logos */}
                 <div className="left-header-wrapper">
-                    <FadeInSmallLogo>KA</FadeInSmallLogo>
-                    <FadeInLargeLogo>Keith Alleman</FadeInLargeLogo>
+                    <FadeInSmallLogo to='/'>KA</FadeInSmallLogo>
+                    <FadeInLargeLogo to='/'>Keith Alleman</FadeInLargeLogo>
                 </div>
                 {/** middle nav */}
                 <div className='center-header-wrapper'>
@@ -72,4 +72,4 @@ class HomePageHeader extends React.Component {
     }
 }
 
-export default HomePageHeader;
+export default Header;

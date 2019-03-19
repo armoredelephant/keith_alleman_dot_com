@@ -6,7 +6,7 @@ const HeaderListItem = (props) => {
     return (
         <li className="header-list-item">
             <Link to={`/${page}`}
-                className={window.location.path === `${page}` ?
+                className={window.location.pathname === `/${page}` ?
                 'section-link-active'
                 : 'section-link'}>
             {props.name}

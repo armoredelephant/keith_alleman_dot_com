@@ -4,11 +4,13 @@ import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo'
 import FadeInLargeLogo from '../Header-Styled/FadeInLargeLogo';
 import FadeInNavList from '../Header-Styled/FadeInNavList';
 import HeaderListItem from '../HomePage/HeaderChildren/HeaderListItem';
+import ModalWrapper from '../Shared/ModalWrapperRemade';
 
 class Header extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            activeModal: false,
             activeSandwich: false,
             showModal: false
         };
@@ -24,7 +26,7 @@ class Header extends React.Component {
     handleAnimation() {
         this.setState(prevState => ({
             activeSandwich: !prevState.activeSandwich,
-            showModal: !prevState.showModal
+            activeModal: !prevState.activeModal
         }));
     }
 
@@ -47,6 +49,7 @@ class Header extends React.Component {
 
     render() {
         return (
+            <React.Fragment>
             <nav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
                 {/** left-side logos */}
                 <div className="left-header-wrapper">
@@ -68,6 +71,12 @@ class Header extends React.Component {
                     <div id="bar-three" className="bar-three"></div>
                 </a>
             </nav>
+            {this.state.activeModal ? 
+                <ModalWrapper handleModal={this.handleAnimation}
+                    hideModal={this.hideModal} />
+            : ''
+            }
+            </React.Fragment>
         )
     }
 }

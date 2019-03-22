@@ -24,16 +24,12 @@ nav {
     color: #FFF;
     width: 100%;
     height: 70px;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
+    display: block;
     background-color: #594F4F;
     font-family: "Arial";
     top: 0;
-    z-index: 2;
     position: fixed;
 }
-
 
 .fixed-nav {
     position: fixed;
@@ -149,6 +145,7 @@ nav {
 
 .nav-bar-animation {
     // visibility: hidden;
+    background: none;
     display: block;
     transition: 275ms all ease;
     -webkit-transition: 275ms all ease;
@@ -164,6 +161,7 @@ nav {
     right: 15px;
     background: #594F4F;
     border: none;
+    z-index: 2;
 
     div {
         font-family: 'Montserrat', sans-serif;
@@ -204,8 +202,9 @@ nav {
     position: fixed;
     top: 15px;
     right: 15px;
-    background: #594F4F;
+    background: none;
     border: none;
+    z-index: 2;
 
     div {
         font-family: 'Montserrat', sans-serif;
@@ -220,12 +219,14 @@ nav {
         position: relative;
         transition: 0.4s all ease;
         -webkit-transition: 0.4s all ease;
+        z-index: 10000 !important;
     }
 
     .bar-one {
         transform: translate(0, 7px) rotate(135deg);
         -webkit-transform: translate(0, 7px) rotate(135deg);
         width: 30px;
+        z-index: 2;
 
     }
 

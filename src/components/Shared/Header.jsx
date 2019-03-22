@@ -4,7 +4,8 @@ import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo'
 import FadeInLargeLogo from '../Header-Styled/FadeInLargeLogo';
 import FadeInNavList from '../Header-Styled/FadeInNavList';
 import HeaderListItem from '../HomePage/HeaderChildren/HeaderListItem';
-import ModalWrapper from '../Shared/ModalWrapperRemade';
+// import ModalWrapper from '../Shared/ModalWrapperRemade';
+import ModalWrapper from '../Shared/ModalWrapper';
 
 class Header extends React.Component {
     constructor(props) {
@@ -49,34 +50,32 @@ class Header extends React.Component {
 
     render() {
         return (
-            <React.Fragment>
             <nav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
-                {/** left-side logos */}
-                <div className="left-header-wrapper">
-                    <FadeInSmallLogo to='/'>KA</FadeInSmallLogo>
-                    <FadeInLargeLogo to='/'>Keith Alleman</FadeInLargeLogo>
+                <div id='nav-wrap' className={this.state.activeModal ? 'active' : ''}>
+                    {/** left-side logos */}
+                    <div className="left-header-wrapper">
+                        <FadeInSmallLogo className='test-class'to='/'>KA</FadeInSmallLogo>
+                        <FadeInLargeLogo to='/'>Keith Alleman</FadeInLargeLogo>
+                    </div>
+                    {/** middle nav */}
+                    <div className='center-header-wrapper'>
+                        <FadeInNavList>
+                            <HeaderListItem name="About" />
+                            <HeaderListItem name="Projects" />
+                            <HeaderListItem name="Work" />
+                        </FadeInNavList>
+                    </div>
+                    {/** nav sandwich button */}
+                    <a onClick={this.handleAnimation} className={this.state.activeSandwich ? "nav-bar-active" : "nav-bar-animation"}>
+                        <div className="bar-one"></div>
+                        <div className="bar-two"></div>
+                        <div id="bar-three" className="bar-three"></div>
+                    </a>
+                    <ModalWrapper 
+                        handleModal={this.handleAnimation}
+                        activeModal={this.state.activeModal} />
                 </div>
-                {/** middle nav */}
-                <div className='center-header-wrapper'>
-                    <FadeInNavList>
-                        <HeaderListItem name="About" />
-                        <HeaderListItem name="Projects" />
-                        <HeaderListItem name="Work" />
-                    </FadeInNavList>
-                </div>
-                {/** nav sandwich button */}
-                <a onClick={this.handleAnimation} className={this.state.activeSandwich ? "nav-bar-active" : "nav-bar-animation"}>
-                    <div className="bar-one"></div>
-                    <div className="bar-two"></div>
-                    <div id="bar-three" className="bar-three"></div>
-                </a>
             </nav>
-            {this.state.activeModal ? 
-                <ModalWrapper handleModal={this.handleAnimation}
-                    hideModal={this.hideModal} />
-            : ''
-            }
-            </React.Fragment>
         )
     }
 }

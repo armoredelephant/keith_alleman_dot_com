@@ -2,36 +2,27 @@ import React from 'react';
 
 const ModalWrapper = ( props ) => {
     const handleBackgroundClick = e  => {
-        if (e.target === e.currentTarget) props.hideModal();
+        if (e.target === e.currentTarget) props.handleModal();
     };
-    
-    const modalLayout = props.needsLayout 
-    //  IF it needs the full layour with header and close button
-    // State will need to manage if modal needs to be hidden and pass down props.
-    // May not need a modal conductor for the single page.
-    // Edit to show what we need in the sandwich menu. Will not need full layout.
-        ? (
-            <div className="modal-wrapper">
-                <header>
-                        <h2>{props.title}</h2>
-                        <button onClick={props.hideModal}><i className="far fa-window-close"></i></button>
-                </header>
-                {props.children}
-                <footer>
-                    <h4>{props.footer}</h4>
-                </footer>
-            </div>
-        )
-        : ( // If it only needs the backdrop
-            <React.Fragment>
-                {props.children};
-            </React.Fragment>
-        );
-    
-    return (
-        <div className="backdrop" onClick={handleBackgroundClick}>
-            {modalLayout} 
+
+    const modal = props.hasRoutes ?
+    (
+        <div className="modal-wrapper">
+            <h2>has routes</h2>
         </div>
+    )
+    :   <div className="modal-wrapper">
+            <h2>no routes</h2>
+        </div> 
+
+    return (
+        <React.Fragment>
+            <div className='backdrop'
+                onClick={e => handleBackgroundClick(e)}>
+            </div>
+            {modal}
+        </React.Fragment>
+
     );
 }
 

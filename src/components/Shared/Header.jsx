@@ -3,9 +3,12 @@ import React from 'react';
 import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo'
 import FadeInLargeLogo from '../Header-Styled/FadeInLargeLogo';
 import FadeInNavList from '../Header-Styled/FadeInNavList';
-import HeaderListItem from '../HomePage/HeaderChildren/HeaderListItem';
+import HeaderListItem from '../Header-Styled/StyledHeaderListItem';
 // import ModalWrapper from '../Shared/ModalWrapperRemade';
 import ModalWrapper from '../Shared/ModalWrapper';
+
+import StyledNav from '../Header-Styled/StyledNav';
+import StyledNavWrapper from '../Header-Styled/StyledNavWrapper';
 
 class Header extends React.Component {
     constructor(props) {
@@ -50,11 +53,11 @@ class Header extends React.Component {
 
     render() {
         return (
-            <nav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
-                <div id='nav-wrap' className={this.state.activeModal ? 'active' : ''}>
+            <StyledNav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
+                <StyledNavWrapper className={this.state.activeModal ? 'active' : ''}>
                     {/** left-side logos */}
                     <div className="left-header-wrapper">
-                        <FadeInSmallLogo className='test-class'to='/'>KA</FadeInSmallLogo>
+                        <FadeInSmallLogo to='/'>KA</FadeInSmallLogo>
                         <FadeInLargeLogo to='/'>Keith Alleman</FadeInLargeLogo>
                     </div>
                     {/** middle nav */}
@@ -62,7 +65,7 @@ class Header extends React.Component {
                         <FadeInNavList>
                             <HeaderListItem name="About" />
                             <HeaderListItem name="Projects" />
-                            <HeaderListItem name="Work" />
+                            <HeaderListItem name="Work" last={true}/>
                         </FadeInNavList>
                     </div>
                     {/** nav sandwich button */}
@@ -71,11 +74,9 @@ class Header extends React.Component {
                         <div className="bar-two"></div>
                         <div id="bar-three" className="bar-three"></div>
                     </a>
-                    <ModalWrapper 
-                        handleModal={this.handleAnimation}
-                        activeModal={this.state.activeModal} />
-                </div>
-            </nav>
+                    <ModalWrapper handleModal={this.handleAnimation} />
+                </StyledNavWrapper>
+            </StyledNav>
         )
     }
 }

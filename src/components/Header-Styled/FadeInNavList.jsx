@@ -5,6 +5,7 @@ const fadeInAnimation = keyframes`${fadeInDown}`;
 
 const FadeInNavList = styled.ul`
     visibility: hidden;
+    
     @media (min-width: 670px) {
         visibility: visible;
         animation: 1s ${fadeInAnimation};

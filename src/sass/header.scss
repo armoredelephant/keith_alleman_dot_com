@@ -54,69 +54,69 @@ nav {
     LIST ITEMS
 ***********************************************************/
 
-.header-list-item {
-    margin-right: 15px;
+// .header-list-item {
+//     margin-right: 15px;
 
-    span {
-        color: #95d5d2;
-        margin: 0;
-        padding-left: 15px;
-    }
+//     span {
+//         color: #95d5d2;
+//         margin: 0;
+//         padding-left: 15px;
+//     }
 
-    &:last-of-type {
-        margin-right: 15px;
+//     &:last-of-type {
+//         margin-right: 15px;
 
-        span {
-            visibility: hidden;
-        }
-    }
-}
+//         span {
+//             visibility: hidden;
+//         }
+//     }
+// }
 
 /**********************************************************
     SECTION LINKS
 ***********************************************************/
 
-.section-link,
-.section-link-active {
-    text-decoration: none;
-    color: #FFF;
-    padding-bottom: 2px;
-    overflow-x: hidden;
-    position: relative;
-    display: inline-flex;
+// .section-link,
+// .section-link-active {
+//     text-decoration: none;
+//     color: #FFF;
+//     padding-bottom: 2px;
+//     overflow-x: hidden;
+//     position: relative;
+//     display: inline-flex;
 
-    &:active,
-    &:hover {
-        color: #fff;
-    }
-}
+//     &:active,
+//     &:hover {
+//         color: #fff;
+//     }
+// }
 
 
 
-.section-link {
-    &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 1px;
-        background: #95d5d2;
-        width: 100%;
-        transform: translate3d(-110%, 0, 0);
-        -webkit-transform: translate3d(-110%, 0, 0);
-        transition: transform .3s ease-in-out;
-        -webkit-transition: transform .3s ease-in-out;
-    }
+// .section-link {
+//     &:after {
+//         content: '';
+//         position: absolute;
+//         bottom: 0;
+//         left: 0;
+//         height: 1px;
+//         background: #95d5d2;
+//         width: 100%;
+//         transform: translate3d(-110%, 0, 0);
+//         -webkit-transform: translate3d(-110%, 0, 0);
+//         transition: transform .3s ease-in-out;
+//         -webkit-transition: transform .3s ease-in-out;
+//     }
 
-    &:hover:after {
-        transform: translate3d(0%, 0, 0);
-        -webkit-transform: translate3d(0%, 0, 0);
-    }
-}
+//     &:hover:after {
+//         transform: translate3d(0%, 0, 0);
+//         -webkit-transform: translate3d(0%, 0, 0);
+//     }
+// }
 
-.section-link-active {
-    border-bottom: 1px solid #95d5d2;
-}
+// .section-link-active {
+//     border-bottom: 1px solid #95d5d2;
+// }
 
 /**********************************************************
     LEFT HEADER
@@ -174,13 +174,13 @@ nav {
         line-height: 28.8px;
         margin-bottom: 4px;
         position: relative;
-        transition: 0.4s all ease;
-        -webkit-transition: 0.4s all ease;
+        transition: 0.6s all ease;
+        -webkit-transition: 0.6s all ease;
         animation-direction: alternate;
-        animation: 1s ease-in grow;
+        animation: .6s ease-in grow;
     
         &:last-of-type {
-            animation: 1s linear grow-short;
+            animation: .6s linear grow-short;
             width: 17px;
             margin-left: auto;
             margin-right: 5px;

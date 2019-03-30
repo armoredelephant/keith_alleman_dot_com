@@ -68,7 +68,7 @@ const HeaderListItem = (props) => {
             </StyledHeaderLink>
             <StyledHeaderSpan last={props.last}>&#x2022;</StyledHeaderSpan>
         </StyledHeaderListItem>
-    )
+    );
 }
 
 export default HeaderListItem;

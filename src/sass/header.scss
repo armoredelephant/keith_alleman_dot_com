@@ -133,142 +133,142 @@ nav {
 
 // make next sections float up from bottom
 
-@keyframes grow {
-    from { width: 0; }
-    to { width: 30px;}
-}
+// @keyframes grow {
+//     from { width: 0; }
+//     to { width: 30px;}
+// }
 
-@keyframes grow-short {
-    from { width: 0; }
-    to { width: 17px;}
-}
+// @keyframes grow-short {
+//     from { width: 0; }
+//     to { width: 17px;}
+// }
 
-.nav-bar-animation {
-    // visibility: hidden;
-    background: none;
-    display: block;
-    transition: 275ms all ease;
-    -webkit-transition: 275ms all ease;
-    cursor: pointer;
-    padding: 10px 0;
-    margin-right: 15px;
-    padding: 10px 0;
-    height: 40px;
-    width: 35px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: #594F4F;
-    border: none;
-    z-index: 2;
+// .nav-bar-animation {
+//     // visibility: hidden;
+//     background: none;
+//     display: block;
+//     transition: 275ms all ease;
+//     -webkit-transition: 275ms all ease;
+//     cursor: pointer;
+//     padding: 10px 0;
+//     margin-right: 15px;
+//     padding: 10px 0;
+//     height: 40px;
+//     width: 35px;
+//     box-sizing: border-box;
+//     position: fixed;
+//     top: 15px;
+//     right: 15px;
+//     background: #594F4F;
+//     border: none;
+//     z-index: 2;
 
-    div {
-        font-family: 'Montserrat', sans-serif;
-        background: #FFF;
-        box-sizing: border-box;
-        display: block;
-        font-size: 18px;
-        height: 3px;
-        width: 30px;
-        line-height: 28.8px;
-        margin-bottom: 4px;
-        position: relative;
-        transition: 0.6s all ease;
-        -webkit-transition: 0.6s all ease;
-        animation-direction: alternate;
-        animation: .6s ease-in grow;
+//     div {
+//         font-family: 'Montserrat', sans-serif;
+//         background: #FFF;
+//         box-sizing: border-box;
+//         display: block;
+//         font-size: 18px;
+//         height: 3px;
+//         width: 30px;
+//         line-height: 28.8px;
+//         margin-bottom: 4px;
+//         position: relative;
+//         transition: 0.6s all ease;
+//         -webkit-transition: 0.6s all ease;
+//         animation-direction: alternate;
+//         animation: .6s ease-in grow;
     
-        &:last-of-type {
-            animation: .6s linear grow-short;
-            width: 17px;
-            margin-left: auto;
-            margin-right: 5px;
-        }
-    }
-}
+//         &:last-of-type {
+//             animation: .6s linear grow-short;
+//             width: 17px;
+//             margin-left: auto;
+//             margin-right: 5px;
+//         }
+//     }
+// }
 
-.nav-bar-active {
-    display: inline-block;
-    transition: 275ms all ease;
-    -webkit-transition: 275ms all ease;
-    cursor: pointer;
-    padding: 10px 0;
-    margin-right: 15px;
-    padding: 10px 0;
-    height: 40px;
-    width: 35px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: none;
-    border: none;
-    z-index: 2;
+// .nav-bar-active {
+//     display: inline-block;
+//     transition: 275ms all ease;
+//     -webkit-transition: 275ms all ease;
+//     cursor: pointer;
+//     padding: 10px 0;
+//     margin-right: 15px;
+//     padding: 10px 0;
+//     height: 40px;
+//     width: 35px;
+//     box-sizing: border-box;
+//     position: fixed;
+//     top: 15px;
+//     right: 15px;
+//     background: none;
+//     border: none;
+//     z-index: 2;
 
-    div {
-        font-family: 'Montserrat', sans-serif;
-        background-color:#FFF;
-        box-sizing: border-box;
-        display: block;
-        font-size: 18px;
-        height: 3px;
-        width: 30px;
-        line-height: 28.8px;
-        margin-bottom: 4px;
-        position: relative;
-        transition: 0.4s all ease;
-        -webkit-transition: 0.4s all ease;
-        z-index: 10000 !important;
-    }
+//     div {
+//         font-family: 'Montserrat', sans-serif;
+//         background-color:#FFF;
+//         box-sizing: border-box;
+//         display: block;
+//         font-size: 18px;
+//         height: 3px;
+//         width: 30px;
+//         line-height: 28.8px;
+//         margin-bottom: 4px;
+//         position: relative;
+//         transition: 0.4s all ease;
+//         -webkit-transition: 0.4s all ease;
+//         z-index: 10000 !important;
+//     }
 
-    .bar-one {
-        transform: translate(0, 7px) rotate(135deg);
-        -webkit-transform: translate(0, 7px) rotate(135deg);
-        width: 30px;
-        z-index: 2;
+//     .bar-one {
+//         transform: translate(0, 7px) rotate(135deg);
+//         -webkit-transform: translate(0, 7px) rotate(135deg);
+//         width: 30px;
+//         z-index: 2;
 
-    }
+//     }
 
-    .bar-two {
-        transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        width: 30px;
+//     .bar-two {
+//         transform: rotate(45deg);
+//         -webkit-transform: rotate(45deg);
+//         width: 30px;
 
-    }
+//     }
 
-    .bar-three {
-        width: 0;
-        margin-left: 0;
-    }
+//     .bar-three {
+//         width: 0;
+//         margin-left: 0;
+//     }
 
-}
+// }
 
 /**********************************************************
     MEDIA QUERY TO FIX MOBILE
 ***********************************************************/
 
-@media (min-width: 900px) {
-    .nav-bar-animation {
+// @media (min-width: 900px) {
+//     .nav-bar-animation {
 
-        &:hover {
+//         &:hover {
 
-            .bar-one {
-                transform: translateY(6px) rotate(90deg);
-                -webkit-transform: translateY(6px) rotate(90deg);
-                width: 30px;
-            }
+//             .bar-one {
+//                 transform: translateY(6px) rotate(90deg);
+//                 -webkit-transform: translateY(6px) rotate(90deg);
+//                 width: 30px;
+//             }
     
-            .bar-two {
-                width: 30px;
-            }
+//             .bar-two {
+//                 width: 30px;
+//             }
     
-            #bar-three {
-                width: 0;
-                margin-left: auto;
-            }
-        }
-    }
-}
+//             #bar-three {
+//                 width: 0;
+//                 margin-left: auto;
+//             }
+//         }
+//     }
+// }
 
 

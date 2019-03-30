@@ -7,6 +7,8 @@ import HeaderListItem from '../Header-Styled/StyledHeaderListItem';
 // import ModalWrapper from '../Shared/ModalWrapperRemade';
 import ModalWrapper from '../Shared/ModalWrapper';
 
+import HeaderSandwich from '../Header-Styled/StyledHeaderSandwich';
+import StyledSandwichBar from '../Header-Styled/StyledSandwichBar';
 import StyledNav from '../Header-Styled/StyledNav';
 import StyledNavWrapper from '../Header-Styled/StyledNavWrapper';
 
@@ -16,7 +18,7 @@ class Header extends React.Component {
         this.state = {
             activeModal: false,
             activeSandwich: false,
-            showModal: false
+            showModal: false 
         };
         
         this.handleScroll = this.handleScroll.bind(this);
@@ -69,11 +71,18 @@ class Header extends React.Component {
                         </FadeInNavList>
                     </div>
                     {/** nav sandwich button */}
-                    <a onClick={this.handleAnimation} className={this.state.activeSandwich ? "nav-bar-active" : "nav-bar-animation"}>
+                    {/* <a onClick={this.handleAnimation} className={this.state.activeSandwich ? "nav-bar-active" : "nav-bar-animation"}>
                         <div className="bar-one"></div>
                         <div className="bar-two"></div>
                         <div id="bar-three" className="bar-three"></div>
-                    </a>
+                    </a> */}
+                    <HeaderSandwich 
+                        handleAnimation={this.handleAnimation}
+                        activeSandwich={this.state.activeSandwich}>
+                        <StyledSandwichBar />
+                        <StyledSandwichBar />
+                        <StyledSandwichBar />
+                    </HeaderSandwich>
                     <ModalWrapper handleModal={this.handleAnimation} />
                 </StyledNavWrapper>
             </StyledNav>

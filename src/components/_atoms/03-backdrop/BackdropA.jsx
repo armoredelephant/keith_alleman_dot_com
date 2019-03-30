@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledBackdrop = styled.div`
+const BackdropA = styled.div`
     position: fixed;
     top: 0;
     right: 0;
@@ -25,4 +25,4 @@ const StyledBackdrop = styled.div`
     }
 `;
 
-export default StyledBackdrop;
+export default BackdropA;

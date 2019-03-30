@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const fadeInAnimation = keyframes`${fadeInLeft}`;
 
-const FadeInSmallLogo = styled(Link)`
+const HeaderSmLogoA = styled(Link)`
     visibility: hidden;
     text-decoration: none;
     color: #FFF;
@@ -27,4 +27,4 @@ const FadeInSmallLogo = styled(Link)`
 }
 `;
 
-export default FadeInSmallLogo;
+export default HeaderSmLogoA;

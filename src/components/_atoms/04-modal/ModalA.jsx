@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledModal = styled.div`
+const ModalA = styled.div`
     position: fixed;
     background: #594F4F;
     color: #FFF;
@@ -39,4 +39,4 @@ const StyledModal = styled.div`
     }
 `;
 
-export default StyledModal;
+export default ModalA;

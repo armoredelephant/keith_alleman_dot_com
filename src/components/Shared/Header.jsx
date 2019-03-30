@@ -1,16 +1,24 @@
 import React from 'react';
 
-import FadeInSmallLogo from '../Header-Styled/FadeInSmallLogo'
-import FadeInLargeLogo from '../Header-Styled/FadeInLargeLogo';
-import FadeInNavList from '../Header-Styled/FadeInNavList';
-import HeaderListItem from '../Header-Styled/StyledHeaderListItem';
-// import ModalWrapper from '../Shared/ModalWrapperRemade';
-import ModalWrapper from '../Shared/ModalWrapper';
-
-import HeaderSandwich from '../Header-Styled/StyledHeaderSandwich';
-import StyledSandwichBar from '../Header-Styled/StyledSandwichBar';
+// NavContainer - Organism
 import StyledNav from '../Header-Styled/StyledNav';
 import StyledNavWrapper from '../Header-Styled/StyledNavWrapper';
+
+// HeaderNavListContainer - Molecule
+import HeaderNavListContainerM from '../_molecules/00-list_container/HeaderNavListContainerM';
+import HeaderListItemA from '../_atoms/01-list_items/HeaderListItemA';
+
+// HeaderLogoContainer - Molecule
+import HeaderLogoContainerM from '../_molecules/02-logo_container/HeaderLogoContainerM';
+import HeaderSmLogoA from '../_atoms/02-logos/HeaderSmLogoA'
+import HeaderLgLogoA from '../_atoms/02-logos/HeaderLgLogoA';
+
+// NavSandwich - Molecule
+import HeaderNavSandwichM from '../_molecules/03-nav_sandwich/HeaderNavSandwichM';
+
+// Modal - Molecule
+import ModalContainerM from '../_molecules/01-modal_container/ModalContainerM';
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -53,38 +61,33 @@ class Header extends React.Component {
             document.body.style.paddingTop = 0;
     }
 
+    // function /w switch statement that checks scroll and state to determine class name for  StyledNav. This will allow removal of StyledNavWrapper.
+
     render() {
         return (
-            <StyledNav className={this.state.scroll > this.state.top ? 'fixed-nav' : ''}>
-                <StyledNavWrapper className={this.state.activeModal ? 'active' : ''}>
-                    {/** left-side logos */}
-                    <div className="left-header-wrapper">
-                        <FadeInSmallLogo to='/'>KA</FadeInSmallLogo>
-                        <FadeInLargeLogo to='/'>Keith Alleman</FadeInLargeLogo>
-                    </div>
-                    {/** middle nav */}
-                    <div className='center-header-wrapper'>
-                        <FadeInNavList>
-                            <HeaderListItem name="About" />
-                            <HeaderListItem name="Projects" />
-                            <HeaderListItem name="Work" last={true}/>
-                        </FadeInNavList>
-                    </div>
-                    {/** nav sandwich button */}
-                    {/* <a onClick={this.handleAnimation} className={this.state.activeSandwich ? "nav-bar-active" : "nav-bar-animation"}>
-                        <div className="bar-one"></div>
-                        <div className="bar-two"></div>
-                        <div id="bar-three" className="bar-three"></div>
-                    </a> */}
-                    <HeaderSandwich 
-                        handleAnimation={this.handleAnimation}
-                        activeSandwich={this.state.activeSandwich}>
-                        <StyledSandwichBar />
-                        <StyledSandwichBar />
-                        <StyledSandwichBar />
-                    </HeaderSandwich>
-                    <ModalWrapper handleModal={this.handleAnimation} />
-                </StyledNavWrapper>
+            <StyledNav className={this.state.scroll > this.state.top && this.state.activeModal ? 
+                    'fixed-nav active' 
+                : this.state.scroll > this.state.top ? 
+                    'fixed-nav'
+                : this.state.activeModal ?  
+                    'active'
+                : '' }>
+                {/** left-side logos */}
+                <HeaderLogoContainerM>
+                    <HeaderSmLogoA to='/'>KA</HeaderSmLogoA>
+                    <HeaderLgLogoA to='/'>Keith Alleman</HeaderLgLogoA>
+                </HeaderLogoContainerM>
+                {/** middle nav */}
+                <HeaderNavListContainerM>
+                    <HeaderListItemA name="About" />
+                    <HeaderListItemA name="Projects" />
+                    <HeaderListItemA name="Work" last/>
+                </HeaderNavListContainerM>
+                {/** nav sandwich button */}
+                <HeaderNavSandwichM 
+                    handleAnimation={this.handleAnimation}
+                    activeSandwich={this.state.activeSandwich} />
+                <ModalContainerM handleModal={this.handleAnimation} />
             </StyledNav>
         )
     }

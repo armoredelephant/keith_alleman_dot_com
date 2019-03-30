@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const fadeInAnimation = keyframes`${fadeInLeft}`;
 
-const FadeInLargeLogo = styled(Link)`
+const HeaderLgLogoA = styled(Link)`
     visibility: hidden;
     width: 0;
     margin: 0;
@@ -40,19 +40,4 @@ const FadeInLargeLogo = styled(Link)`
     }
 `;
 
-export default FadeInLargeLogo;
-
-/** Fade in border
- *     @keyframes logo-border {
-            from { border-bottom: 1px solid #594F4F;; }
-            to { border-bottom: 1px solid #95d5d2; }
-    }
- * 
- */
-
- /** Fade in border from left
-  *     @keyframes test {
-        from { width: 0; }
-        to { width: 39%; }
-    }
-  */
+export default HeaderLgLogoA;

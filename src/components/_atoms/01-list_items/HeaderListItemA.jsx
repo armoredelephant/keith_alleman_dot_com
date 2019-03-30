@@ -56,7 +56,7 @@ const StyledHeaderSpan = styled.span`
     }
 `;
 
-const HeaderListItem = (props) => {
+const HeaderListItemA = (props) => {
     const page = props.name.toLowerCase();
     return (
         <StyledHeaderListItem>
@@ -71,4 +71,4 @@ const HeaderListItem = (props) => {
     );
 }
 
-export default HeaderListItem;
+export default HeaderListItemA;

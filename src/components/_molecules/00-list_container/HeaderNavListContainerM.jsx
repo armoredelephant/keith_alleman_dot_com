@@ -3,10 +3,11 @@ import { fadeInDown } from 'react-animations';
 
 const fadeInAnimation = keyframes`${fadeInDown}`;
 
-const FadeInNavList = styled.ul`
+const HeaderNavListContainerM = styled.ul`
     visibility: hidden;
     
     @media (min-width: 670px) {
+        margin: auto;
         visibility: visible;
         animation: 1s ${fadeInAnimation};
         display: flex;
@@ -18,4 +19,4 @@ const FadeInNavList = styled.ul`
     }
 `;
 
-export default FadeInNavList;
+export default HeaderNavListContainerM;

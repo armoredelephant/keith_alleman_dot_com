@@ -1,7 +1,7 @@
 import React from 'react';
 
-import BackdropA from '../../_atoms/03-backdrop/BackdropA';
-import ModalA from '../../_atoms/04-modal/ModalA';
+import BackdropA from '../../../_atoms/03-backdrop/BackdropA.jsx';
+import ModalM from '../00-modal/ModalM.jsx';
 
 const ModalContainerM = ( props ) => {
     const handleBackgroundClick = e  => {
@@ -11,7 +11,7 @@ const ModalContainerM = ( props ) => {
     return (
         <React.Fragment>
             <BackdropA onClick={e => handleBackgroundClick(e)} />
-            <ModalA />
+            <ModalM />
         </React.Fragment>
     );
 }

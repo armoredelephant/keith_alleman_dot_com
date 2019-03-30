@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
 import { Link } from 'react-router-dom';
 
-const fadeInAnimation = keyframes`${fadeInLeft}`;
+const fadeInAnimation = keyframes`${ fadeInLeft }`;
 
 const HeaderLgLogoA = styled(Link)`
     visibility: hidden;
@@ -10,7 +10,7 @@ const HeaderLgLogoA = styled(Link)`
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: #FFF;
+    color: ${ props => props.theme.primarycolor };
     padding-bottom: 2px;
     overflow-x: hidden;
     position: relative;
@@ -24,8 +24,8 @@ const HeaderLgLogoA = styled(Link)`
     @media (max-width: 670px) {
         visibility: visible;
         opacity: 0;
-        animation: 1s ${fadeInAnimation};
-        color: #FFF;
+        animation: 1s ${ fadeInAnimation };
+        color: ${ props => props.theme.primarycolor };
         font-size: 20px;
         text-align: center;
         letter-spacing: 1.3px;
@@ -34,7 +34,7 @@ const HeaderLgLogoA = styled(Link)`
         width: 100%;
         white-space: nowrap;
         text-transform: uppercase;
-        border-bottom: 1px solid #95d5d2;
+        border-bottom: 1px solid ${ props => props.theme.secondarycolor };
         animation: 1.5s linear fade-in-logo;
         animation-fill-mode: forwards;
     }

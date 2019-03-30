@@ -8,7 +8,7 @@ const StyledHeaderListItem = styled.li`
 
 const StyledHeaderLink = styled(Link)`
     text-decoration: none;
-    color: #FFF;
+    color: ${ props => props.theme.primarycolor };
     padding-bottom: 2px;
     overflow-x: hidden;
     position: relative;
@@ -16,7 +16,7 @@ const StyledHeaderLink = styled(Link)`
 
     &:active,
     &:hover {
-        color: #fff;
+        color: ${ props => props.theme.primarycolor };
     }
 
     &.section-link {
@@ -26,7 +26,7 @@ const StyledHeaderLink = styled(Link)`
             bottom: 0;
             left: 0;
             height: 1px;
-            background: #95d5d2;
+            background: ${ props => props.theme.secondarycolor };
             width: 100%;
             transform: translate3d(-110%, 0, 0);
             -webkit-transform: translate3d(-110%, 0, 0);
@@ -41,27 +41,28 @@ const StyledHeaderLink = styled(Link)`
     }
 
     &.section-link-active {
-        border-bottom: 1px solid #95d5d2;
+        border-bottom: 1px solid ${ props => props.theme.secondarycolor };
     }
 
 `;
 
 const StyledHeaderSpan = styled.span`
-    color: #95d5d2;
+    color: ${ props => props.theme.secondarycolor };
     margin: 0;
     padding-left: 15px;
 
     @media (min-width: 720px) {
-        visibility: ${props => props.last ? 'hidden' : 'visible'}
+        visibility: ${ props => props.last ? 'hidden' : 'visible' }
     }
 `;
 
 const HeaderListItemA = (props) => {
     const page = props.name.toLowerCase();
+    
     return (
         <StyledHeaderListItem>
-            <StyledHeaderLink to={`/${page}`}
-                className={window.location.pathname === `/${page}` ?
+            <StyledHeaderLink to={`/${ page }`}
+                className={window.location.pathname === `/${ page }` ?
                 'section-link-active'
                 : 'section-link'} >
             {props.name}

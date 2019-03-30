@@ -18,12 +18,10 @@ const StyledHeaderSandwich = styled.a`
 
     &.nav-bar-animation {
         display: block;
-        background: #594F4F;
     }
 
     &.nav-bar-active {
         display: inline-block;
-        background: none;
     }
 
     @media (min-width: 900px) {
@@ -108,7 +106,8 @@ const SandwichBar = styled.div`
 `;
 
 const HeaderNavSandwichM = (props) => (
-    <StyledHeaderSandwich onClick={props.handleAnimation} className={props.activeSandwich ? 'nav-bar-active' : 'nav-bar-animation' }>
+    <StyledHeaderSandwich onClick={props.handleAnimation} 
+        className={props.activeSandwich ? 'nav-bar-active' : 'nav-bar-animation' }>
         <SandwichBar/>
         <SandwichBar/>
         <SandwichBar/>

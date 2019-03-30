@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const ModalA = styled.div`
+const ModalM = styled.div`
     position: fixed;
-    background: #594F4F;
+    background: ${ props => props.theme.bg };
     color: #FFF;
     top: 0;
     left: auto;
@@ -39,4 +39,4 @@ const ModalA = styled.div`
     }
 `;
 
-export default ModalA;
+export default ModalM;

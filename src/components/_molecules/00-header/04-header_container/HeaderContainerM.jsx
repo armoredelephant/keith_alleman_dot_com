@@ -12,9 +12,9 @@ const HeaderContainerM = styled.header`
     flex-flow: row;
     justify-content: space-between;
     font-family: "Arial";
+    position: fixed;
 
     &.fixed-nav {
-        position: fixed;
         box-shadow: ${ props => props.theme.boxshadow };
     }
 

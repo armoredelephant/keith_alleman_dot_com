@@ -29,10 +29,7 @@ const theme = {
 const HeaderO = () => {
     const [activeModal, setActiveModal] = useState(false),
         [activeSandwich, setActiveSandwich] = useState(false),
-        [scroll, setScroll] = useState(),
-        [top, setTop] = useState(),
-        [height, setHeight] = useState();
-        
+        [scroll, setScroll] = useState();
 
     const handleScroll = () => {
         setScroll(window.scrollY);
@@ -45,7 +42,7 @@ const HeaderO = () => {
 
     const classSwitch = () => {
         const isFixed = () => {
-            return scroll > top ? 'fixed-nav' : '';
+            return scroll ? 'fixed-nav' : '';
         }
 
         const isActive = () => {
@@ -56,16 +53,7 @@ const HeaderO = () => {
     }
 
     useEffect(() => {
-        const el = document.querySelector('header');
-
-        setTop(el.offsetTop);
-        setHeight(el.offsetHeight);
-
         window.addEventListener('scroll', handleScroll);
-
-        scroll > top ? 
-            document.body.style.paddingTop = `${ height }px` :
-            document.body.style.paddingTop = 0;
     });
 
     return (

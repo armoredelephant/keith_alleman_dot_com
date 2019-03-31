@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-// HeaderContainer - Organism
+// HeaderContainer - Molecule
 import HeaderContainerM from '../../_molecules/00-header/04-header_container/HeaderContainerM.jsx';
 
 // HeaderNavListContainer - Molecule

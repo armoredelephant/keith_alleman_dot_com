@@ -1,15 +1,18 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import AboutPage from './components/Sections/About.jsx';
-import Footer from './components/Shared/Footer.jsx';
-import HeaderO from './components/_organisms/00-header/HeaderO.jsx';
-// import HeaderO from './components/_unused/HeaderO';
-import Landing from './components/HomePage/Landing.jsx';
-import ProjectsPage from './components/Sections/Projects.jsx';
-import WorkPage from './components/Sections/Work.jsx';
-
+// Scroll Fix
 import ScrollToTop from './components/_unused/ScrollToTop.jsx';
+
+// Shared - Organisms
+import HeaderO from './components/_organisms/00-header/HeaderO.jsx';
+import FooterO from './components/_organisms/02-footer/FooterO.jsx';
+
+// Routes - Organisms
+import ProjectsPageO from './components/_organisms/01-routes/ProjectsPageO.jsx';
+import LandingPageO from './components/_organisms/01-routes/LandingPageO.jsx'
+import WorkPageO from './components/_organisms/01-routes/WorkPageO.jsx';
+import AboutPageO from './components/_organisms/01-routes/AboutPageO.jsx';
 
 import './sass/base.scss'
 
@@ -19,11 +22,11 @@ class App extends React.Component {
             <Router>
                 <ScrollToTop>
                     <HeaderO />
-                    <Route exact path='/' component={Landing} />
-                    <Route exact path='/about'component={AboutPage} />
-                    <Route exact path='/projects' component={ProjectsPage} />
-                    <Route exact path='/work' component={WorkPage} />
-                    <Footer />
+                        <Route exact path='/' component={LandingPageO} />
+                        <Route exact path='/about'component={AboutPageO} />
+                        <Route exact path='/projects' component={ProjectsPageO} />
+                        <Route exact path='/work' component={WorkPageO} />
+                    <FooterO />
                 </ScrollToTop>
             </Router>
         );

@@ -21,7 +21,7 @@ import ModalContainerM from '../../_molecules/01-modal/01-modal_container/ModalC
 
 const theme = {
     bg: '#252627',
-    primarycolor: '#bfbfbf',
+    primarycolor: '#eaeaea',
     secondarycolor: '#95d5d2',
     boxshadow: '0 1px 1px 0 rgba(0, 0, 0, .1)'
 }

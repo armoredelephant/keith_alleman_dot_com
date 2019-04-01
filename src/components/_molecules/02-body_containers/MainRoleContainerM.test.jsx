@@ -10,12 +10,12 @@ describe('MainRoleContainerM', () => { // enzyme
         expect(wrapper).toBeTruthy(); // jest
     });
 
-    it('renders with end', () => {
+    it('renders justify-content /w prop', () => {
         const wrapper = mount(<MainRoleContainerM align='space-between' />); // enzyme
         expect(wrapper).toHaveStyleRule('justify-content', 'space-between'); // jest-styled-components 
     })
     
-    it('renders with end', () => {
+    it('renders justify-content /wo prop', () => {
         const wrapper = mount(<MainRoleContainerM />);
         expect(wrapper).toHaveStyleRule('justify-content', undefined); // falsey styled componenet, checks if '' 
     })

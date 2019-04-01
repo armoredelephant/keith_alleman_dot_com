@@ -61,7 +61,7 @@ const HeaderListItemA = (props) => {
     
     return (
         <StyledHeaderListItem>
-            <StyledHeaderLink to={`/${ page }`}
+            <StyledHeaderLink {...props } to={`/${ page }`}
                 className={window.location.pathname === `/${ page }` ?
                 'section-link-active'
                 : 'section-link'} >

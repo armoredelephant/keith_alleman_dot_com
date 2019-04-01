@@ -17,7 +17,7 @@ const theme = {
 
 const WorkPageO = () => {
     return (
-        <MainRoleContainerM center >
+        <MainRoleContainerM align='center' >
             <ThemeProvider theme={theme}>
                 {/* placeholder */}
                 <SectionHeaderA header={'Work Page'}></SectionHeaderA>

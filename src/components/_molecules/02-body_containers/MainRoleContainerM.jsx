@@ -2,27 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const MainRole = styled.main`
+    background: #252627;
     min-height: 1000px;
     max-height: 1000px;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     padding-top: 70px;
     display: flex;
     flex-flow: row;
-    justify-content: ${ props => props.center ? 
-        'center' : 
-        props.start ?
-        'flex-start' :
-        props.end ? 
-        'flex-end' :
-        props.between ?
-        'space-between' :
-        props.around ?
-        'space-around' :
-        props.even ? 
-        'space-evenly' 
-        : '' 
-    };
+    justify-content: ${ props => props.align || '' };
 
     @media (max-width: 670px) {
         display: flex;

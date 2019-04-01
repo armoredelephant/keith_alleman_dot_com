@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const ModalM = styled.div`
     position: fixed;
-    background: ${ props => props.theme.bg };
+    background: linear-gradient(146deg, #252627, #252627 54.8%, #95d5d2 55%);
     color: #FFF;
     top: 0;
     left: auto;

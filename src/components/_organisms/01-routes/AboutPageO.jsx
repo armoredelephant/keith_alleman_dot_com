@@ -15,8 +15,9 @@ const theme = {
     headheight: '100px',
     headff: 'Montserrat',
     ls: '2px',
-    primarycolor: '#FFF',
-    headfs: '50px'
+    primarycolor: '#dfdfdf',
+    secondarycolor: '#b7b7b7',
+    headfs: '38px'
 };
 
 const AboutPageO = () => {
@@ -27,9 +28,10 @@ const AboutPageO = () => {
                     {/** Photo and design in here maybe not use grid?*/}
                 </GridWrapperA>
                 <SectionWrapperAutoA>
-                    <SectionHeaderA header={'About Page'}></SectionHeaderA>
+                    <SectionHeaderA header={'- I\'m Keith Alleman.' }></SectionHeaderA>
                     {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
                     {/** Pull the paragraph from a snipet/json for cleaner code? */}
+                    {/** Hobbies | Interests */}
                 </SectionWrapperAutoA>
             </MainRoleContainerM>
         </ThemeProvider>

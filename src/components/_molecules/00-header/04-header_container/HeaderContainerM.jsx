@@ -20,7 +20,7 @@ const HeaderContainerM = styled.header`
 
     @media (max-width: 460px) {
         &.active {
-            transition-delay: 0.4s;å
+            transition-delay: 0.4s;
         }
     }
 `;

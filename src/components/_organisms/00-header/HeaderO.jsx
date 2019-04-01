@@ -20,8 +20,8 @@ import HeaderNavSandwichM from '../../_molecules/00-header/03-nav_sandwich/Heade
 import ModalContainerM from '../../_molecules/01-modal/01-modal_container/ModalContainerM.jsx';
 
 const theme = {
-    bg: '#594F4F',
-    primarycolor: '#FFF',
+    bg: '#252627',
+    primarycolor: '#bfbfbf',
     secondarycolor: '#95d5d2',
     boxshadow: '0 1px 1px 0 rgba(0, 0, 0, .1)'
 }

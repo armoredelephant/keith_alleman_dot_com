@@ -105,6 +105,7 @@ const SandwichBar = styled.div`
     }
 `;
 
+// change to use onMouseEnter/onMouseLeave instead of hover from css?
 const HeaderNavSandwichM = (props) => (
     <StyledHeaderSandwich onClick={props.handleAnimation} 
         className={props.activeSandwich ? 'nav-bar-active' : 'nav-bar-animation' }>

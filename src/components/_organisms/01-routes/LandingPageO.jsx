@@ -20,6 +20,8 @@ const LandingPageO = () => {
         <MainRoleContainerM>
             <ThemeProvider theme={theme}>
                 {/* placeholder */}
+                {/** WELCOME */}
+                {/** Animated JS? : have a look around. */}
                 <SectionHeaderA header={'Landing Page'}></SectionHeaderA>
             </ThemeProvider>
         </MainRoleContainerM>

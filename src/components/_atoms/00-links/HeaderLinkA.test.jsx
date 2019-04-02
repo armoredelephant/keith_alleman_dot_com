@@ -31,7 +31,26 @@ describe('HeaderLinkA', () => {
         expect(wrapper.find('Link')).toHaveStyleRule('color', '#FFF', {
             modifier: `:hover`
         });
-        expect(wrapper.find('Link.section-link-active')).toBeTruthy();
-        expect(wrapper.find('Link')).toHaveStyleRule('border-bottom', '1px solid #95d5d2');
+        expect(wrapper.find('a.section-link-active')).toBeTruthy();
+    });
+
+    it('is themed with custom styles', () => {
+        const customTheme = {
+            primarycolor: 'black',
+            secondarycolor: 'black'
+        }
+        const wrapper = global.StyledComponents.mountWithTheme(
+            <MemoryRouter initialEntries={['/about']} >
+                <React.Fragment>      
+                    <HeaderLinkA name='about' testclass='section-link-active' />,
+                </React.Fragment>
+            </MemoryRouter>,
+            customTheme
+        )
+        expect(wrapper.find('Link')).toHaveStyleRule('color', 'black')
+        expect(wrapper.find('Link')).toHaveStyleRule('color', 'black', {
+            modifier: `:hover`
+        });
+        expect(wrapper.find('a.section-link-active')).toBeTruthy();
     });
 });

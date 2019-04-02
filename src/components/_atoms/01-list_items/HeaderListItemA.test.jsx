@@ -7,9 +7,13 @@ import HeaderListItemA from './HeaderListItemA.jsx';
 
 describe('HeaderListItemA', () => {
     it('renders', () => {
-        const wrapper = shallow(<HeaderListItemA name='test' />);
+        const wrapper = shallow(<HeaderListItemA />)
         expect(wrapper).toBeTruthy();
     });
+
+    it('')
 });
+
+// will need setProps to test visibility?
 
 

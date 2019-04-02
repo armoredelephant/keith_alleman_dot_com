@@ -37,7 +37,9 @@ const StyledHeaderLink = styled(Link)`
     }
 
     &.section-link-active {
-        border-bottom: 1px solid ${ props => props.theme.secondarycolor || '#95d5d2' };
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: ${ props => props.theme.secondarycolor }
     }
 
 `;
@@ -46,10 +48,10 @@ const HeaderLinkA = ( props ) => {
     const page = props.name.toLowerCase();
     return (
         <StyledHeaderLink {...props } to={`/${ page }`}
-            className={props.testclass || window.location.pathname === `/${ page }` ? // refactor this to be controlled by HeaderO and pass down the prop.
+            className={ props.testclass ||  window.location.pathname === `/${ page }` ? 
             'section-link-active'
-            : 'section-link'} >
-        {props.name}
+            : 'section-link' } >
+        { props.name }
         </StyledHeaderLink>
     )
 }

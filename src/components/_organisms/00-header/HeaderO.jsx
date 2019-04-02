@@ -68,7 +68,7 @@ const HeaderO = () => {
                 <HeaderNavListContainerM>
                     <HeaderListItemA name='About' />
                     <HeaderListItemA name='Projects' />
-                    <HeaderListItemA name='Work' last />
+                    <HeaderListItemA name='Work' last='true' />
                 </HeaderNavListContainerM>
                 {/** nav sandwich button */}
                 <HeaderNavSandwichM 

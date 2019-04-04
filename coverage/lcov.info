@@ -5,6 +5,7 @@ FN:28,(anonymous_1)
 FNF:2
 FNH:1
 FNDA:0,(anonymous_0)
+<<<<<<< HEAD
 FNDA:11,(anonymous_1)
 DA:23,15
 DA:24,0
@@ -12,6 +13,15 @@ DA:25,0
 DA:28,15
 DA:29,11
 DA:30,11
+=======
+FNDA:8,(anonymous_1)
+DA:23,8
+DA:24,0
+DA:25,0
+DA:28,8
+DA:29,8
+DA:30,8
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
 LF:6
 LH:4
 BRDA:24,0,0,0
@@ -25,7 +35,11 @@ TN:
 SF:/Users/mci/Projects/keith_alleman_dot_com/src/theme.js
 FNF:0
 FNH:0
+<<<<<<< HEAD
 DA:1,15
+=======
+DA:1,8
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
 LF:1
 LH:1
 BRF:0
@@ -255,7 +269,21 @@ BRF:0
 BRH:0
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/mci/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/01-modal_container/ModalContainerM.jsx
+=======
+SF:/Users/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/00-modal/ModalM.jsx
+FNF:0
+FNH:0
+DA:3,1
+LF:1
+LH:1
+BRF:0
+BRH:0
+end_of_record
+TN:
+SF:/Users/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/01-modal_container/ModalContainerM.jsx
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
 FN:6,(anonymous_0)
 FN:7,(anonymous_1)
 FN:13,(anonymous_2)
@@ -271,13 +299,22 @@ DA:11,3
 DA:13,1
 LF:5
 LH:5
+<<<<<<< HEAD
 BRDA:8,0,0,0
 BRDA:8,0,1,1
+=======
+BRDA:8,0,0,1
+BRDA:8,0,1,0
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
 BRF:2
 BRH:1
 end_of_record
 TN:
+<<<<<<< HEAD
 SF:/Users/mci/Projects/keith_alleman_dot_com/src/components/_molecules/02-body_containers/MainRoleContainerM.jsx
+=======
+SF:/Users/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/02-body_containers/MainRoleContainerM.jsx
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
 FN:14,(anonymous_0)
 FN:23,(anonymous_1)
 FNF:2

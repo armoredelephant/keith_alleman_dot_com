@@ -9,4 +9,8 @@ describe('ModalM', () => {
         const wrapper = shallow(<ModalM />);
         expect(wrapper).toBeTruthy();
     });
+    it('renders', () => {
+        const wrapper = shallow(<ModalM />);
+        expect(wrapper).toBeTruthy();
+    });
 });

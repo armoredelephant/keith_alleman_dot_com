@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1554341983124" clover="3.2.0">
   <project timestamp="1554341983125" name="All files">
     <metrics statements="66" coveredstatements="64" conditionals="16" coveredconditionals="13" methods="31" coveredmethods="30" elements="113" coveredelements="107" complexity="0" loc="66" ncloc="66" packages="14" files="17" classes="17"/>
+=======
+<coverage generated="1554412512509" clover="3.2.0">
+  <project timestamp="1554412512509" name="All files">
+    <metrics statements="50" coveredstatements="43" conditionals="22" coveredconditionals="11" methods="26" coveredmethods="20" elements="98" coveredelements="74" complexity="0" loc="50" ncloc="50" packages="9" files="11" classes="11"/>
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
     <package name="src">
       <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="styled-components.js" path="/Users/mci/Projects/keith_alleman_dot_com/src/styled-components.js">
         <metrics statements="6" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
+<<<<<<< HEAD
         <line num="23" count="15" type="stmt"/>
         <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="25" count="0" type="stmt"/>
         <line num="28" count="15" type="stmt"/>
         <line num="29" count="11" type="cond" truecount="2" falsecount="0"/>
         <line num="30" count="11" type="stmt"/>
+=======
+        <line num="23" count="8" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="8" type="stmt"/>
+        <line num="29" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="8" type="stmt"/>
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
       </file>
       <file name="theme.js" path="/Users/mci/Projects/keith_alleman_dot_com/src/theme.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+<<<<<<< HEAD
         <line num="1" count="15" type="stmt"/>
+=======
+        <line num="1" count="8" type="stmt"/>
+>>>>>>> 12e5ac9740595f51dbad2e8c91bfe64632fc364b
       </file>
     </package>
     <package name="src.components._atoms.00-links">
@@ -143,6 +162,24 @@
     <package name="src.components._molecules.01-modal.01-modal_container">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
       <file name="ModalContainerM.jsx" path="/Users/mci/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/01-modal_container/ModalContainerM.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components._molecules.01-modal.00-modal">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ModalM.jsx" path="/Users/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/00-modal/ModalM.jsx">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components._molecules.01-modal.01-modal_container">
+      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="ModalContainerM.jsx" path="/Users/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/01-modal_container/ModalContainerM.jsx">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="3" type="stmt"/>

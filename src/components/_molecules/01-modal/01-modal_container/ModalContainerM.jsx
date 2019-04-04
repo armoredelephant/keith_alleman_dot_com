@@ -10,7 +10,7 @@ const ModalContainerM = ( props ) => {
 
     return (
         <React.Fragment>
-            <BackdropA onClick={e => handleBackgroundClick(e)} />
+            <BackdropA {...props} onClick={e => handleBackgroundClick(e)} />
             <ModalM />
         </React.Fragment>
     );

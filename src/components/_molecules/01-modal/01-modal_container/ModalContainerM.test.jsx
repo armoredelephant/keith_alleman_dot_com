@@ -18,11 +18,10 @@ describe('ModalContainerM', () => {
     });
 
     it('should handle the click event', () => {
-        let activeModal = false;
-        window.alert = jest.fn();
-        const wrapper = shallow(<ModalContainerM {...props} activeModal='false' 
-            handleModal={() => { return activeModal = !activeModal }} />);
-        wrapper.find(BackdropA).simulate('click', { target: { BackdropA } });
-        expect(window.alert).toHaveBeenCalledWith('clicked');
+        const wrapper = mount(<ModalContainerM activeModal='false' />);
+        console.log(wrapper.props());
+        const backDrop = wrapper.find(BackdropA);
+        backDrop.simulate('click');
+        expect(wrapper.activeModal('true')).toBeTruthy();
     });
 });

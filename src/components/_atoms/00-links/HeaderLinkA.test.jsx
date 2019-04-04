@@ -51,6 +51,9 @@ describe('HeaderLinkA', () => {
         expect(wrapper.find('Link')).toHaveStyleRule('color', 'black', {
             modifier: `:hover`
         });
-        expect(wrapper.find('a.section-link-active')).toBeTruthy();
+        expect(wrapper.find('Link')).toBeTruthy();
+        expect(wrapper.find('Link')).toHaveStyleRule('border-bottom-color', 'black', {
+            modifier: `&.section-link-active`
+        });
     });
 });

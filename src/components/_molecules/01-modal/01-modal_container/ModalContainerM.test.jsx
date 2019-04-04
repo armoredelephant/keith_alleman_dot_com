@@ -11,17 +11,4 @@ describe('ModalContainerM', () => {
         const wrapper = shallow(<ModalContainerM />);
         expect(wrapper).toBeTruthy();
     });
-
-    it('renders correctly snapshot', () => {
-        const output = shallow(<ModalContainerM />);
-        expect(shallowToJson(output)).toMatchSnapshot();
-    });
-
-    it('should handle the click event', () => {
-        const wrapper = mount(<ModalContainerM activeModal='false' />);
-        console.log(wrapper.props());
-        const backDrop = wrapper.find(BackdropA);
-        backDrop.simulate('click');
-        expect(wrapper.activeModal('true')).toBeTruthy();
-    });
 });

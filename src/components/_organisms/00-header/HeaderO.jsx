@@ -74,7 +74,7 @@ const HeaderO = () => {
                 <HeaderNavSandwichM 
                     handleAnimation={handleAnimation}
                     activeSandwich={activeSandwich} />
-                <ModalContainerM handleModal={handleAnimation} />
+                <ModalContainerM />
             </HeaderContainerM>
         </ThemeProvider>
     );

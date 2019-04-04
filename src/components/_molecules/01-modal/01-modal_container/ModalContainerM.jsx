@@ -3,14 +3,10 @@ import React from 'react';
 import BackdropA from '../../../_atoms/03-backdrop/BackdropA.jsx';
 import ModalM from '../00-modal/ModalM.jsx';
 
-const ModalContainerM = ( props ) => {
-    const handleBackgroundClick = e  => {
-        if (e.target === e.currentTarget) props.handleModal();
-    };
-
+const ModalContainerM = () => {
     return (
         <React.Fragment>
-            <BackdropA {...props} onClick={e => handleBackgroundClick(e)} />
+            <BackdropA />
             <ModalM />
         </React.Fragment>
     );

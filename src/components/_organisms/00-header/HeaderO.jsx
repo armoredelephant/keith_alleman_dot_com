@@ -29,7 +29,7 @@ const theme = {
 const HeaderO = () => {
     const [activeModal, setActiveModal] = useState(false),
         [activeSandwich, setActiveSandwich] = useState(false),
-        [scroll, setScroll] = useState();
+        [scroll, setScroll] = useState(0);
 
     const handleScroll = () => {
         setScroll(window.scrollY);
@@ -71,7 +71,8 @@ const HeaderO = () => {
                     <HeaderListItemA name='Work' last='true' />
                 </HeaderNavListContainerM>
                 {/** nav sandwich button */}
-                <HeaderNavSandwichM 
+                <HeaderNavSandwichM
+                    data-testid="animation" 
                     handleAnimation={handleAnimation}
                     activeSandwich={activeSandwich} />
                 <ModalContainerM />

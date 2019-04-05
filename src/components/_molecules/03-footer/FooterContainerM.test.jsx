@@ -2,11 +2,12 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 
-import ModalContainerM from './ModalContainerM.jsx';
+import FooterContainerM from './FooterContainerM.jsx';
 
-describe('ModalContainerM', () => {
+describe('FooterContainerM', () => {
     it('renders', () => {
-        const wrapper = shallow(<ModalContainerM />);
+        const wrapper = shallow(<FooterContainerM />);
         expect(wrapper).toBeTruthy();
     });
 });
+

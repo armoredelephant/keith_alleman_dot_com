@@ -12,20 +12,17 @@ const StyledHeader = styled.h2`
     font-family: ${ props => props.theme.headff };
     letter-spacing: ${ props => props.theme.ls };
     color: ${ props => props.theme.primarycolor };
-    font-size: ${ props => props.secondary ? props.theme.secondaryfs : props.theme.headfs };
-    font-style: ${ props => props.secondary ? props.theme.secondaryfst : '' }
-    border-bottom: ${ props => props.secondary ? props.theme.border : '' }
+    font-size: ${ props => props.theme.secondaryheadfs };
 `;
 
-const SectionHeaderA = ( props ) => {
-    console.log(props.secondary);
+const SectionHeaderSecondaryA = ( props ) => {
     return (
         <SectionHeaderWrapper>
-            <StyledHeader { ...props }>
-            { props.header }
+            <StyledHeader>
+            {props.header}
             </StyledHeader>
         </SectionHeaderWrapper>
     );
 }
 
-export default SectionHeaderA;
+export default SectionHeaderSecondaryA;

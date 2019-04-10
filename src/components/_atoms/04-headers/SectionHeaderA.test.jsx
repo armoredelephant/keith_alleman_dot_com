@@ -4,7 +4,7 @@ import 'jest-styled-components';
 
 import SectionHeaderA from './SectionHeaderA.jsx';
 
-describe('SectionHeaderA', () => {
+describe('<SectionHeaderA>', () => {
     it('renders', () => {
         const wrapper = shallow(<SectionHeaderA header='test' />);
         expect(wrapper).toBeTruthy();
@@ -16,7 +16,7 @@ describe('SectionHeaderA', () => {
         );
         expect(wrapper.find('div')).toHaveStyleRule('height', '100px');
         expect(wrapper.find('h2')).toHaveStyleRule('color', '#FFF');
-        expect(wrapper.find('h2')).toHaveStyleRule('font-family', 'Helvetica');
+        expect(wrapper.find('h2')).toHaveStyleRule('font-family', 'Montserrat,sans-serif');
         expect(wrapper.find('h2')).toHaveStyleRule('letter-spacing', '1.4px');
         expect(wrapper.find('h2')).toHaveStyleRule('font-size', '32px');
     });

@@ -15,10 +15,10 @@ const StyledHeader = styled.h2`
     font-size: ${ props => props.secondary ? props.theme.secondaryfs : props.theme.headfs };
     font-style: ${ props => props.secondary ? props.theme.secondaryfst : '' }
     border-bottom: ${ props => props.secondary ? props.theme.border : '' }
+    padding-bottom: ${ props => props.secondary ? props.theme.paddingb : '' }
 `;
 
 const SectionHeaderA = ( props ) => {
-    console.log(props.secondary);
     return (
         <SectionHeaderWrapper>
             <StyledHeader { ...props }>

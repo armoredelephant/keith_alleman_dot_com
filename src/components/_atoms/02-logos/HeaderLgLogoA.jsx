@@ -10,6 +10,7 @@ const HeaderLgLogoA = styled(Link)`
     margin: 0;
     padding: 0;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
     color: ${ props => props.theme.primarycolor };
     padding-bottom: 2px;
     overflow-x: hidden;

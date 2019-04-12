@@ -16,6 +16,7 @@
     "@babel/preset-react": "^7.0.0",
     "axios": "^0.18.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "dotenv": "^6.2.0",
     "dotenv-webpack": "^1.7.0",
     "enzyme-adapter-react-16": "^1.11.2",
@@ -32,6 +33,7 @@
     "yarn": "^1.13.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.4.3",
     "babel-jest": "^24.5.0",
     "css-loader": "^2.1.0",
     "enzyme": "^3.9.0",

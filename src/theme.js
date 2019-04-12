@@ -5,7 +5,7 @@ const defaultTheme = {
     boxshadow: '0 1px 1px 0 rgba(0, 0, 0, .1)',
     ls: '1.4px',
     headheight: '100px',
-    headff: 'Helvetica',
+    headff: 'Montserrat, sans-serif',
     headfs: '32px'
 }
 

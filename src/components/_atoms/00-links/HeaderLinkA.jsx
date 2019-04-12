@@ -9,6 +9,7 @@ const StyledHeaderLink = styled(Link)`
     overflow-x: hidden;
     position: relative;
     display: inline-flex;
+    font-family: 'Montserrat', sans-serif;
 
     &:active,
     &:hover {

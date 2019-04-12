@@ -9,6 +9,7 @@ const HeaderSmLogoA = styled(Link)`
     text-decoration: none;
     color: ${ props => props.theme.primarycolor };
     padding-bottom: 2px;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     position: relative;
     display: inline-flex;

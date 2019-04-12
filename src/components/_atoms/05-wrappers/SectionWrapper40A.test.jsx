@@ -2,11 +2,11 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 
-import GridWrapperA from './GridWrapperA.jsx';
+import SectionWrapper40A from './SectionWrapper40A.jsx';
 
-describe('GridWrapperA', () => {
+describe('<SectionWrapper40A>', () => {
     it('renders', () => {
-        const wrapper = shallow(<GridWrapperA />);
+        const wrapper = shallow(<SectionWrapper40A />);
         expect(wrapper).toBeTruthy();
     });
 });

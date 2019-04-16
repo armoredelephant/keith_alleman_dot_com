@@ -3,9 +3,17 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 // will import list item
+import InterestListItemA from '../../_atoms/01-list_items/InterestListItemsA.jsx';
 
 const InterestList = styled.ul`
+    width: 100%;
+    height: 100%;
+    padding: 0;
 
+    @media (max-width: 770px) {
+        width: 100%;
+        margin: 0 auto;
+    }
 `;
 
 const InterestListM = () => {
@@ -23,12 +31,13 @@ const InterestListM = () => {
     if (!interests) return null;
     return (
         <InterestList>
-            {/** ListItems */}
-            {/** ListItems */}
-            {/** ListItems */}
-            {/** ListItems */}
-            {/** ListItems */}
-            {/** ListItems */}
+            {/** make the map function space out with a timing function somehow? */}
+            {interests.map((interest, index) => (
+                <InterestListItemA 
+                    className={`interest-${index}`}
+                    interest={interest}
+                    key={index} />
+            ))}
         </InterestList>
     );
 }

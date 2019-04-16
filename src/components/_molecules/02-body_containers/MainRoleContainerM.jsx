@@ -12,12 +12,19 @@ const MainRole = styled.main`
     display: flex;
     flex-flow: row;
     justify-content: ${ props => props.align || '' };
+    
+    @media (max-width: 770px) {
+        &.about-page {
+            display: flex;
+            flex-flow: column;
+        }
+    }
 
     @media (max-width: 670px) {
         display: flex;
         flex-flow: column;
-        height: 100%;
     }
+
 `;
 
 const MainRoleContainerM = ( props ) => {

@@ -1,14 +1,30 @@
-import styled, { keyframes } from 'styled-components';
+import React from 'react';
+import styled from 'styled-components';
 import { fadeIn } from 'react-animations';
 
-const InterestListItemA = styled.li`
+const InterestListItem = styled.li`
+    list-style: none;
+    color: white;
+    font-family: ${ props => props.theme.headff }
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    line-height: 1.6em;
 
-    &.first {
-        animation: 1s ${ fadeIn };
+    &.interest-0 {
+        animation: ${ props => props.timing } ${ fadeIn };
     }
-
-    &.second 
 `;
+
+const InterestListItemA = ( props ) => {
+    return (
+        <React.Fragment>
+            {/** Icon here somehow? */}
+            <InterestListItem>
+            {props.interest}
+            </InterestListItem> 
+        </React.Fragment>
+    );
+}
 
 export default InterestListItemA;
 
@@ -24,3 +40,6 @@ export default InterestListItemA;
 // }
 
 
+/**
+ * just have one class but have a prop determine the animation time?
+ */

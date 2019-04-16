@@ -7,8 +7,10 @@ const SectionHeaderWrapper = styled.div`
 `;
 
 const StyledHeader = styled.h2`
+    white-space: nowrap;
+    overflow: hidden;
     text-align: center;
-    margin: auto;
+    margin: ${ props => props.margin ? 'auto 0' : 'auto' };
     font-family: ${ props => props.theme.headff };
     letter-spacing: ${ props => props.theme.ls };
     color: ${ props => props.theme.primarycolor };

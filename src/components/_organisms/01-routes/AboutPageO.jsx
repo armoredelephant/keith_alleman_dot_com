@@ -31,10 +31,10 @@ const theme = {
 const AboutPageO = () => {
     return (
         <ThemeProvider theme={theme}>
-            <MainRoleContainerM>
-                <SectionWrapper40A>
+            <MainRoleContainerM className='about-page'>
+                <SectionWrapper40A className='about'>
                     <InterestsWrapperA>
-                        <SectionHeaderA header={ 'Interests & Hobbies' } secondary='true' />
+                        <SectionHeaderA margin={true} header={ 'Interests & Hobbies' } secondary='true' />
                         <InterestListM />
                     {/** Photo and design in here maybe not use grid?*/}
                     </InterestsWrapperA>

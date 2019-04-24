@@ -22,12 +22,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>8/8</span>
+        <span class='fraction'>11/11</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">50% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>1/2</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>8/8</span>
+        <span class='fraction'>11/11</span>
       </div>
     </div>
     <p class="quiet">
@@ -105,7 +105,17 @@
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
 <a name='L59'></a><a href='#L59'>59</a>
-<a name='L60'></a><a href='#L60'>60</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -155,6 +165,7 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,13 +175,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 &nbsp;
 const StyledHeaderLink = styled(Link)`
     text-decoration: none;
-    color: ${ props =&gt; props.theme.primarycolor };
+    color: ${props =&gt; props.theme.primarycolor};
     padding-bottom: 2px;
     overflow-x: hidden;
     position: relative;
@@ -179,7 +198,7 @@ const StyledHeaderLink = styled(Link)`
 &nbsp;
     &amp;:active,
     &amp;:hover {
-        color: ${ props =&gt; props.theme.primarycolor };
+        color: ${props =&gt; props.theme.primarycolor};
     }
 &nbsp;
     &amp;.section-link {
@@ -189,7 +208,7 @@ const StyledHeaderLink = styled(Link)`
             bottom: 0;
             left: 0;
             height: 1px;
-            background: ${ props =&gt; props.theme.secondarycolor };
+            background: ${props =&gt; props.theme.secondarycolor};
             width: 100%;
             transform: translate3d(-110%, 0, 0);
             -webkit-transform: translate3d(-110%, 0, 0);
@@ -206,30 +225,38 @@ const StyledHeaderLink = styled(Link)`
     &amp;.section-link-active {
         border-bottom-width: 1px;
         border-bottom-style: solid;
-        border-bottom-color: ${ props =&gt; props.theme.secondarycolor }
+        border-bottom-color: ${props =&gt; props.theme.secondarycolor}
     }
 &nbsp;
 `;
 &nbsp;
-const HeaderLinkA = ( props ) =&gt; {
-    const page = props.name.toLowerCase();
-    return (
-        &lt;StyledHeaderLink {...props } to={`/${ page }`}
-            className={ props.testclass ||  window.location.pathname === `/${ page }` ? 
-            'section-link-active'
-            : 'section-link' } &gt;
-        { props.name }
-        &lt;/StyledHeaderLink&gt;
-    )
-}
+const HeaderLinkA = (props) =&gt; {
+  const { name } = props;
+  const page = name.toLowerCase();
+  return (
+    &lt;StyledHeaderLink
+      {...props}
+      to={`/${page}`}
+      className={window.location.pathname === `/${page}`
+        ? <span class="branch-0 cbranch-no" title="branch not covered" >'section-link-active'</span>
+        : 'section-link'}
+    &gt;
+      {name}
+    &lt;/StyledHeaderLink&gt;
+  );
+};
 &nbsp;
-export default HeaderLinkA;</pre></td></tr>
+export default HeaderLinkA;
+&nbsp;
+HeaderLinkA.propTypes = { name: PropTypes.string };
+HeaderLinkA.defaultProps = { name: 'About' };
+&nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Apr 11 2019 18:44:09 GMT-0600 (MDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 23 2019 14:20:34 GMT-0600 (MDT)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

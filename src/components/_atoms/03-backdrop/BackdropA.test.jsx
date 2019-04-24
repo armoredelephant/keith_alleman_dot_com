@@ -5,9 +5,8 @@ import 'jest-styled-components';
 import BackdropA from './BackdropA.jsx';
 
 describe('BackdropA', () => {
-    it('renders', () => {
-        const wrapper = shallow(<BackdropA />);
-        expect(wrapper).toBeTruthy();
-    });
+  it('renders', () => {
+    const wrapper = shallow(<BackdropA />);
+    expect(wrapper).toBeTruthy();
+  });
 });
-

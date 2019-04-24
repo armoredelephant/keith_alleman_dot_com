@@ -1,12 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import 'jest-styled-components';
 
-import InterestsWrapperA from './InterestsWrapperA.jsx';
+import InterestsWrapperA from './InterestsWrapperA';
 
 describe('<InterestsWrapperA>', () => {
-    it('renders', () => {
-        const wrapper = shallow(<InterestsWrapperA />);
-        expect(wrapper).toBeTruthy();
-    });
+  it('renders', () => {
+    const wrapper = shallow(<InterestsWrapperA />);
+    expect(wrapper).toBeTruthy();
+  });
 });

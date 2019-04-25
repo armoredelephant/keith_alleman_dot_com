@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledHeaderSandwich = styled.a`
@@ -106,14 +107,33 @@ const SandwichBar = styled.div`
 `;
 
 // change to use onMouseEnter/onMouseLeave instead of hover from css?
-const HeaderNavSandwichM = props => (
-  <StyledHeaderSandwich
-    onClick={props.handleAnimation}
-    className={props.activeSandwich ? 'nav-bar-active' : 'nav-bar-animation'}
-  >
-    <SandwichBar />
-    <SandwichBar />
-    <SandwichBar />
-  </StyledHeaderSandwich>
-);
+const HeaderNavSandwichM = props => {
+  const { handleAnimation, activeSandwich } = props;
+  return (
+    <StyledHeaderSandwich
+      onClick={handleAnimation}
+      className={
+        activeSandwich === 'true' // prettier-ignore
+          ? 'nav-bar-active'
+          : 'nav-bar-animation'
+      }
+    >
+      <SandwichBar />
+      <SandwichBar />
+      <SandwichBar />
+    </StyledHeaderSandwich>
+  );
+};
 export default HeaderNavSandwichM;
+
+HeaderNavSandwichM.propTypes = {
+  handleAnimation: PropTypes.func,
+  activeSandwich: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
+};
+
+HeaderNavSandwichM.defaultProps = {
+  handleAnimation: a => {
+    return a;
+  },
+  activeSandwich: 'false'
+};

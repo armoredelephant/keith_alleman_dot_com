@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import HeaderLinkA from '../00-links/HeaderLinkA';
+import HeaderLinkA from '@A/00-links/HeaderLinkA';
 
 const StyledHeaderListItem = styled.li`
   margin-right: 15px;
@@ -19,10 +19,10 @@ const StyledHeaderSpan = styled.span`
 `;
 
 const HeaderListItemA = props => {
-  const { last } = props;
+  const { last, link, name } = props;
   return (
-    <StyledHeaderListItem>
-      <HeaderLinkA {...props} />
+    <StyledHeaderListItem key={link}>
+      <HeaderLinkA name={name} />
       <StyledHeaderSpan last={last}>&#x2022;</StyledHeaderSpan>
     </StyledHeaderListItem>
   );
@@ -30,5 +30,13 @@ const HeaderListItemA = props => {
 
 export default HeaderListItemA;
 
-HeaderListItemA.propTypes = { last: PropTypes.string };
-HeaderListItemA.defaultProps = { last: 'false' };
+HeaderListItemA.propTypes = {
+  last: PropTypes.string,
+  link: PropTypes.string,
+  name: PropTypes.string
+};
+HeaderListItemA.defaultProps = {
+  last: 'false',
+  link: 'About',
+  name: 'About'
+};

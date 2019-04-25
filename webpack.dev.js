@@ -68,9 +68,9 @@ module.exports = {
       Components: path.resolve(paths.appSrc, 'components'),
       Containers: path.resolve(paths.appSrc, 'containers'),
       Utils: path.resolve(paths.appSrc, 'utils'),
-      A: path.resolve(paths.appComponents, '_atoms'), // atom
-      M: path.resolve(paths.appComponents, '_molecules'), // molelcule
-      O: path.resolve(paths.appComponents, '_organisms'), // organism
+      '@A': path.resolve(paths.appComponents, '_atoms'), // atom
+      '@M': path.resolve(paths.appComponents, '_molecules'), // molelcule
+      '@O': path.resolve(paths.appComponents, '_organisms'), // organism
     },
   }
 };

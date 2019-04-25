@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 
-import HeaderNavListContainerM from './HeaderNavListContainerM.jsx';
+import HeaderNavListContainerM from './HeaderNavListContainerM';
 
 describe('HeaderNavListContainerM', () => {
   it('renders', () => {

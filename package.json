@@ -65,7 +65,12 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "moduleNameMapper": {
+      "@A(.*)$": "<rootDir>/src/components/_atoms/$1",
+      "@M(.*)$": "<rootDir>/src/components/_molecules/$1",
+      "@O(.*)$": "<rootDir>/src/components/_organisms/$1"
+    }
   },
   "lint-staged": {
     "*.{js,jsx}": [

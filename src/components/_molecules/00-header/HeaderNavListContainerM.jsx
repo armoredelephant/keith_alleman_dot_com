@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { fadeInDown } from 'react-animations';
 
-import HeaderListItemA from 'A/01-list_items/HeaderListItemA';
+import HeaderListItemA from '@A/01-list_items/HeaderListItemA';
 
 const fadeInAnimation = keyframes`${fadeInDown}`;
 
@@ -43,5 +43,10 @@ const HeaderNavListContainerM = props => {
 
 export default HeaderNavListContainerM;
 
-HeaderNavListContainerM.propTypes = { children: PropTypes.array };
+HeaderNavListContainerM.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element, // prettier-ignore
+    PropTypes.arrayOf(PropTypes.element)
+  ])
+};
 HeaderNavListContainerM.defaultProps = { children: [<HeaderListItemA />] };

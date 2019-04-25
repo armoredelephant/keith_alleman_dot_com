@@ -1,12 +1,11 @@
 import React from 'react';
 
 // Footer Contaner - Molecule
-import FooterContainerM from '../../_molecules/03-footer/FooterContainerM';
+import FooterContainerM from '@M/03-footer/FooterContainerM';
 
 const FooterO = () => {
   return (
     <FooterContainerM>
-      {/** placeholder */}
       <div>Test</div>
     </FooterContainerM>
   );

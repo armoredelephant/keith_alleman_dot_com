@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // linear-gradient(146deg, #252627, #252627 54.8%, #95d5d2 55%);
@@ -44,7 +45,19 @@ const StyledModal = styled.div`
 `;
 
 const ModalM = props => {
-  return <StyledModal>{props.children}</StyledModal>;
+  const { children } = props;
+  return <StyledModal>{children}</StyledModal>;
 };
 
 export default ModalM;
+
+ModalM.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element, // prettier-ignore
+    PropTypes.arrayOf(PropTypes.element)
+  ])
+};
+
+ModalM.defaultProps = {
+  children: <div />
+};

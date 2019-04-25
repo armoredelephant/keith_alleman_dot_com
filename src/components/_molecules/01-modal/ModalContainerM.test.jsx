@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 
-import ModalContainerM from './ModalContainerM.jsx';
+import ModalContainerM from './ModalContainerM';
 
 describe('ModalContainerM', () => {
   it('renders', () => {

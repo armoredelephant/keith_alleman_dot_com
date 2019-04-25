@@ -4,16 +4,13 @@ import { shallow } from 'enzyme';
 
 // This will have to use hook testing.
 
-import AboutParagraph from './AboutParagraph';
+import AboutParagraphA from './AboutParagraphA';
 
-describe('<AboutParagraph />', () => {
+describe('<AboutParagraphA />', () => {
   let wrapper;
-  const props = {
-    paragraph: 'filler'
-  };
 
   it('renders', () => {
-    wrapper = shallow(<AboutParagraph />);
+    wrapper = shallow(<AboutParagraphA />);
     expect(wrapper).toBeTruthy();
   });
   it('is themed with custom styles', () => {
@@ -24,7 +21,7 @@ describe('<AboutParagraph />', () => {
 
     wrapper = global.StyledComponents.mountWithTheme(
       <MemoryRouter>
-        <AboutParagraph paragraph="test" />
+        <AboutParagraphA paragraph="test" />
       </MemoryRouter>,
       customTheme
     );

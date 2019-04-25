@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import styled from 'styled-components';
 
 const StyledHeaderLink = styled(Link)`
@@ -50,9 +51,13 @@ const HeaderLinkA = props => {
   const page = name.toLowerCase();
   return (
     <StyledHeaderLink
-      {...props}
-      to={`/${page}`}
-      className={window.location.pathname === `/${page}` ? 'section-link-active' : 'section-link'}
+      smooth
+      to={`/#${page}`}
+      className={
+        window.location.pathname === `/${page}` // prettier-ignore
+          ? 'section-link-active'
+          : 'section-link'
+      }
     >
       {name}
     </StyledHeaderLink>

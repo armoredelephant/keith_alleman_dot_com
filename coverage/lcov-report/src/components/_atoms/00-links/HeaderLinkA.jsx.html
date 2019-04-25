@@ -114,21 +114,13 @@
 <a name='L66'></a><a href='#L66'>66</a>
 <a name='L67'></a><a href='#L67'>67</a>
 <a name='L68'></a><a href='#L68'>68</a>
-<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,15 +131,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -162,7 +146,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
@@ -180,66 +180,69 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 &nbsp;
 const StyledHeaderLink = styled(Link)`
-    text-decoration: none;
+  text-decoration: none;
+  color: ${props =&gt; props.theme.primarycolor};
+  padding-bottom: 2px;
+  overflow-x: hidden;
+  position: relative;
+  display: inline-flex;
+  font-family: 'Montserrat', sans-serif;
+&nbsp;
+  &amp;:active,
+  &amp;:hover {
     color: ${props =&gt; props.theme.primarycolor};
-    padding-bottom: 2px;
-    overflow-x: hidden;
-    position: relative;
-    display: inline-flex;
-    font-family: 'Montserrat', sans-serif;
+  }
 &nbsp;
-    &amp;:active,
-    &amp;:hover {
-        color: ${props =&gt; props.theme.primarycolor};
+  &amp;.section-link {
+    &amp;:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: ${props =&gt; props.theme.secondarycolor};
+      width: 100%;
+      transform: translate3d(-110%, 0, 0);
+      -webkit-transform: translate3d(-110%, 0, 0);
+      transition: transform 0.3s ease-in-out;
+      -webkit-transition: transform 0.3s ease-in-out;
     }
 &nbsp;
-    &amp;.section-link {
-        &amp;:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 1px;
-            background: ${props =&gt; props.theme.secondarycolor};
-            width: 100%;
-            transform: translate3d(-110%, 0, 0);
-            -webkit-transform: translate3d(-110%, 0, 0);
-            transition: transform .3s ease-in-out;
-            -webkit-transition: transform .3s ease-in-out;
-        }
-&nbsp;
-        &amp;:hover:after {
-            transform: translate3d(0%, 0, 0);
-            -webkit-transform: translate3d(0%, 0, 0);
-        }
+    &amp;:hover:after {
+      transform: translate3d(0%, 0, 0);
+      -webkit-transform: translate3d(0%, 0, 0);
     }
+  }
 &nbsp;
-    &amp;.section-link-active {
-        border-bottom-width: 1px;
-        border-bottom-style: solid;
-        border-bottom-color: ${props =&gt; props.theme.secondarycolor}
-    }
-&nbsp;
+  &amp;.section-link-active {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: ${props =&gt; props.theme.secondarycolor};
+  }
 `;
 &nbsp;
-const HeaderLinkA = (props) =&gt; {
+const HeaderLinkA = props =&gt; {
   const { name } = props;
   const page = name.toLowerCase();
   return (
     &lt;StyledHeaderLink
       {...props}
       to={`/${page}`}
-      className={window.location.pathname === `/${page}`
-        ? <span class="branch-0 cbranch-no" title="branch not covered" >'section-link-active'</span>
-        : 'section-link'}
+      className={
+        window.location.pathname === `/${page}` // prettier-ignore
+          ? <span class="branch-0 cbranch-no" title="branch not covered" >'section-link-active'</span>
+          : 'section-link'
+      }
     &gt;
       {name}
     &lt;/StyledHeaderLink&gt;
@@ -256,7 +259,7 @@ HeaderLinkA.defaultProps = { name: 'About' };
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Apr 23 2019 14:20:34 GMT-0600 (MDT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Apr 24 2019 19:33:25 GMT-0600 (MDT)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

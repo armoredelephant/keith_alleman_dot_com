@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 
 // HeaderContainer - Molecule
-import HeaderContainerM from 'M/00-header/HeaderContainerM';
+import HeaderContainerM from '@M/00-header/HeaderContainerM';
 
 // HeaderNavListContainer - Molecule
-import HeaderNavListContainerM from 'M/00-header/HeaderNavListContainerM';
-import HeaderListItemA from 'A/01-list_items/HeaderListItemA';
+import HeaderNavListContainerM from '@M/00-header/HeaderNavListContainerM';
+import HeaderListItemA from '@A/01-list_items/HeaderListItemA';
 
 // HeaderLogoContainer - Molecule
-import HeaderLogoContainerM from 'M/00-header/HeaderLogoContainerM';
-import HeaderLgLogoA from 'A/02-logos/HeaderLgLogoA';
-import HeaderSmLogoA from 'A/02-logos/HeaderSmLogoA';
+import HeaderLogoContainerM from '@M/00-header/HeaderLogoContainerM';
+import HeaderLgLogoA from '@A/02-logos/HeaderLgLogoA';
+import HeaderSmLogoA from '@A/02-logos/HeaderSmLogoA';
 
 // NavSandwich - Molecule
-import HeaderNavSandwichM from 'M/00-header/HeaderNavSandwichM';
+import HeaderNavSandwichM from '@M/00-header/HeaderNavSandwichM';
 
 // Modal - Molecule
-import ModalContainerM from 'M/01-modal/ModalContainerM';
+import ModalContainerM from '@M/01-modal/ModalContainerM';
 
 const theme = {
   bg: '#252627',
@@ -30,6 +30,7 @@ const HeaderO = () => {
   const [activeModal, setActiveModal] = useState(false);
   const [activeSandwich, setActiveSandwich] = useState(false);
   const [scroll, setScroll] = useState(0);
+  const links = ['About', 'Projects', 'Work'];
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -61,14 +62,22 @@ const HeaderO = () => {
       <HeaderContainerM className={classSwitch()}>
         {/** left-side logos */}
         <HeaderLogoContainerM>
-          <HeaderSmLogoA to="/">KA</HeaderSmLogoA>
-          <HeaderLgLogoA to="/">Keith Alleman</HeaderLgLogoA>
+          <HeaderSmLogoA smooth to="/#about">
+            KA
+          </HeaderSmLogoA>
+          <HeaderLgLogoA smooth to="/#about">
+            Keith Alleman
+          </HeaderLgLogoA>
         </HeaderLogoContainerM>
         {/** middle nav */}
         <HeaderNavListContainerM>
-          <HeaderListItemA name="About" />
-          <HeaderListItemA name="Projects" />
-          <HeaderListItemA name="Work" last="true" />
+          {links.map((link, index) => (
+            <HeaderListItemA
+              key={link}
+              name={link}
+              last={index === links.length - 1 ? 'true' : 'false'}
+            />
+          ))}
         </HeaderNavListContainerM>
         {/** nav sandwich button */}
         <HeaderNavSandwichM

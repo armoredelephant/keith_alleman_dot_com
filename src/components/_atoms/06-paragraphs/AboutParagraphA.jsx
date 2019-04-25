@@ -18,7 +18,7 @@ const StyledParagraph = styled.p`
   }
 `;
 
-const AboutParagraph = () => {
+const AboutParagraphA = () => {
   const [paragraph, setParagraph] = useState(null);
 
   useEffect(() => {
@@ -34,4 +34,4 @@ const AboutParagraph = () => {
   return <StyledParagraph>{paragraph}</StyledParagraph>;
 };
 
-export default AboutParagraph;
+export default AboutParagraphA;

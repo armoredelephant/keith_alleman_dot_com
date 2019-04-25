@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/components/_molecules/02-body_containers/MainRoleContainerM.jsx</title>
+    <title>Code coverage report for src/components/_molecules/00-header/HeaderNavListContainerM.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../../prettify.css" />
     <link rel="stylesheet" href="../../../../base.css" />
@@ -16,28 +16,28 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="../../../../index.html">All files</a> / <a href="index.html">src/components/_molecules/02-body_containers</a> MainRoleContainerM.jsx
+      <a href="../../../../index.html">All files</a> / <a href="index.html">src/components/_molecules/00-header</a> HeaderNavListContainerM.jsx
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/2</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>8/8</span>
       </div>
     </div>
     <p class="quiet">
@@ -98,8 +98,22 @@
 <a name='L50'></a><a href='#L50'>50</a>
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
-<a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -115,25 +129,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -148,63 +149,59 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { fadeInDown } from 'react-animations';
 &nbsp;
-const MainRole = styled.main`
-  background: #252627;
-  min-height: 1000px;
-  max-height: 1000px;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  padding-top: 70px;
-  padding-left: 30px;
-  padding-right: 30px;
-  display: flex;
-  flex-flow: row;
-  justify-content: ${props =&gt; props.align || ''};
+import HeaderListItemA from '@A/01-list_items/HeaderListItemA';
 &nbsp;
-  @media (max-width: 983px) {
-    &amp;.about-page {
-      display: flex;
-      flex-flow: column;
-      margin: 0 auto;
-    }
-  }
+const fadeInAnimation = keyframes`${fadeInDown}`;
 &nbsp;
-  @media (max-width: 670px) {
-    display: flex;
-    flex-flow: column;
+const HeaderNav = styled.nav`
+  visiblity: hidden;
+&nbsp;
+  @media (min-width: 670px) {
+    margin: auto;
+    visibility: visible;
+    animation: 1s ${fadeInAnimation};
   }
 `;
 &nbsp;
-const MainRoleContainerM = props =&gt; {
+const ListContainer = styled.ul`
+  visibility: hidden;
+&nbsp;
+  @media (min-width: 670px) {
+    visibility: visible;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    flex-flow: row;
+    justify-content: flex-end;
+    text-align: center;
+    letter-spacing: 1.8px;
+  }
+`;
+&nbsp;
+const HeaderNavListContainerM = props =&gt; {
   const { children } = props;
   return (
-    &lt;MainRole {...props} role="main"&gt;
-      {children}
-    &lt;/MainRole&gt;
+    &lt;HeaderNav&gt;
+      &lt;ListContainer&gt;{children}&lt;/ListContainer&gt;
+    &lt;/HeaderNav&gt;
   );
 };
 &nbsp;
-export default MainRoleContainerM;
+export default HeaderNavListContainerM;
 &nbsp;
-MainRoleContainerM.propTypes = {
+HeaderNavListContainerM.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element, // prettier-ignore
     PropTypes.arrayOf(PropTypes.element)
   ])
 };
-&nbsp;
-MainRoleContainerM.defaultProps = {
-  children: &lt;div /&gt;
-};
+HeaderNavListContainerM.defaultProps = { children: [&lt;HeaderListItemA /&gt;] };
 &nbsp;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 // will import list item
-import InterestListItemA from 'A/01-list_items/InterestListItemsA';
+import InterestListItemA from '@A/01-list_items/InterestListItemsA';
 
 const InterestList = styled.ul`
   width: 100%;

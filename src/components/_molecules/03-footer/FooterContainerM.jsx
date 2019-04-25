@@ -1,5 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
+import AboutParagraphA from '@A/06-paragraphs/AboutParagraphA';
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -10,7 +13,19 @@ const FooterContainer = styled.footer`
 `;
 
 const FooterContainerM = props => {
-  return <FooterContainer>{props.children}</FooterContainer>;
+  const { children } = props;
+  return <FooterContainer>{children}</FooterContainer>;
 };
 
 export default FooterContainerM;
+
+FooterContainerM.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element, // prettier-ignore
+    PropTypes.arrayOf(PropTypes.element)
+  ])
+};
+
+FooterContainerM.defaultProps = {
+  children: <AboutParagraphA />
+};

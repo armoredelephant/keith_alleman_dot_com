@@ -2,21 +2,21 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 // <Main role='main'> container - Molecule
-import MainRoleContainerM from 'M/02-body_containers/MainRoleContainerM';
+import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
 
 // placeholder
-import SectionWrapperAutoA from 'A/05-wrappers/SectionWrapperAutoA';
-import SectionHeaderA from 'A/04-headers/SectionHeaderA';
+import SectionWrapperAutoA from '@A/05-wrappers/SectionWrapperAutoA';
+import SectionHeaderA from '@A/04-headers/SectionHeaderA';
 
 // Left Side Wrapper - Atom
-import SectionWrapper40A from 'A/05-wrappers/SectionWrapper40A';
-import InterestsWrapperA from 'A/05-wrappers/InterestsWrapperA';
+import SectionWrapper40A from '@A/05-wrappers/SectionWrapper40A';
+import InterestsWrapperA from '@A/05-wrappers/InterestsWrapperA';
 
 // InterestList - Molecule
-import InterestListM from 'M/04-list_containers/InterestListM';
+import InterestListM from '@M/04-list_containers/InterestListM';
 
 // Paragraph - Atom
-import AboutParagraph from 'A/06-paragraphs/AboutParagraph';
+import AboutParagraphA from '@A/06-paragraphs/AboutParagraphA';
 
 const theme = {
   headheight: '100px',
@@ -36,7 +36,7 @@ const theme = {
 const AboutPageO = () => {
   return (
     <ThemeProvider theme={theme}>
-      <MainRoleContainerM className="about-page">
+      <MainRoleContainerM id="about" className="about-page">
         <SectionWrapper40A className="about-l">
           <InterestsWrapperA>
             <SectionHeaderA
@@ -50,7 +50,7 @@ const AboutPageO = () => {
         </SectionWrapper40A>
         <SectionWrapperAutoA className="about-r" margin="0 auto 0 0">
           <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
-          <AboutParagraph />
+          <AboutParagraphA />
           {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
         </SectionWrapperAutoA>
       </MainRoleContainerM>

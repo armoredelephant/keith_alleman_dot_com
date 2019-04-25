@@ -15,13 +15,19 @@ const StyledHeader = styled.h2`
   font-family: ${props => props.theme.headff};
   letter-spacing: ${props => props.theme.ls};
   color: ${props => props.theme.primarycolor};
-  font-size: ${props => (props.secondary ? props.theme.secondaryfs : props.theme.headfs)};
   font-style: ${props => (props.secondary ? props.theme.secondaryfst : '')};
   padding-bottom: ${props => (props.secondary ? props.theme.paddingb : '')};
+  font-size: ${props =>
+    props.secondary // prettier-ignore
+      ? props.theme.secondaryfs
+      : props.theme.headfs};
 
   @media (max-width: 660px) {
-    font-size: ${props => (props.secondary ? props.theme.secondaryfs : props.theme.mobilefont)};
     margin: ${props => (props.secondary ? '' : 'auto 0')};
+    font-size: ${props =>
+      props.secondary // prettier-ignore
+        ? props.theme.secondaryfs
+        : props.theme.mobilefont};
   }
 `;
 

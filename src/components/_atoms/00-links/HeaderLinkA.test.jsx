@@ -60,8 +60,9 @@ describe('HeaderLinkA', () => {
       modifier: ':hover'
     });
     expect(wrapper.find('Link')).toBeTruthy();
-    expect(wrapper.find('Link')).toHaveStyleRule('border-bottom-color', 'black', {
-      modifier: '&.section-link-active'
-    });
+    expect(wrapper.find('Link')) // prettier-ignore
+      .toHaveStyleRule('border-bottom-color', 'black', {
+        modifier: '&.section-link-active'
+      });
   });
 });

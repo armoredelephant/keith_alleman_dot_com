@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { fadeInLeft } from 'react-animations';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const fadeInAnimation = keyframes`${fadeInLeft}`;
 

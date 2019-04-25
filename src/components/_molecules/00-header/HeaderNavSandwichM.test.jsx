@@ -1,17 +1,25 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
-import HeaderNavSandwichM from './HeaderNavSandwichM.jsx';
+import HeaderNavSandwichM from './HeaderNavSandwichM';
 
 describe('HeaderNavSandwichM', () => {
+  let wrapper;
   it('renders /wo props', () => {
-    const wrapper = shallow(<HeaderNavSandwichM />);
+    wrapper = shallow(<HeaderNavSandwichM />);
     expect(wrapper).toBeTruthy();
   });
 
   it('renders /w props', () => {
-    const wrapper = shallow(<HeaderNavSandwichM activeSandwich="true" />);
-    expect(wrapper).toBeTruthy();
+    wrapper = shallow(<HeaderNavSandwichM activeSandwich="true" />);
+    expect(wrapper.find('.nav-bar-active')).toBeTruthy();
+  });
+
+  it('defaultProps is defined', () => {
+    wrapper = mount(<HeaderNavSandwichM />);
+    const props = wrapper.props();
+    expect(props).toBeTruthy();
+    expect(props.handleAnimation('working')).toBe('working');
   });
 });

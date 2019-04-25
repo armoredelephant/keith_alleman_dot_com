@@ -8,8 +8,8 @@ import React from 'react';
  * (152,164,196) - 98A4C4 - purple/blue
  */
 
-import BackdropA from 'A/03-backdrop/BackdropA.jsx';
-import ModalM from './ModalM.jsx';
+import BackdropA from '@A/03-backdrop/BackdropA';
+import ModalM from './ModalM';
 
 const ModalContainerM = () => {
   return (

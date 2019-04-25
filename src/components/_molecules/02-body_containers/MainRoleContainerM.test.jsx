@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
-import MainRoleContainerM from './MainRoleContainerM.jsx';
+import MainRoleContainerM from './MainRoleContainerM';
 
 describe('MainRoleContainerM', () => {
   // enzyme
@@ -13,12 +13,12 @@ describe('MainRoleContainerM', () => {
   });
 
   it('renders justify-content /w prop', () => {
-    const wrapper = mount(<MainRoleContainerM align="space-between" />); // enzyme
-    expect(wrapper).toHaveStyleRule('justify-content', 'space-between'); // jest-styled-components
+    const wrapper = mount(<MainRoleContainerM align="space-between" />);
+    expect(wrapper).toHaveStyleRule('justify-content', 'space-between');
   });
 
   it('renders justify-content /wo prop', () => {
     const wrapper = mount(<MainRoleContainerM />);
-    expect(wrapper).toHaveStyleRule('justify-content', undefined); // falsey styled componenet, checks if ''
+    expect(wrapper).toHaveStyleRule('justify-content', undefined);
   });
 });

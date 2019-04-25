@@ -16,6 +16,7 @@ describe('<InterestListItemA />', () => {
         <InterestListItemA />
       </MemoryRouter>
     );
-    expect(wrapper.find('li')).toHaveStyleRule('font-family', 'Montserrat,sans-serif');
+    expect(wrapper.find('li')) // prettier-ignore
+      .toHaveStyleRule('font-family', 'Montserrat,sans-serif');
   });
 });

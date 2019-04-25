@@ -12,10 +12,14 @@ describe('<SectionHeaderA>', () => {
   });
 
   it('is themed with default styles', () => {
-    wrapper = global.StyledComponents.mountWithTheme(<SectionHeaderA header="test" />);
+    wrapper = global.StyledComponents.mountWithTheme(
+      // prettier-ignore
+      <SectionHeaderA header="test" />
+    );
     expect(wrapper.find('div')).toHaveStyleRule('height', '100px');
     expect(wrapper.find('h2')).toHaveStyleRule('color', '#FFF');
-    expect(wrapper.find('h2')).toHaveStyleRule('font-family', 'Montserrat,sans-serif');
+    expect(wrapper.find('h2')) // prettier-ignore
+      .toHaveStyleRule('font-family', 'Montserrat,sans-serif');
     expect(wrapper.find('h2')).toHaveStyleRule('letter-spacing', '1.4px');
     expect(wrapper.find('h2')).toHaveStyleRule('font-size', '32px');
   });

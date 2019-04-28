@@ -6,11 +6,14 @@ const StyledParagraph = styled.p`
   height: 100%;
   margin: auto 0;
   overflow: hidden;
-  width: 70%;
+  width: 80%;
   white-space: no-wrap;
+  line-height: 140%;
+  letter-spacing: 1.5px;
   color: ${props => props.theme.sectionfc};
   font-family: ${props => props.theme.headff};
-  font-size: 15px;
+  font-size: 16px;
+  text-indent: 2em;
 
   @media (max-width: 983px) {
     margin: 0;

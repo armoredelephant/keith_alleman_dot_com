@@ -19,7 +19,7 @@ const InterestListItem = styled.li`
   list-style: none;
   color: ${props => props.theme.sectionfc};
   font-family: ${props => props.theme.headff};
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 1.2px;
   line-height: 1.6em;
   animation: 1s ${fadeInAnimation} ${props => `${props.count}s`};

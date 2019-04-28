@@ -22,7 +22,7 @@ const theme = {
   headheight: '100px',
   headff: 'Montserrat, sans-serif',
   headfs: '38px',
-  ls: '2px',
+  ls: '1.5px',
   primarycolor: '#dfdfdf',
   secondarycolor: '#b7b7b7',
   secondaryfs: '18px',
@@ -30,7 +30,7 @@ const theme = {
   border: '1px solid #95d5d2',
   paddingb: '3px',
   sectionfc: 'rgb(255, 255, 255, .7)',
-  mobilefont: '20px'
+  mobilefont: '25px'
 };
 
 const AboutPageO = () => {

@@ -5,30 +5,10 @@ import { MemoryRouter, Route } from 'react-router-dom';
 import HeaderLinkA from './HeaderLinkA';
 
 describe('HeaderLinkA', () => {
-  it('renders color /w prop', () => {
-    const wrapper = mount(
-      <MemoryRouter initialEntries={['/about']}>
-        <Route
-          component={props => (
-            <HeaderLinkA
-              {...props}
-              name="about"
-              test="about"
-              theme={{ primarycolor: 'white', secondarycolor: 'black' }}
-            />
-          )}
-          path="/about"
-        />
-      </MemoryRouter>
-    );
-    expect(wrapper.find('Link')).toHaveStyleRule('color', 'white');
-    expect(wrapper.find('Link')).toHaveStyleRule('color', 'white', {
-      modifier: ':hover'
-    });
-  });
-
+  let wrapper;
+  let customTheme;
   it('is themed with default styles, when theme is missing', () => {
-    const wrapper = global.StyledComponents.mountWithTheme(
+    wrapper = global.StyledComponents.mountWithTheme(
       <MemoryRouter initialEntries={['/about']}>
         <React.Fragment>
           <HeaderLinkA name="about" testclass="section-link-active" />,
@@ -43,11 +23,11 @@ describe('HeaderLinkA', () => {
   });
 
   it('is themed with custom styles', () => {
-    const customTheme = {
+    customTheme = {
       primarycolor: 'black',
       secondarycolor: 'black'
     };
-    const wrapper = global.StyledComponents.mountWithTheme(
+    wrapper = global.StyledComponents.mountWithTheme(
       <MemoryRouter initialEntries={['/about']}>
         <React.Fragment>
           <HeaderLinkA name="about" testclass="section-link-active" />,

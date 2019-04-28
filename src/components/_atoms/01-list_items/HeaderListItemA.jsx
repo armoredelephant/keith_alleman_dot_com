@@ -19,9 +19,9 @@ const StyledHeaderSpan = styled.span`
 `;
 
 const HeaderListItemA = props => {
-  const { last, link, name } = props;
+  const { last, name } = props;
   return (
-    <StyledHeaderListItem key={link}>
+    <StyledHeaderListItem>
       <HeaderLinkA name={name} />
       <StyledHeaderSpan last={last}>&#x2022;</StyledHeaderSpan>
     </StyledHeaderListItem>
@@ -32,11 +32,9 @@ export default HeaderListItemA;
 
 HeaderListItemA.propTypes = {
   last: PropTypes.string,
-  link: PropTypes.string,
   name: PropTypes.string
 };
 HeaderListItemA.defaultProps = {
   last: 'false',
-  link: 'About',
   name: 'About'
 };

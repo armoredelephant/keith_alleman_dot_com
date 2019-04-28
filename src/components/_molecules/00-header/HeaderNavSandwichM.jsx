@@ -113,7 +113,7 @@ const HeaderNavSandwichM = props => {
     <StyledHeaderSandwich
       onClick={handleAnimation}
       className={
-        activeSandwich === 'true' // prettier-ignore
+        activeSandwich === true // prettier-ignore
           ? 'nav-bar-active'
           : 'nav-bar-animation'
       }

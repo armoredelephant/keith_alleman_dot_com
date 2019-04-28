@@ -71,13 +71,16 @@ const HeaderO = () => {
         </HeaderLogoContainerM>
         {/** middle nav */}
         <HeaderNavListContainerM>
-          {links.map((link, index) => (
-            <HeaderListItemA
-              key={link}
-              name={link}
-              last={index === links.length - 1 ? 'true' : 'false'}
-            />
-          ))}
+          {links.map((link, index) => {
+            const count = index + 1;
+            return (
+              <HeaderListItemA
+                key={count}
+                name={link}
+                last={index === links.length - 1 ? 'true' : 'false'}
+              />
+            );
+          })}
         </HeaderNavListContainerM>
         {/** nav sandwich button */}
         <HeaderNavSandwichM

@@ -18,13 +18,13 @@ describe('<AboutParagraphA />', () => {
       sectionfc: 'white',
       headff: 'Arial'
     };
-
+    // needs to setParagraph to set the state? Can't be passed down.
     wrapper = global.StyledComponents.mountWithTheme(
       <MemoryRouter>
         <AboutParagraphA paragraph="test" />
       </MemoryRouter>,
       customTheme
     );
-    expect(wrapper.find('StyledParagraph')).toHaveStyleRule('color', 'white');
+    expect(wrapper.find('p')).toHaveStyleRule('color', 'white');
   });
 });

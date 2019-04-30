@@ -1,6 +1,5 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { MemoryRouter, Route } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 import HeaderLinkA from './HeaderLinkA';
 

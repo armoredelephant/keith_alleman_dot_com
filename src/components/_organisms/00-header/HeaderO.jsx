@@ -30,7 +30,7 @@ const HeaderO = () => {
   const [activeModal, setActiveModal] = useState(false);
   const [activeSandwich, setActiveSandwich] = useState(false);
   const [scroll, setScroll] = useState(0);
-  const links = ['About', 'Projects', 'Work'];
+  const links = ['About', 'Projects'];
 
   const handleScroll = () => {
     setScroll(window.scrollY);

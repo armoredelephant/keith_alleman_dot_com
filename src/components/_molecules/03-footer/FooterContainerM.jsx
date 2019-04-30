@@ -6,10 +6,12 @@ import AboutParagraphA from '@A/06-paragraphs/AboutParagraphA';
 
 const FooterContainer = styled.footer`
   width: 100%;
-  height: 200px;
-  background: black;
-  color: #fff;
-  font-size: 20px;
+  height: 100px;
+  font-family: ${props => props.theme.ff};
+  background: ${props => props.theme.bg};
+  color: ${props => props.theme.clr};
+  display: flex;
+  justify-content: center;
 `;
 
 const FooterContainerM = props => {

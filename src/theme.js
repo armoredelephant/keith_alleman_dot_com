@@ -6,7 +6,10 @@ const defaultTheme = {
   ls: '1.4px',
   headheight: '100px',
   headff: 'Montserrat, sans-serif',
-  headfs: '32px'
+  headfs: '32px',
+  fs: '13px',
+  clr: '#252627',
+  sectionfc: 'rgb(255, 255, 255, .7)',
 };
 
 export default defaultTheme;

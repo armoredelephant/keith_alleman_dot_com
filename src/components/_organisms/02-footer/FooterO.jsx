@@ -35,7 +35,7 @@ const FooterO = () => {
               name="Contact"
             />
             <FooterLinkA // prettier-ignore
-              destination="#"
+              destination="https://github.com"
               name="Resume"
             />
             <FooterLinkA // prettier-ignore

@@ -30,12 +30,13 @@ const IconLinkA = props => {
 export default IconLinkA;
 
 IconLinkA.propTypes = {
-  destination: PropTypes.string.isRequired,
+  destination: PropTypes.string,
   icon: PropTypes.string,
   name: PropTypes.string
 };
 
 IconLinkA.defaultProps = {
+  destination: '#',
   icon: '',
   name: ''
 };

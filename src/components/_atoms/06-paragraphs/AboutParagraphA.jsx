@@ -24,13 +24,14 @@ const StyledParagraph = styled.p`
 const AboutParagraphA = () => {
   const [paragraph, setParagraph] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios('/resources/stubs/aboutme.json');
+  const fetchData = async () => {
+    const result = await axios('/resources/stubs/aboutme.json');
 
-      setParagraph(result.data.description);
-    };
-    fetchData();
+    setParagraph(result.data.description);
+  };
+
+  useEffect(() => {
+    fetchData()
   }, []);
 
   if (!paragraph) return null;

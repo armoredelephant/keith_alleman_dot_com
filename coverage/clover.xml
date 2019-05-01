@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1556658812986" clover="3.2.0">
-  <project timestamp="1556658812987" name="All files">
-    <metrics statements="149" coveredstatements="133" conditionals="34" coveredconditionals="28" methods="60" coveredmethods="51" elements="243" coveredelements="212" complexity="0" loc="149" ncloc="149" packages="13" files="23" classes="23"/>
+<coverage generated="1556687620472" clover="3.2.0">
+  <project timestamp="1556687620472" name="All files">
+    <metrics statements="149" coveredstatements="131" conditionals="34" coveredconditionals="28" methods="60" coveredmethods="49" elements="243" coveredelements="208" complexity="0" loc="149" ncloc="149" packages="13" files="23" classes="23"/>
     <package name="src">
       <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="styled-components.js" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/styled-components.js">
@@ -10,8 +10,8 @@
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="11" count="0" type="stmt"/>
         <line num="14" count="21" type="stmt"/>
-        <line num="15" count="16" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="16" type="stmt"/>
+        <line num="15" count="15" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="15" type="stmt"/>
       </file>
       <file name="theme.js" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/theme.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -143,21 +143,21 @@
       </file>
     </package>
     <package name="src.components._atoms.06-paragraphs">
-      <metrics statements="12" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="3"/>
+      <metrics statements="12" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="1"/>
       <file name="AboutParagraphA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/06-paragraphs/AboutParagraphA.jsx">
-        <metrics statements="12" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="3"/>
+        <metrics statements="12" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="1"/>
         <line num="5" count="2" type="stmt"/>
         <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
         <line num="25" count="2" type="stmt"/>
         <line num="27" count="2" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="36" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="37" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="37" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="38" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.components._molecules.00-header">

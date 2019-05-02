@@ -45,3 +45,5 @@ describe('HeaderLinkA', () => {
       });
   });
 });
+
+// Have to spoof window location to test conditional.

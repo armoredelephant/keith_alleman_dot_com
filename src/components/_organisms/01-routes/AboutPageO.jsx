@@ -44,7 +44,7 @@ const AboutPageO = () => {
               header="Interests & Hobbies"
               secondary="true"
             />
-            <InterestListM />
+            <InterestListM url="/resources/stubs/interests.json" />
             {/** Photo and design in here maybe not use grid? */}
           </InterestsWrapperA>
         </SectionWrapper40A>

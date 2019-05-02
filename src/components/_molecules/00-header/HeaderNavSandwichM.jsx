@@ -135,5 +135,5 @@ HeaderNavSandwichM.defaultProps = {
   handleAnimation: a => {
     return a;
   },
-  activeSandwich: 'false'
+  activeSandwich: false
 };

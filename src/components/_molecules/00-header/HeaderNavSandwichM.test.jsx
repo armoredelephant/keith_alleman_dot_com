@@ -22,4 +22,12 @@ describe('HeaderNavSandwichM', () => {
     expect(props).toBeTruthy();
     expect(props.handleAnimation('working')).toBe('working');
   });
+  it('chooses correct className', () => {
+    const props = {
+      activeSandwitch: true
+    };
+    wrapper = mount(<HeaderNavSandwichM {...props} />);
+    console.log(wrapper.debug());
+    expect(wrapper.find('.nav-bar-active')).toBeTruthy();
+  });
 });

@@ -8,6 +8,7 @@ const defaultTheme = {
   headff: 'Montserrat, sans-serif',
   headfs: '32px',
   fs: '13px',
+  ff: 'Montserrat, sans-serif',
   clr: '#252627',
   sectionfc: 'rgb(255, 255, 255, .7)'
 };

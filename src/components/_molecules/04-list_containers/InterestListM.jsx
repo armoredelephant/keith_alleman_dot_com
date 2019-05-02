@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
-// will import list item
 import InterestListItemA from '@A/01-list_items/InterestListItemsA';
 
 const InterestList = styled.ul`
@@ -18,14 +18,14 @@ const InterestList = styled.ul`
   }
 `;
 
-const InterestListM = () => {
+const InterestListM = ({ url }) => {
   const [interests, setInterests] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       // async function has to be inside of the arrow function
       // within the useEffect
-      const result = await axios('/resources/stubs/interests.json');
+      const result = await axios.get(url);
 
       setInterests(result.data.interests);
     };
@@ -34,15 +34,13 @@ const InterestListM = () => {
 
   if (!interests) return null;
   return (
-    <InterestList>
-      {/* {interests.map((interest, index) => (
-        <InterestListItemA count={index} interest={interest} key={index} />
-      ))} */}
+    <InterestList data-testid="interest-list">
       {interests.map((interest, index) => {
         const count = index;
         return (
           <InterestListItemA
             count={count} // prettier-ignore
+            data-testid="list-item"
             interest={interest}
             key={`${interest}-${count}`}
           />
@@ -53,3 +51,11 @@ const InterestListM = () => {
 };
 
 export default InterestListM;
+
+InterestListM.propTypes = {
+  url: PropTypes.string
+};
+
+InterestListM.defaultProps = {
+  url: '/resources/stubs/interests.json'
+};

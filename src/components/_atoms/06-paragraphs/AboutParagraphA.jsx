@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import axios from 'axios';
+import Axios from 'axios';
 
 const StyledParagraph = styled.p`
   height: 100%;
@@ -21,21 +22,29 @@ const StyledParagraph = styled.p`
   }
 `;
 
-const AboutParagraphA = () => {
+const AboutParagraphA = ({ url }) => {
   const [paragraph, setParagraph] = useState(null);
 
   const fetchData = async () => {
-    const result = await axios('/resources/stubs/aboutme.json');
+    const result = await Axios.get(url);
 
     setParagraph(result.data.description);
   };
 
   useEffect(() => {
-    fetchData()
+    fetchData();
   }, []);
 
   if (!paragraph) return null;
-  return <StyledParagraph>{paragraph}</StyledParagraph>;
+  return <StyledParagraph data-testid="paragraph">{paragraph}</StyledParagraph>;
 };
 
 export default AboutParagraphA;
+
+AboutParagraphA.propTypes = {
+  url: PropTypes.string
+};
+
+AboutParagraphA.defaultProps = {
+  url: '/resources/stubs/aboutme.json'
+};

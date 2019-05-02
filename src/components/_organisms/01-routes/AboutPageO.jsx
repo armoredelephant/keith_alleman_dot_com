@@ -50,7 +50,7 @@ const AboutPageO = () => {
         </SectionWrapper40A>
         <SectionWrapperAutoA className="about-r" margin="0 auto 0 0">
           <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
-          <AboutParagraphA />
+          <AboutParagraphA url="/resources/stubs/aboutme.json" />
           {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
         </SectionWrapperAutoA>
       </MainRoleContainerM>

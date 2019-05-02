@@ -9,7 +9,7 @@ const defaultTheme = {
   headfs: '32px',
   fs: '13px',
   clr: '#252627',
-  sectionfc: 'rgb(255, 255, 255, .7)',
+  sectionfc: 'rgb(255, 255, 255, .7)'
 };
 
 export default defaultTheme;

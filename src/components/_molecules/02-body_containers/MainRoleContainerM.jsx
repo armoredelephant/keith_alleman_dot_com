@@ -12,6 +12,7 @@ const MainRole = styled.main`
   padding-top: 70px;
   padding-left: 30px;
   padding-right: 30px;
+  padding-bottom: ${props => props.theme.pb || ''};
   display: flex;
   flex-flow: row;
   justify-content: ${props => props.align || ''};

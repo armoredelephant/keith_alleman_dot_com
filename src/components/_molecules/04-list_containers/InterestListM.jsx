@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import axios from 'axios';
+import Axios from 'axios';
 import PropTypes from 'prop-types';
 
 import InterestListItemA from '@A/01-list_items/InterestListItemsA';
@@ -21,14 +21,13 @@ const InterestList = styled.ul`
 const InterestListM = ({ url }) => {
   const [interests, setInterests] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      // async function has to be inside of the arrow function
-      // within the useEffect
-      const result = await axios.get(url);
+  const fetchData = async () => {
+    const result = await Axios.get(url);
 
-      setInterests(result.data.interests);
-    };
+    setInterests(result.data.interests);
+  };
+
+  useEffect(() => {
     fetchData();
   }, []); // <== Empty array to avoid activating on updates, and ONLY for mount.
 

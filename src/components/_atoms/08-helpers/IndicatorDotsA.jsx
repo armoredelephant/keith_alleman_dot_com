@@ -22,13 +22,18 @@ const StyledDiv = styled.div`
 `;
 
 const IndicatorDots = props => {
-  if (props.total < 2) {
+  const { index, total } = props;
+  const keyArray = [];
+  for (let i = 0; i < total; i += 1) {
+    keyArray.push(i);
+  }
+  if (total < 2) {
     return <StyledDiv />;
   }
   return (
     <StyledDiv>
-      {Array.apply(null, Array(props.total)).map((x, i) => {
-        return <Dot key={i} selected={props.index === i} />;
+      {Array(...Array(total)).map((x, i) => {
+        return <Dot key={keyArray[i]} selected={index === i} />;
       })}
     </StyledDiv>
   );

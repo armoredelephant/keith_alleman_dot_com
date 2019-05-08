@@ -53,6 +53,13 @@ export default CarouselButtonsA;
 CarouselButtonsA.propTypes = {
   index: propTypes.number.isRequired,
   total: propTypes.number.isRequired,
+  loop: propTypes.bool,
   prevHandler: propTypes.func,
   nextHandler: propTypes.func
+};
+
+CarouselButtonsA.defaultProps = {
+  loop: false,
+  prevHandler: () => {},
+  nextHandler: () => {}
 };

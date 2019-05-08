@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
 import { ThemeProvider } from 'styled-components';
 import Carousel from 're-carousel';
 import IndicatorDots from '@A/08-helpers/IndicatorDotsA';
@@ -10,6 +11,7 @@ import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
 // placeholder
 
 const theme = {
+  bg: '#594F4F',
   headheight: '100px',
   headff: 'Montserrat',
   ls: '2px',
@@ -19,6 +21,10 @@ const theme = {
 };
 
 const ProjectsPageO = () => {
+  const [projects, setProjects] = useState([])
+
+  // will need a useEffect and pass down the data to ProjectContainerM within Carousel. Map through.
+
   return (
     <ThemeProvider theme={theme}>
       <MainRoleContainerM id="projects">

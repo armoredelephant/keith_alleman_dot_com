@@ -14,12 +14,20 @@ import ProjectContainerM from '@M/02-body_containers/ProjectContainerM';
 // placeholder
 
 const theme = {
+  headheight: '100px',
+  headff: 'Montserrat, sans-serif',
+  headfs: '25px',
+  ls: '1.5px',
+  primarycolor: '#dfdfdf',
+  secondarycolor: '#b7b7b7',
+  secondaryfs: '18px',
+  secondaryfst: 'italic',
+  border: '1px solid #95d5d2',
+  paddingb: '3px',
+  sectionfc: 'rgb(255, 255, 255, .7)',
   bg: '#252627',
   headheight: '100px',
-  headff: 'Montserrat',
-  ls: '2px',
-  primarycolor: '#FFF',
-  headfs: '50px',
+  mobilefont: '25px',
   pb: '30px'
 };
 
@@ -38,19 +46,22 @@ const ProjectsPageO = () => {
     fetchData('/resources/stubs/projects.json');
   }, []);
 
+  // NEED A FUNCTION THAT GRABS THE SKILLS FROM EACH
+
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
       <MainRoleContainerM id="projects">
         <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
           {projectKeys.map((projectKey, i) => {
-            const { name, used, description } = projects[projectKeys[i]];
+            const { name, used, description, skills } = projects[projectKeys[i]];
             return (
               <ProjectContainerM
                 key={projectKey}
                 name={name}
                 used={used}
                 description={description}
+                items={skills}
               />
             );
           })}

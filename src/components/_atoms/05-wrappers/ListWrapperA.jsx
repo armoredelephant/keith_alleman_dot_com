@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const InterestsWrapperA = styled.div`
+const ListWrapperA = styled.div`
   display: flex;
   flex-flow: column;
   width: 60%;
@@ -14,4 +14,4 @@ const InterestsWrapperA = styled.div`
   }
 `;
 
-export default InterestsWrapperA;
+export default ListWrapperA;

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
+import Axios from 'axios';
 
 // <Main role='main'> container - Molecule
 import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
@@ -10,10 +11,10 @@ import SectionHeaderA from '@A/04-headers/SectionHeaderA';
 
 // Left Side Wrapper - Atom
 import SectionWrapper40A from '@A/05-wrappers/SectionWrapper40A';
-import InterestsWrapperA from '@A/05-wrappers/InterestsWrapperA';
+import ListWrapperA from '@A/05-wrappers/ListWrapperA';
 
 // InterestList - Molecule
-import InterestListM from '@M/04-list_containers/InterestListM';
+import AnimatedListM from '@M/04-list_containers/AnimatedListM';
 
 // Paragraph - Atom
 import AboutParagraphA from '@A/06-paragraphs/AboutParagraphA';
@@ -34,19 +35,32 @@ const theme = {
 };
 
 const AboutPageO = () => {
+  const [interests, setInterests] = useState(null);
+
+  const fetchData = async url => {
+    const result = await Axios.get(url);
+
+    setInterests(result.data.interests);
+  };
+
+  useEffect(() => {
+    fetchData('/resources/stubs/interests.json');
+  }, []); // <== Empty array to avoid activating on updates, and ONLY for mount.
+
+  if (!interests) return null;
   return (
     <ThemeProvider theme={theme}>
       <MainRoleContainerM id="about" className="about-page">
         <SectionWrapper40A className="about-l">
-          <InterestsWrapperA>
+          <ListWrapperA>
             <SectionHeaderA
               margin="30px 0 0 0" // prettier-ignore
               header="Interests & Hobbies"
               secondary="true"
             />
-            <InterestListM url="/resources/stubs/interests.json" />
+            <AnimatedListM items={interests} />
             {/** Photo and design in here maybe not use grid? */}
-          </InterestsWrapperA>
+          </ListWrapperA>
         </SectionWrapper40A>
         <SectionWrapperAutoA className="about-r" margin="0 auto 0 0">
           <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />

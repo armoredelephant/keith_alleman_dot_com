@@ -5,12 +5,15 @@ import styled from 'styled-components';
 const SectionHeaderWrapper = styled.div`
   max-height: ${props => (props.secondary ? '75px' : '')};
   height: ${props => props.theme.headheight};
+  text-align: ${props => (props.center ? 'center' : '')};
+  margin: ${props => (props.center ? 'auto' : '')};
   display: flex;
 `;
 
 const StyledHeader = styled.h2`
   white-space: nowrap;
   overflow: hidden;
+  text-align: ${props => (props.center ? 'center' : '')};
   margin: ${props => (props.margin ? props.margin : 'auto')};
   font-family: ${props => props.theme.headff};
   letter-spacing: ${props => props.theme.ls};

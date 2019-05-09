@@ -4,8 +4,8 @@ import styled from 'styled-components';
 
 const MainRole = styled.main`
   background: #252627;
-  min-height: 1000px;
-  max-height: 1000px;
+  min-height: 700px;
+  max-height: 700px;
   height: 100%;
   width: 100%;
   overflow: hidden;

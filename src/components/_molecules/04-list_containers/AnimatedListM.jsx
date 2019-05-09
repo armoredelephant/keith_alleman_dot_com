@@ -18,23 +18,11 @@ const InterestList = styled.ul`
   }
 `;
 
-const InterestListM = ({ url }) => {
-  const [interests, setInterests] = useState(null);
-
-  const fetchData = async () => {
-    const result = await Axios.get(url);
-
-    setInterests(result.data.interests);
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []); // <== Empty array to avoid activating on updates, and ONLY for mount.
-
-  if (!interests) return null;
+const AnimatedListM = props => {
+  const { items } = props;
   return (
     <InterestList data-testid="interest-list">
-      {interests.map((interest, index) => {
+      {items.map((interest, index) => {
         const count = index;
         return (
           <InterestListItemA
@@ -49,12 +37,9 @@ const InterestListM = ({ url }) => {
   );
 };
 
-export default InterestListM;
+export default AnimatedListM;
 
-InterestListM.propTypes = {
-  url: PropTypes.string
+AnimatedListM.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string).isRequired
 };
 
-InterestListM.defaultProps = {
-  url: '/resources/stubs/interests.json'
-};

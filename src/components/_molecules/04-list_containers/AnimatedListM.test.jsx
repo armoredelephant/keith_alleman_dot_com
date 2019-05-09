@@ -5,21 +5,21 @@ import 'jest-styled-components';
 import 'jest-dom/extend-expect';
 import axiosMock from 'axios';
 
-import InterestListM from './InterestListM';
+import AnimatedListM from './AnimatedListM';
 
 afterEach(cleanup);
 
 describe('<InterestListM />', () => {
   let wrapper;
   it('renders', () => {
-    wrapper = shallow(<InterestListM />);
+    wrapper = shallow(<AnimatedListM />);
     expect(wrapper).toBeTruthy();
   });
   it('renders with interests', () => {
     const props = {
       interests: [1, 2]
     };
-    wrapper = shallow(<InterestListM {...props} />);
+    wrapper = shallow(<AnimatedListM {...props} />);
     expect(wrapper.find('ul')).toBeTruthy();
   });
   it('fetches and returns data', async () => {
@@ -30,7 +30,7 @@ describe('<InterestListM />', () => {
     });
     const url = '/resources/stubs/interests.json';
 
-    const { getByTestId } = render(<InterestListM url={url} />);
+    const { getByTestId } = render(<AnimatedListM url={url} />);
 
     await wait(() => getByTestId('interest-list'));
 

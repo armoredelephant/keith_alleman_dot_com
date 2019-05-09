@@ -2,16 +2,19 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { ThemeProvider } from 'styled-components';
 import Carousel from 're-carousel';
+
+// widgets for Carousel
 import IndicatorDots from '@A/08-helpers/IndicatorDotsA';
 import CarouselButtonsA from '@A/08-helpers/CarouselButtonsA';
 
 // <Main role='main'> container - Molecule
 import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
+import ProjectContainerM from '@M/02-body_containers/ProjectContainerM';
 
 // placeholder
 
 const theme = {
-  bg: '#594F4F',
+  bg: '#252627',
   headheight: '100px',
   headff: 'Montserrat',
   ls: '2px',
@@ -21,20 +24,36 @@ const theme = {
 };
 
 const ProjectsPageO = () => {
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState(null);
+  const [projectKeys, setProjectKeys] = useState([]);
 
-  // will need a useEffect and pass down the data to ProjectContainerM within Carousel. Map through.
+  const fetchData = async url => {
+    const result = await Axios.get(url);
 
+    setProjects(result.data.projects);
+    setProjectKeys(Object.keys(result.data.projects));
+  };
+
+  useEffect(() => {
+    fetchData('/resources/stubs/projects.json');
+  }, []);
+
+  if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
       <MainRoleContainerM id="projects">
-        {/* placeholder */}
         <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
-          {/** create a reusable div that will load each project */}
-          <div style={{ backgroundColor: 'tomato', height: '100%' }} />
-          <div style={{ backgroundColor: 'orange', height: '100%' }} />
-          <div style={{ backgroundColor: 'orchid', height: '100%' }} />
-          {/* <SectionHeaderA header="Project Page" /> */}
+          {projectKeys.map((projectKey, i) => {
+            const { name, used, description } = projects[projectKeys[i]];
+            return (
+              <ProjectContainerM
+                key={projectKey}
+                name={name}
+                used={used}
+                description={description}
+              />
+            );
+          })}
         </Carousel>
       </MainRoleContainerM>
     </ThemeProvider>

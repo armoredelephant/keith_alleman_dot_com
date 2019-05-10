@@ -5,7 +5,7 @@ import { fadeInLeft } from 'react-animations';
 
 const fadeInAnimation = keyframes`${fadeInLeft}`;
 
-const InterestListItem = styled.li`
+const AnimatedListItem = styled.li`
   @keyframes fade-in-left {
     from {
       opacity: 0;
@@ -26,17 +26,17 @@ const InterestListItem = styled.li`
   animation-fill-mode: forwards;
 `;
 
-const InterestListItemA = props => {
-  const { interest } = props;
+const AnimatedListItemA = props => {
+  const { item } = props;
   return (
     <React.Fragment>
       {/** Icon here somehow? */}
-      <InterestListItem {...props}>{interest}</InterestListItem>
+      <AnimatedListItem {...props}>{item}</AnimatedListItem>
     </React.Fragment>
   );
 };
 
-export default InterestListItemA;
+export default AnimatedListItemA;
 
-InterestListItemA.propTypes = { interest: PropTypes.string };
-InterestListItemA.defaultProps = { interest: 'coding' };
+AnimatedListItemA.propTypes = { item: PropTypes.string };
+AnimatedListItemA.defaultProps = { item: 'coding' };

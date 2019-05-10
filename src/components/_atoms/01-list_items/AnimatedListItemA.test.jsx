@@ -2,18 +2,18 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { MemoryRouter } from 'react-router-dom';
 
-import InterestListItemA from './InterestListItemsA';
+import AnimatedListItemA from './AnimatedListItemA';
 
-describe('<InterestListItemA />', () => {
+describe('<AnimatedListItemA />', () => {
   let wrapper;
   it('renders', () => {
-    wrapper = shallow(<InterestListItemA />);
+    wrapper = shallow(<AnimatedListItemA />);
     expect(wrapper).toBeTruthy();
   });
   it('is themed with default styling', () => {
     wrapper = global.StyledComponents.mountWithTheme(
       <MemoryRouter>
-        <InterestListItemA />
+        <AnimatedListItemA />
       </MemoryRouter>
     );
     expect(wrapper.find('li')) // prettier-ignore

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const SectionHeaderWrapper = styled.div`
   max-height: ${props => (props.secondary ? '75px' : '')};
   height: ${props => props.theme.headheight};
-  text-align: ${props => (props.center ? 'center' : '')};
+  text-align: ${props => (props.align ? props.align : '')};
   margin: ${props => (props.center ? 'auto' : '')};
   display: flex;
 `;

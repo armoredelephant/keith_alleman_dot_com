@@ -14,27 +14,28 @@ const Container = styled.div`
   flex-flow: row;
 `;
 
+const Title = styled.h1`
+  text-align: center;
+`;
+
+const Used = styled.h3`
+  margin-top: 10px;
+  text-align: center;
+`;
+
 const ProjectContainerM = props => {
   const { description, items, name, used } = props;
   return (
     <Container>
       {/** Project Info below */}
       <SectionWrapperAutoA>
-        {/** One vomponent that displays all the project info? */}
-        <SectionHeaderA 
-          margin="auto 0"
-        center="true"
-          header={name}
-        />
+        <Title>{name}</Title>
+        <Used>{used}</Used>
       </SectionWrapperAutoA>
       {/** Skills below */}
       <SectionWrapperAutoA>
         <ListWrapperA>
-          <SectionHeaderA
-            margin="30px 0 0 0"
-            header="Skills Built"
-            secondary="true"
-          />
+          <SectionHeaderA margin="30px 0 0 0" header="Skills Built" secondary="true" />
           <AnimatedListM items={items} />
         </ListWrapperA>
       </SectionWrapperAutoA>
@@ -50,4 +51,3 @@ ProjectContainerM.propTypes = {
   used: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired
 };
-

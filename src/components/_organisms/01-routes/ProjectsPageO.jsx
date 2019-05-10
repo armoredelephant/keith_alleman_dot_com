@@ -26,7 +26,6 @@ const theme = {
   paddingb: '3px',
   sectionfc: 'rgb(255, 255, 255, .7)',
   bg: '#252627',
-  headheight: '100px',
   mobilefont: '25px',
   pb: '30px'
 };
@@ -54,7 +53,8 @@ const ProjectsPageO = () => {
       <MainRoleContainerM id="projects">
         <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
           {projectKeys.map((projectKey, i) => {
-            const { name, used, description, skills } = projects[projectKeys[i]];
+            const project = projects[projectKeys[i]];
+            const { name, used, description, skills } = project;
             return (
               <ProjectContainerM
                 key={projectKey}

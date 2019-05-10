@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import Axios from 'axios';
 import PropTypes from 'prop-types';
 
-import InterestListItemA from '@A/01-list_items/InterestListItemsA';
+import AnimatedListItemA from '@A/01-list_items/AnimatedListItemA';
 
-const InterestList = styled.ul`
+const List = styled.ul`
   width: 100%;
   height: 100%;
   padding: 0;
@@ -21,19 +20,19 @@ const InterestList = styled.ul`
 const AnimatedListM = props => {
   const { items } = props;
   return (
-    <InterestList data-testid="interest-list">
-      {items.map((interest, index) => {
+    <List data-testid="interest-list">
+      {items.map((item, index) => {
         const count = index;
         return (
-          <InterestListItemA
+          <AnimatedListItemA
             count={count} // prettier-ignore
             data-testid="list-item"
-            interest={interest}
-            key={`${interest}-${count}`}
+            item={item}
+            key={`${item}-${count}`}
           />
         );
       })}
-    </InterestList>
+    </List>
   );
 };
 
@@ -42,4 +41,3 @@ export default AnimatedListM;
 AnimatedListM.propTypes = {
   items: PropTypes.arrayOf(PropTypes.string).isRequired
 };
-

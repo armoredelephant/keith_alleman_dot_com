@@ -50,7 +50,7 @@ const ProjectsPageO = () => {
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
-      <MainRoleContainerM id="projects">
+      <MainRoleContainerM id="projects" carousel="true">
         <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
           {projectKeys.map((projectKey, i) => {
             const project = projects[projectKeys[i]];

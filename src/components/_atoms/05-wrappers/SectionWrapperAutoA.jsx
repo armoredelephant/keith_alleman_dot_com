@@ -6,9 +6,10 @@ const SectionWrapperAutoA = styled.section`
   display: flex;
   flex-flow: column;
 
-  @media (max-width: 983px) {
+  @media (max-width: 600px) {
     margin: 0;
-    width: 100%;
+    width: ${props => (props.hidden ? '0' : '100%')};
+    visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
   }
 `;
 

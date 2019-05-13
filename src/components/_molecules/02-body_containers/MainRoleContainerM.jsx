@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 const MainRole = styled.main`
   background: #252627;
-  min-height: 700px;
-  max-height: 700px;
-  height: 100%;
+  min-height: ${props => (props.vh ? props.vh : '600px')};
+  height: ${props => (props.carousel ? '100vh' : '')};
   width: 100%;
   overflow: hidden;
   padding-top: 70px;

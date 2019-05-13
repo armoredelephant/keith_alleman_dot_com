@@ -25,7 +25,7 @@ const StyledHeader = styled.h2`
       ? props.theme.secondaryfs
       : props.theme.headfs};
 
-  @media (max-width: 660px) {
+  @media (max-width: 983px) {
     margin: ${props => (props.secondary ? '' : 'auto 0')};
     font-size: ${props =>
       props.secondary // prettier-ignore

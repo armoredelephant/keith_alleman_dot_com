@@ -50,8 +50,15 @@ const AboutPageO = () => {
   if (!interests) return null;
   return (
     <ThemeProvider theme={theme}>
-      <MainRoleContainerM id="about" className="about-page">
-        <SectionWrapper40A className="about-l">
+      <MainRoleContainerM
+        id="about" // prettier-ignore
+        className="about-page"
+        vh="100vh"
+      >
+        <SectionWrapper40A
+          className="about-l" // prettier-ignore
+          margin="50px auto 0 auto"
+        >
           <ListWrapperA>
             <SectionHeaderA
               margin="30px 0 0 0" // prettier-ignore
@@ -62,7 +69,7 @@ const AboutPageO = () => {
             {/** Photo and design in here maybe not use grid? */}
           </ListWrapperA>
         </SectionWrapper40A>
-        <SectionWrapperAutoA className="about-r" margin="0 auto 0 0">
+        <SectionWrapperAutoA className="about-r" margin="50px auto 0 0">
           <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
           <AboutParagraphA url="/resources/stubs/aboutme.json" />
           {/** <DescriptionParagraphA>text</DescriptionParagraph> */}

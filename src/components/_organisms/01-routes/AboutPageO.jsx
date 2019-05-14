@@ -36,18 +36,26 @@ const theme = {
 
 const AboutPageO = () => {
   const [interests, setInterests] = useState(null);
+  const [paragraph, setParagraph] = useState(null);
 
-  const fetchData = async url => {
+  const fetchData = async (url, cb) => {
     const result = await Axios.get(url);
-
-    setInterests(result.data.interests);
+    cb(result.data.items);
   };
 
+  // const fetchData = async url => {
+  //   const result = await Axios.get(url);
+
+  //   setInterests(result.data.items);
+
+  // };
+
   useEffect(() => {
-    fetchData('/resources/stubs/interests.json');
+    fetchData('/resources/stubs/interests.json', setInterests);
+    fetchData('/resources/stubs/aboutme.json', setParagraph);
   }, []); // <== Empty array to avoid activating on updates, and ONLY for mount.
 
-  if (!interests) return null;
+  if (!interests || !paragraph) return null;
   return (
     <ThemeProvider theme={theme}>
       <MainRoleContainerM
@@ -71,7 +79,7 @@ const AboutPageO = () => {
         </SectionWrapper40A>
         <SectionWrapperAutoA className="about-r" margin="50px auto 0 0">
           <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
-          <AboutParagraphA url="/resources/stubs/aboutme.json" />
+          <AboutParagraphA paragraph={paragraph} />
           {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
         </SectionWrapperAutoA>
       </MainRoleContainerM>

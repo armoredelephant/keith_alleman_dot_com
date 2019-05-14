@@ -31,6 +31,10 @@ const Used = styled.h3`
   text-align: center;
 `;
 
+const Description = styled.p`
+
+`;
+
 const ProjectContainerM = props => {
   const { description, items, name, used } = props;
   return (
@@ -39,6 +43,7 @@ const ProjectContainerM = props => {
       <SectionWrapperAutoA margin="25% 0 0 0">
         <Title>{name}</Title>
         <Used>{used}</Used>
+
       </SectionWrapperAutoA>
       {/** Skills below */}
       <SectionWrapperAutoA

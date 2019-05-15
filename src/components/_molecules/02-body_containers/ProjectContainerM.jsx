@@ -31,9 +31,7 @@ const Used = styled.h3`
   text-align: center;
 `;
 
-const Description = styled.p`
-
-`;
+const Description = styled.p``;
 
 const ProjectContainerM = props => {
   const { description, items, name, used } = props;
@@ -43,11 +41,10 @@ const ProjectContainerM = props => {
       <SectionWrapperAutoA margin="25% 0 0 0">
         <Title>{name}</Title>
         <Used>{used}</Used>
-
       </SectionWrapperAutoA>
       {/** Skills below */}
       <SectionWrapperAutoA
-        hidden='true' // prettier-ignore
+        hidden // prettier-ignore
         margin="25% 0 0 0"
       >
         <ListWrapperA>

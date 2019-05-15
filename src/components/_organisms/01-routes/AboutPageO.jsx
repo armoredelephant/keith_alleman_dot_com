@@ -17,7 +17,7 @@ import ListWrapperA from '@A/05-wrappers/ListWrapperA';
 import AnimatedListM from '@M/04-list_containers/AnimatedListM';
 
 // Paragraph - Atom
-import AboutParagraphA from '@A/06-paragraphs/AboutParagraphA';
+import ParagraphA from '@A/06-paragraphs/ParagraphA';
 
 const theme = {
   headheight: '100px',
@@ -42,13 +42,6 @@ const AboutPageO = () => {
     const result = await Axios.get(url);
     cb(result.data.items);
   };
-
-  // const fetchData = async url => {
-  //   const result = await Axios.get(url);
-
-  //   setInterests(result.data.items);
-
-  // };
 
   useEffect(() => {
     fetchData('/resources/stubs/interests.json', setInterests);
@@ -79,7 +72,7 @@ const AboutPageO = () => {
         </SectionWrapper40A>
         <SectionWrapperAutoA className="about-r" margin="50px auto 0 0">
           <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
-          <AboutParagraphA paragraph={paragraph} />
+          <ParagraphA paragraph={paragraph} />
           {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
         </SectionWrapperAutoA>
       </MainRoleContainerM>

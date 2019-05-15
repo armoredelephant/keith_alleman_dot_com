@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import AboutParagraphA from '@A/06-paragraphs/AboutParagraphA';
+import ParagraphA from '@A/06-paragraphs/ParagraphA';
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -29,5 +29,5 @@ FooterContainerM.propTypes = {
 };
 
 FooterContainerM.defaultProps = {
-  children: <AboutParagraphA />
+  children: <ParagraphA />
 };

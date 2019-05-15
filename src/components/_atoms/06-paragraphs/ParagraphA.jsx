@@ -21,13 +21,17 @@ const StyledParagraph = styled.p`
   }
 `;
 
-const AboutParagraphA = props => {
+const ParagraphA = props => {
   const { paragraph } = props;
-  return <StyledParagraph data-testid="paragraph">{paragraph}</StyledParagraph>;
+  return <StyledParagraph>{paragraph}</StyledParagraph>;
 };
 
-export default AboutParagraphA;
+export default ParagraphA;
 
-AboutParagraphA.propTypes = {
-  paragraph: PropTypes.string.isRequired
+ParagraphA.propTypes = {
+  paragraph: PropTypes.string
+};
+
+ParagraphA.defaultProps = {
+  paragraph: 'This is the default prop value for this paragraph.'
 };

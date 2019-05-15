@@ -13,8 +13,15 @@ describe('MainRoleContainerM', () => {
   });
 
   it('renders justify-content /w prop', () => {
-    const wrapper = mount(<MainRoleContainerM align="space-between" />);
+    const props = {
+      align: 'space-between',
+      carousel: true,
+      vh: '100vh'
+    };
+    const wrapper = mount(<MainRoleContainerM {...props} />);
     expect(wrapper).toHaveStyleRule('justify-content', 'space-between');
+    expect(wrapper).toHaveStyleRule('height', '100vh');
+    expect(wrapper).toHaveStyleRule('min-height', '100vh');
   });
 
   it('renders justify-content /wo prop', () => {

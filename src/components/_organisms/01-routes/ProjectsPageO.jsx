@@ -27,7 +27,8 @@ const theme = {
   sectionfc: 'rgb(255, 255, 255, .7)',
   bg: '#252627',
   mobilefont: '25px',
-  pb: '30px'
+  pb: '30px',
+  pwidth: '100%',
 };
 
 const ProjectsPageO = () => {
@@ -54,14 +55,17 @@ const ProjectsPageO = () => {
         <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
           {projectKeys.map((projectKey, i) => {
             const project = projects[projectKeys[i]];
-            const { name, used, description, skills } = project;
+            const { name, used, description, linkGithub, linkUrl, skills, visit } = project;
             return (
               <ProjectContainerM
                 key={projectKey}
-                name={name}
-                used={used}
                 description={description}
                 items={skills}
+                linkGuthub={linkGithub}
+                linkUrl={linkUrl}
+                name={name}
+                used={used}
+                visit={visit}
               />
             );
           })}

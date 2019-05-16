@@ -6,6 +6,9 @@ import SectionHeaderA from '@A/04-headers/SectionHeaderA';
 import SectionWrapperAutoA from '@A/05-wrappers/SectionWrapperAutoA';
 import ListWrapperA from '@A/05-wrappers/ListWrapperA';
 import AnimatedListM from '@M/04-list_containers/AnimatedListM';
+import ParagraphA from '@A/06-paragraphs/ParagraphA';
+import GhostLinkA from '@A/00-links/GhostLinkA';
+import GithubLinkA from '@A/00-links/GithubLinkA';
 
 const Container = styled.div`
   background-color: ${props => props.theme.bg};
@@ -31,16 +34,19 @@ const Used = styled.h3`
   text-align: center;
 `;
 
-const Description = styled.p``;
-
 const ProjectContainerM = props => {
-  const { description, items, name, used } = props;
+  const { description, items, linkGithub, linkUrl, name, used, visit } = props;
   return (
     <Container>
       {/** Project Info below */}
       <SectionWrapperAutoA margin="25% 0 0 0">
         <Title>{name}</Title>
         <Used>{used}</Used>
+        <ParagraphA paragraph={description} />
+        {/** WORKING ON */}
+        <GithubLinkA url={linkGithub} />
+        {visit ? <GhostLinkA url={linkUrl} /> : '' }
+        {/** WORKING ON */}
       </SectionWrapperAutoA>
       {/** Skills below */}
       <SectionWrapperAutoA
@@ -49,7 +55,7 @@ const ProjectContainerM = props => {
       >
         <ListWrapperA>
           <SectionHeaderA
-            margin="30px 0 0 0" // prettier-ignore
+            margin="10px 0 0 0" // prettier-ignore
             header="Skills Built"
             secondary="true"
           />

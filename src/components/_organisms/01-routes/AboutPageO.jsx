@@ -31,7 +31,8 @@ const theme = {
   border: '1px solid #95d5d2',
   paddingb: '3px',
   sectionfc: 'rgb(255, 255, 255, .7)',
-  mobilefont: '25px'
+  mobilefont: '25px',
+  pwidth: '80%',
 };
 
 const AboutPageO = () => {

@@ -6,7 +6,7 @@ const StyledParagraph = styled.p`
   height: 100%;
   margin: auto 0;
   overflow: hidden;
-  width: 80%;
+  width: ${props => props.theme.pwidth};
   white-space: no-wrap;
   line-height: 140%;
   letter-spacing: 1.5px;

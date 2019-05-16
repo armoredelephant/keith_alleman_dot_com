@@ -9,6 +9,9 @@ const SectionWrapperAutoA = styled.section`
   @media (max-width: 600px) {
     margin: 0;
     width: ${props => (props.hidden ? '0' : '100%')};
+  }
+  
+  @media (max-width: 983px) { 
     visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
   }
 `;

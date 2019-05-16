@@ -4,6 +4,9 @@
             "name": "eviHelp",
             "used": "React & Node.JS",
             "description": "This was a website I build to provide easy access to remote workers. The idea was for them to be able to easily access support documents from their personal mobile devices. There is a fully integrated admin dashboard to allow adding, editing, and removal of help articles. I initially decided it was not something the company would probably use due to PHI, but it was a good beginner projectl. I learned a lot about working with APIs, Google's Firebase, and really reading through documentation.",
+            "linkGithub": "https://github.com/armoredelephant/evi_support_full",
+            "visit": false,
+            "linkUrl": null,
             "skills": [
                 "one",
                 "two"
@@ -13,6 +16,9 @@
             "name": "eviCore Signature Creator",
             "used": "Vanilla Javascript",
             "description": "This was the first web app that I developed, and is very basic. I utilized bootstrap and plain javascript to create a tool that users could build their Outlook signatures with. They would visit the page during orientation and fill in their information to create a signature. From there they would simply copy the signature that was created with our template and add it to their Outlook. I learned quite a bit about bootstrap and refactoring for functionality accross older browsers (we used IE8 & IE10 still). It was a great project to get my feet wet with and was regularly used for new hire classes within the company. This app was hosted on one of our internal servers using WAMP.",
+            "linkGithub": "https://github.com/armoredelephant/signature",
+            "visit": false,
+            "linkUrl": null,
             "skills": [
                 "one",
                 "two"
@@ -22,6 +28,8 @@
             "name": "KeithAlleman.com",
             "used": "React",
             "description": "This is the website you're currently viewing. I built this project to display my work while also providing some insight into the person behind the work. I learned about integrating animations into my web pages with this app and using stubs within the app for cases where I don't need to store data in a larger secure database.",
+            "linkGithub": "https://github.com/armoredelephant/keith_alleman_dot_com",
+            "visit": true,
             "skills": [
                 "one",
                 "two"
@@ -31,6 +39,9 @@
             "name": "tbd",
             "used": "React & Node.JS",
             "description": "This is a web app that works with an authenticated spotify account, and will access the user's saved playlists. The user can set a timer and when the time is up, it will select another playlist to play at random.  This project was thought up to save me from having to change the spotify playlist at work on a regular bases for management. Through this project I learned more about the importance of reading through documentation and following along through tutorials they provide for their APIs. I also learned a lot about user authentication and tokens.",
+            "linkGithub": "https://github.com/armoredelephant/playlist_randomizer",
+            "visit": true,
+            "linkUrl": "tbd",
             "skills": [
                 "one",
                 "two"

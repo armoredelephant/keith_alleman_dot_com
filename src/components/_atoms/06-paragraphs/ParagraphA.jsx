@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledParagraph = styled.p`
-  height: 100%;
-  margin: auto 0;
+  height: auto;
+  margin: 0;
   overflow: hidden;
   width: ${props => props.theme.pwidth};
   white-space: no-wrap;

@@ -26,6 +26,7 @@ const theme = {
   paddingb: '3px',
   sectionfc: 'rgb(255, 255, 255, .7)',
   bg: '#252627',
+  linkbg: '#95d5d2',
   mobilefont: '25px',
   pb: '30px',
   pwidth: '100%',
@@ -61,7 +62,7 @@ const ProjectsPageO = () => {
                 key={projectKey}
                 description={description}
                 items={skills}
-                linkGuthub={linkGithub}
+                linkGithub={linkGithub}
                 linkUrl={linkUrl}
                 name={name}
                 used={used}

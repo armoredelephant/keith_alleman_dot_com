@@ -30,6 +30,7 @@
             "description": "This is the website you're currently viewing. I built this project to display my work while also providing some insight into the person behind the work. I learned about integrating animations into my web pages with this app and using stubs within the app for cases where I don't need to store data in a larger secure database.",
             "linkGithub": "https://github.com/armoredelephant/keith_alleman_dot_com",
             "visit": true,
+            "linkUrl": "https://wwww.keithalleman.com",
             "skills": [
                 "one",
                 "two"

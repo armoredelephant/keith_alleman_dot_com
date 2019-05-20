@@ -21,6 +21,13 @@ const Container = styled.div`
   }
 `;
 
+const LinkContainer = styled.div`
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  margin-top: 65px;
+`;
+
 const Title = styled.h1`
   color: ${props => props.theme.primarycolor};
   letter-spacing: ${props => props.theme.ls};
@@ -44,8 +51,10 @@ const ProjectContainerM = props => {
         <Used>{used}</Used>
         <ParagraphA paragraph={description} />
         {/** WORKING ON */}
-        <GithubLinkA url={linkGithub} />
-        {visit ? <GhostLinkA url={linkUrl} /> : '' }
+        <LinkContainer>
+          <GithubLinkA url={linkGithub} />
+          {/* {visit ? <GhostLinkA url={linkUrl} /> : ''} */}
+        </LinkContainer>
         {/** WORKING ON */}
       </SectionWrapperAutoA>
       {/** Skills below */}

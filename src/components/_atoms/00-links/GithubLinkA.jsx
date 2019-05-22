@@ -23,6 +23,9 @@ const Link = styled.a`
     cursor: pointer;
     outline: none;
     line-height: normal;
+    position: absolute;
+    right: 10px;
+
 `;
 
 const GithubLinkA = props => {

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const MainRole = styled.main`
   background: #252627;
   min-height: ${props => (props.vh ? props.vh : '600px')};
-  height: ${props => (props.carousel ? '100vh' : '')};
+  height: ${props => (props.carousel ? '900px' : '')};
   width: 100%;
   overflow: hidden;
   padding-top: 70px;
@@ -17,6 +17,7 @@ const MainRole = styled.main`
   justify-content: ${props => props.align || ''};
 
   @media (max-width: 983px) {
+    min-height: auto;
     &.about-page {
       display: flex;
       flex-flow: column;

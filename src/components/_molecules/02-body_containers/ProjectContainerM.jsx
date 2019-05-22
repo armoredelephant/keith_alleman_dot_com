@@ -12,20 +12,22 @@ import GithubLinkA from '@A/00-links/GithubLinkA';
 
 const Container = styled.div`
   background-color: ${props => props.theme.bg};
-  min-height: 100vh;
+  min-height:100%;
   display: flex;
   flex-flow: row;
+  padding-bottom: 100px;
 
-  @media (max-width: 983px) {
-    margin-top: 25%;
+  @media (max-width: 600px) {
+    margin-top: 25%
   }
 `;
 
 const LinkContainer = styled.div`
-  height: auto;
+  height: 75px;
   display: flex;
   flex-flow: row;
-  margin-top: 65px;
+  margin-top: 30px;
+  position: relative;
 `;
 
 const Title = styled.h1`
@@ -46,7 +48,7 @@ const ProjectContainerM = props => {
   return (
     <Container>
       {/** Project Info below */}
-      <SectionWrapperAutoA margin="25% 0 0 0">
+      <SectionWrapperAutoA margin="70px 0 0 0">
         <Title>{name}</Title>
         <Used>{used}</Used>
         <ParagraphA paragraph={description} />
@@ -60,7 +62,7 @@ const ProjectContainerM = props => {
       {/** Skills below */}
       <SectionWrapperAutoA
         hidden // prettier-ignore
-        margin="25% 0 0 0"
+        margin="70px 0 0 0"
       >
         <ListWrapperA>
           <SectionHeaderA

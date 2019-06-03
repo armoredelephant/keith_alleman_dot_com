@@ -5,27 +5,38 @@ import 'jest-styled-components';
 import MainRoleContainerM from './MainRoleContainerM';
 
 describe('MainRoleContainerM', () => {
+  let props;
+  let wrapper;
   // enzyme
   it('renders', () => {
     // enzyme
-    const wrapper = shallow(<MainRoleContainerM />);
+    wrapper = shallow(<MainRoleContainerM />);
     expect(wrapper).toBeTruthy(); // jest
   });
 
   it('renders justify-content /w prop', () => {
-    const props = {
+    props = {
       align: 'space-between',
       carousel: true,
       vh: '100vh'
     };
-    const wrapper = mount(<MainRoleContainerM {...props} />);
+    wrapper = mount(<MainRoleContainerM {...props} />);
     expect(wrapper).toHaveStyleRule('justify-content', 'space-between');
-    expect(wrapper).toHaveStyleRule('height', '100vh');
+    expect(wrapper).toHaveStyleRule('height', '900px');
+  });
+
+  it('renders min-height without carousel', () => {
+    props = {
+      align: 'space-between',
+      carousel: false,
+      vh: '100vh'
+    };
+    wrapper = mount(<MainRoleContainerM {...props} />);
     expect(wrapper).toHaveStyleRule('min-height', '100vh');
   });
 
   it('renders justify-content /wo prop', () => {
-    const wrapper = mount(<MainRoleContainerM />);
+    wrapper = mount(<MainRoleContainerM />);
     expect(wrapper).toHaveStyleRule('justify-content', undefined);
   });
 });

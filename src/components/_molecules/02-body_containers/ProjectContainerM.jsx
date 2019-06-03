@@ -12,13 +12,13 @@ import GithubLinkA from '@A/00-links/GithubLinkA';
 
 const Container = styled.div`
   background-color: ${props => props.theme.bg};
-  min-height:100%;
+  min-height: 100%;
   display: flex;
   flex-flow: row;
   padding-bottom: 100px;
 
   @media (max-width: 600px) {
-    margin-top: 25%
+    margin-top: 25%;
   }
 `;
 
@@ -52,12 +52,10 @@ const ProjectContainerM = props => {
         <Title>{name}</Title>
         <Used>{used}</Used>
         <ParagraphA paragraph={description} />
-        {/** WORKING ON */}
         <LinkContainer>
           <GithubLinkA url={linkGithub} />
-          {/* {visit ? <GhostLinkA url={linkUrl} /> : ''} */}
+          {visit ? <GhostLinkA url={linkUrl} /> : ''}
         </LinkContainer>
-        {/** WORKING ON */}
       </SectionWrapperAutoA>
       {/** Skills below */}
       <SectionWrapperAutoA
@@ -83,5 +81,12 @@ ProjectContainerM.propTypes = {
   description: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   used: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  linkGithub: PropTypes.string.isRequired,
+  linkUrl: PropTypes.string,
+  visit: PropTypes.bool.isRequired
+};
+
+ProjectContainerM.defaultProps = {
+  linkUrl: 'https://www.keithalleman.com'
 };

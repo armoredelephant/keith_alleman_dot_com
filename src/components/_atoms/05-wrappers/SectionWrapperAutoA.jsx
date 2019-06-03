@@ -12,7 +12,7 @@ const SectionWrapperAutoA = styled.section`
     margin: ${props => (props.margin ? props.margin : '0')};
     width: ${props => (props.hidden ? '0' : '100%')};
   }
-  
+
   @media (max-width: 983px) {
     margin: ${props => (props.margin ? props.margin : '0')};
     visibility: ${props => (props.hidden ? 'hidden' : 'visible')};

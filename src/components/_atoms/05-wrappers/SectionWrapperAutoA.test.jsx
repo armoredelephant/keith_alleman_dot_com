@@ -18,14 +18,14 @@ describe('<SectionWrapperAutoA />', () => {
     wrapper = mount(<SectionWrapperAutoA {...props} />);
     expect(wrapper).toHaveStyleRule('margin', '0');
     expect(wrapper).toHaveStyleRule('visibility', 'hidden', {
-      media: '(max-width:600px)'
+      media: '(max-width:983px)'
     });
   });
   it('is being styled /wo props', () => {
     wrapper = mount(<SectionWrapperAutoA />);
     expect(wrapper).toHaveStyleRule('margin', 'auto');
     expect(wrapper).toHaveStyleRule('visibility', 'visible', {
-      media: '(max-width:600px)'
+      media: '(max-width:983px)'
     });
   });
 });

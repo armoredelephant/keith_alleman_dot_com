@@ -30,6 +30,21 @@ const theme = {
   mobilefont: '25px',
   pb: '30px',
   pwidth: '100%',
+  // buttons
+  btnDisplay: 'inline-block',
+  btnW: 'auto',
+  btnH: 'auto',
+  btnP: '21px 34px',
+  btnFS: '15px',
+  btnTT: 'uppercase',
+  btnLS: '.1em',
+  btnBorderRadius: '30px',
+  btnTA: 'center',
+  btnTD: 'none',
+  btnCursor: 'pointer',
+  btnOutline: 'none',
+  btnLH: 'normal',
+  btnPos: 'absolute'
 };
 
 const ProjectsPageO = () => {
@@ -56,7 +71,15 @@ const ProjectsPageO = () => {
         <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
           {projectKeys.map((projectKey, i) => {
             const project = projects[projectKeys[i]];
-            const { name, used, description, linkGithub, linkUrl, skills, visit } = project;
+            const {
+              name, // prettiter-ignore
+              used,
+              description,
+              linkGithub,
+              linkUrl,
+              skills,
+              visit
+            } = project;
             return (
               <ProjectContainerM
                 key={projectKey}

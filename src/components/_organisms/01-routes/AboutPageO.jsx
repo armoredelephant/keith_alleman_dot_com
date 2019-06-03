@@ -32,7 +32,7 @@ const theme = {
   paddingb: '3px',
   sectionfc: 'rgb(255, 255, 255, .7)',
   mobilefont: '25px',
-  pwidth: '80%',
+  pwidth: '80%'
 };
 
 const AboutPageO = () => {

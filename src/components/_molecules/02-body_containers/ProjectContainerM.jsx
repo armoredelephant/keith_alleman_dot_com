@@ -48,7 +48,7 @@ const ProjectContainerM = props => {
   return (
     <Container>
       {/** Project Info below */}
-      <SectionWrapperAutoA margin="70px 0 0 0">
+      <SectionWrapperAutoA margin="70px 0 0 100px">
         <Title>{name}</Title>
         <Used>{used}</Used>
         <ParagraphA paragraph={description} />

@@ -14,6 +14,7 @@ const StyledParagraph = styled.p`
   font-family: ${props => props.theme.headff};
   font-size: 16px;
   text-indent: 2em;
+  text-align: justify;
 
   @media (max-width: 983px) {
     margin: 0;

@@ -22,7 +22,7 @@ const AnimatedListItem = styled.li`
   font-size: 16px;
   letter-spacing: 1.2px;
   line-height: 1.6em;
-  animation: 1s ${fadeInAnimation} ${props => `${props.count}s`};
+  animation: .7s ${fadeInAnimation} ${props => `${props.count}s`};
   animation-fill-mode: forwards;
 `;
 

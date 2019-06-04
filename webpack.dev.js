@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const Dotenv = require('dotenv-webpack')
 
 const paths = require('./paths');
 
@@ -24,11 +23,6 @@ module.exports = {
     port: 9000,
     historyApiFallback: true
   },
-  plugins: [
-    new Dotenv({
-      path: './.env.development'
-    })
-  ],
   module: {
     rules: [
       {

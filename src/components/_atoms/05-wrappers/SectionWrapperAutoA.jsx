@@ -14,7 +14,7 @@ const SectionWrapperAutoA = styled.section`
   }
 
   @media (max-width: 983px) {
-    margin: ${props => (props.margin ? props.margin : '0')};
+    margin: 0;
     visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
   }
 `;

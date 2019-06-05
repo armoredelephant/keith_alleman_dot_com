@@ -22,7 +22,7 @@ const Container = styled.div`
   }
 `;
 
-const LinkContainer = styled.div`
+export const LinkContainer = styled.div`
   height: 75px;
   display: flex;
   flex-flow: row;
@@ -90,3 +90,8 @@ ProjectContainerM.propTypes = {
 ProjectContainerM.defaultProps = {
   linkUrl: 'https://www.keithalleman.com'
 };
+
+Container.displayName = 'Container';
+LinkContainer.displayName = 'LinkContainer';
+Title.displayName = 'Title';
+Used.displayName = 'Used';

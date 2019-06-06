@@ -17,7 +17,7 @@ const Button = styled.div`
   user-select: none;
   position: absolute;
   bottom: 0;
-  font-size: 16px;
+  font-size: 30px;
   font-family: sans-serif;
   color: rgba(255, 255, 255, 0.8);
 
@@ -36,12 +36,12 @@ const CarouselButtonsA = props => {
     <Wrapper>
       {(loop || index !== 0) && (
         <Button className="left" onClick={prevHandler}>
-          ◀
+          &#x2BC7;
         </Button>
       )}
       {(loop || index !== total - 1) && (
         <Button className="right" onClick={nextHandler}>
-          ▶
+          &#x2BC8;
         </Button>
       )}
     </Wrapper>

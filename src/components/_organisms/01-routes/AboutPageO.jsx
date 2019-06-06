@@ -67,7 +67,7 @@ const AboutPageO = () => {
               header="Interests & Hobbies"
               secondary="true"
             />
-            <AnimatedListM items={interests} />
+            <AnimatedListM animated items={interests} />
             {/** Photo and design in here maybe not use grid? */}
           </ListWrapperA>
         </SectionWrapper40A>

@@ -4,6 +4,7 @@ const SectionWrapperAutoA = styled.section`
   width: 50%;
   height: 100%;
   margin: ${props => (props.margin ? props.margin : 'auto')};
+  padding: ${props => (props.padding ? props.padding : '')};
   display: flex;
   flex-flow: column;
   overflow: auto;

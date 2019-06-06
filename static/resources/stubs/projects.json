@@ -11,7 +11,9 @@
                 "Animations",
                 "Testing",
                 "Linting",
-                "React Hooks"
+                "React Hooks",
+                "Styled Components",
+                "Atomic Design"
             ]
         },
         "playlistrandomizer": {

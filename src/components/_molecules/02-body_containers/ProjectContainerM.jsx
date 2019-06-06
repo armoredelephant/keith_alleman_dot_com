@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 import SectionHeaderA from '@A/04-headers/SectionHeaderA';
 import SectionWrapperAutoA from '@A/05-wrappers/SectionWrapperAutoA';
@@ -22,7 +23,7 @@ const Container = styled.div`
   }
 `;
 
-export const LinkContainer = styled.div`
+const LinkContainer = styled.div`
   height: 75px;
   display: flex;
   flex-flow: row;
@@ -49,27 +50,32 @@ const ProjectContainerM = props => {
     <Container>
       {/** Project Info below */}
       <SectionWrapperAutoA margin="70px 0 0 100px">
-        <Title>{name}</Title>
-        <Used>{used}</Used>
-        <ParagraphA paragraph={description} />
-        <LinkContainer>
-          <GithubLinkA url={linkGithub} />
-          {visit ? <GhostLinkA url={linkUrl} /> : ''}
-        </LinkContainer>
+        <ScrollAnimation animateIn="fadeIn">
+          <Title>{name}</Title>
+          <Used>{used}</Used>
+          <ParagraphA paragraph={description} />
+          <LinkContainer>
+            <GithubLinkA url={linkGithub} />
+            {visit ? <GhostLinkA url={linkUrl} /> : ''}
+          </LinkContainer>
+        </ScrollAnimation>
       </SectionWrapperAutoA>
       {/** Skills below */}
       <SectionWrapperAutoA
         hidden // prettier-ignore
         margin="70px 0 0 0"
+        padding="0 0 0 13%"
       >
-        <ListWrapperA>
-          <SectionHeaderA
-            margin="10px 0 0 0" // prettier-ignore
-            header="Skills Built"
-            secondary="true"
-          />
-          <AnimatedListM items={items} />
-        </ListWrapperA>
+        <ScrollAnimation animateIn="fadeIn">
+          <ListWrapperA>
+            <SectionHeaderA
+              margin="10px 0 0 0" // prettier-ignore
+              header="Skills Built"
+              secondary="true"
+            />
+            <AnimatedListM items={items} />
+          </ListWrapperA>
+        </ScrollAnimation>
       </SectionWrapperAutoA>
     </Container>
   );

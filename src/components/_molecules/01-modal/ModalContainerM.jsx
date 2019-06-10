@@ -11,14 +11,15 @@ import React from 'react';
 import BackdropA from '@A/03-backdrop/BackdropA';
 import ModalM from './ModalM';
 
+
 const ModalContainerM = () => {
   return (
     <React.Fragment>
       <BackdropA />
-      <ModalM>
-        {/** container for nav within modal */}
-        {/** two sections, upper section and bottom section? */}
-      </ModalM>
+      <ModalM />
+      {/** container for nav within modal */}
+      {/** two sections, upper section and bottom section? */}
+      {/* background will be it's own? */}
     </React.Fragment>
   );
 };

@@ -4,7 +4,7 @@ import 'jest-styled-components';
 
 import ModalM from './ModalM';
 
-describe('ModalM', () => {
+describe('ModalA', () => {
   it('renders', () => {
     const wrapper = shallow(<ModalM />);
     expect(wrapper).toBeTruthy();

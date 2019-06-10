@@ -4,9 +4,11 @@ import styled from 'styled-components';
 
 // linear-gradient(146deg, #252627, #252627 54.8%, #95d5d2 55%);
 
+import ContactContainerA from '@A/07-containers/ContactContainerA';
+
 const StyledModal = styled.div`
   position: fixed;
-  background: linear-gradient(146deg, #252627, #252627 54.8%, #95d5d2 55%);
+  background: linear-gradient(130deg, #252627, #252627 21.8%, #95d5d2 22%);
   background-size: content;
   color: #fff;
   top: 0;
@@ -23,7 +25,7 @@ const StyledModal = styled.div`
   overflow: hidden;
   display: flex;
   display: -webkit-flex;
-  flex-direction: row;
+  flex-direction: column;
   align-content: stretch;
 
   .active & {
@@ -45,19 +47,11 @@ const StyledModal = styled.div`
 `;
 
 const ModalM = props => {
-  const { children } = props;
-  return <StyledModal>{children}</StyledModal>;
+  return (
+    <StyledModal>
+      <ContactContainerA />
+    </StyledModal>
+  );
 };
 
 export default ModalM;
-
-ModalM.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.element, // prettier-ignore
-    PropTypes.arrayOf(PropTypes.element)
-  ])
-};
-
-ModalM.defaultProps = {
-  children: <div />
-};

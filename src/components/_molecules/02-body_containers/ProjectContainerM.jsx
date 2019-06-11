@@ -62,7 +62,7 @@ const ProjectContainerM = props => {
       </SectionWrapperAutoA>
       {/** Skills below */}
       <SectionWrapperAutoA
-        hidden // prettier-ignore
+        hidden={true} // prettier-ignore
         margin="70px 0 0 0"
         padding="0 0 0 13%"
       >

@@ -9,13 +9,14 @@ import ContactContainerA from '@A/07-containers/ContactContainerA';
 const StyledModal = styled.div`
   position: fixed;
   background: linear-gradient(130deg, #252627, #252627 21.8%, #95d5d2 22%);
-  background-size: content;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
   top: 0;
   left: auto;
   right: calc(-40% - 15px);
   width: 40%;
-  height: 100%;
+  min-height: 100%;
   opacity: 0;
   visibility: hidden;
   transition-property: all;

@@ -59,6 +59,10 @@ const AnimatedListM = props => {
 export default AnimatedListM;
 
 AnimatedListM.propTypes = {
-  animated: PropTypes.bool.isRequired,
+  animated: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
+AnimatedListM.defaultProps = {
+  animated: false
 };

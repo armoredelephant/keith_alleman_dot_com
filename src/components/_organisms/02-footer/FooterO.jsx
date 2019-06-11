@@ -21,7 +21,8 @@ const theme = {
   clr: '#252627',
   ff: 'Montserrat, sans-serif',
   fs: '13px',
-  iconsize: '18px'
+  iconsize: '18px',
+  ml: '15px',
 };
 
 const FooterO = () => {

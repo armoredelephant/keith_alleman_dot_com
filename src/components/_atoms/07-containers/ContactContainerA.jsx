@@ -1,14 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ContactLinkA from '@A/00-links/ContactLinkA';
+import FooterLinkA from '@A/00-links/FooterLinkA';
+
 const Top = styled.div`
-    height: 40%;
+    height: 487px;
+    min-height: 487px;
     width: 100%;
     padding-right: 60%;
 `;
 
 const Bottom = styled.div`
-    height: 60%;
+    height: 536px;
+    min-height: 536px;
     width: 100%;
 `;
 
@@ -27,10 +32,21 @@ const ContactContainerA = props => {
                 <Image src='/resources/images/01.jpg' />
             </Top>
             <Bottom>
-
+                {/** possibly needs a <ContactLinkContainerA /> */}
+                <FooterLinkA
+                    destination='mailto:keith.alleman.dev@gmail.com'
+                    name='Email' />
             </Bottom>
         </React.Fragment>
     );
 }
 
 export default ContactContainerA;
+
+/**
+ * Email
+ * Resume Link
+ * Github
+ * LinkedIN
+ *
+ */

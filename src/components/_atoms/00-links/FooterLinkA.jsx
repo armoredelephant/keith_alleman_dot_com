@@ -5,7 +5,8 @@ import styled from 'styled-components';
 const IconLink = styled.a`
   font-size: ${props => props.theme.fs};
   color: ${props => props.theme.clr};
-  margin-left: 15px;
+  margin-left: ${props => props.theme.ml};
+  text-decoration: none;
 
   &:visited {
     color: ${props => props.theme.clr};

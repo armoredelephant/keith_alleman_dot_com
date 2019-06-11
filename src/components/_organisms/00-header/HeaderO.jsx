@@ -23,7 +23,11 @@ const theme = {
   bg: '#252627',
   primarycolor: '#eaeaea',
   secondarycolor: '#95d5d2',
-  boxshadow: '0 1px 1px 0 rgba(0, 0, 0, .1)'
+  boxshadow: '0 1px 1px 0 rgba(0, 0, 0, .1)',
+  clr: '#252627',
+  fs: '20px',
+  iconsize: '18px',
+  ml: '15px',
 };
 
 const HeaderO = () => {

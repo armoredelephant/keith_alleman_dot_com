@@ -8,11 +8,11 @@ const SectionWrapper40A = styled.div`
 
   @media (max-width: 983px) {
     width: 100%;
-
+    visibility: ${props => (props.hidden ? 'hidden' : 'visible')};
+    
     &.about-l {
-      min-height: 300px;
-      max-height: 300px;
-    }
+      height: 0;
+    };
   }
 `;
 

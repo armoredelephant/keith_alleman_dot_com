@@ -27,8 +27,8 @@ const StyledModal = styled.div`
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
-  align-content: stretch;
-
+  justify-content: space-between;
+  
   .active & {
     opacity: 1;
     visibility: visible;

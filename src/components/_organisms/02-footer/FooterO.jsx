@@ -20,9 +20,11 @@ const theme = {
   bg: '#95d5d2',
   clr: '#252627',
   ff: 'Montserrat, sans-serif',
+  linkfs: '13px',
   fs: '13px',
   iconsize: '18px',
   ml: '15px',
+  linkflow: 'row',
 };
 
 const FooterO = () => {
@@ -30,24 +32,7 @@ const FooterO = () => {
     <ThemeProvider theme={theme}>
       <FooterContainerM>
         <FooterWrapper>
-          <FooterLinkContainerA>
-            <FooterLinkA // prettier-ignore
-              destination="mailto:keith.alleman.dev@gmail.com"
-              name="Contact"
-            />
-            <FooterLinkA // prettier-ignore
-              destination="https://github.com"
-              name="Resume"
-            />
-            <FooterLinkA // prettier-ignore
-              destination="https://github.com/armoredelephant"
-              icon="fab fa-github"
-            />
-            <FooterLinkA
-              destination="https://www.linkedin.com/in/keith-alleman-b9b14487"
-              icon="fab fa-linkedin"
-            />
-          </FooterLinkContainerA>
+          <FooterLinkContainerA />
         </FooterWrapper>
       </FooterContainerM>
     </ThemeProvider>

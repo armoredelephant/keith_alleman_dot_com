@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ContactLinkA from '@A/00-links/ContactLinkA';
-import FooterLinkA from '@A/00-links/FooterLinkA';
+import FooterLinkContainerA from '@A/07-containers/FooterLinkContainerA';
 
 const Top = styled.div`
-    height: 487px;
-    min-height: 487px;
+    min-height: fit-content;
     width: 100%;
     padding-right: 60%;
+    flex-shrink: 2
 `;
 
 const Bottom = styled.div`
     height: 536px;
-    min-height: 536px;
+    min-height: fit-content;
     width: 100%;
+    margin-bottom: 8%;
 `;
 
 const Image = styled.img`
@@ -33,9 +33,10 @@ const ContactContainerA = props => {
             </Top>
             <Bottom>
                 {/** possibly needs a <ContactLinkContainerA /> */}
-                <FooterLinkA
-                    destination='mailto:keith.alleman.dev@gmail.com'
-                    name='Email' />
+                <FooterLinkContainerA
+                    column={true} // prettier-ignore
+                    contact={true}
+                />
             </Bottom>
         </React.Fragment>
     );

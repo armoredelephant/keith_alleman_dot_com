@@ -28,6 +28,11 @@ const theme = {
   fs: '20px',
   iconsize: '18px',
   ml: '15px',
+  mt: '45px',
+  ff: 'Montserrat, sans-serif',
+  linkfs: '50px',
+  fw: '500',
+  linkflow: 'column',
 };
 
 const HeaderO = () => {

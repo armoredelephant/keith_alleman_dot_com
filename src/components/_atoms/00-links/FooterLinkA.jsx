@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const IconLink = styled.a`
-  font-size: ${props => props.theme.fs};
+  font-family: ${props => props.theme.ff};
+  font-size: ${props => props.theme.linkfs};
   color: ${props => props.theme.clr};
   margin-left: ${props => props.theme.ml};
+  margin-top: ${props => props.theme.mt};
+  font-weight: ${props => props.theme.fw};
   text-decoration: none;
 
   &:visited {
@@ -22,9 +25,9 @@ const IconLinkA = props => {
   return (
     // prettier-ignore
     <IconLink href={destination}>
-        {icon ? (
-            <Icon className={icon} />
-        ) : `${name}`}
+      {icon ? (
+        <Icon className={icon} />
+      ) : `${name}`}
     </IconLink>
   );
 };

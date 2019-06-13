@@ -32,7 +32,7 @@ const theme = {
   ff: 'Montserrat, sans-serif',
   linkfs: '50px',
   fw: '500',
-  linkflow: 'column',
+  linkflow: 'column'
 };
 
 const HeaderO = () => {

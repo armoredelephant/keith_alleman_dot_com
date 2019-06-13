@@ -1,19 +1,30 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { cleanup } from 'react-testing-library';
 import 'jest-styled-components';
 
-import AnimatedListM from './AnimatedListM';
+import AnimatedListItemA from '@A/01-list_items/AnimatedListItemA';
+import AnimatedListM, { BasicListItem } from './AnimatedListM';
 
 afterEach(cleanup);
 
 describe('<AnimatedListM />', () => {
-  it('renders with interests', () => {
-    const props = {
+  let wrapper;
+  let props;
+  it('renders without animation', () => {
+    props = {
       items: ['1', '2']
     };
-    const wrapper = shallow(<AnimatedListM {...props} />);
-    expect(wrapper.find('ul')).toBeTruthy();
+    wrapper = mount(<AnimatedListM {...props} />);
+    expect(wrapper.find(BasicListItem)).toBeTruthy();
+  });
+  it('renders with animation', () => {
+    props = {
+      items: ['1', '2'],
+      animated: true
+    };
+    wrapper = shallow(<AnimatedListM {...props} />);
+    expect(wrapper.find(AnimatedListItemA)).toBeTruthy();
   });
 });
 

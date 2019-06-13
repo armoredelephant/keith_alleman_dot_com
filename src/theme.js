@@ -10,7 +10,9 @@ const defaultTheme = {
   fs: '13px',
   ff: 'Montserrat, sans-serif',
   clr: '#252627',
-  sectionfc: 'rgb(255, 255, 255, .7)'
+  sectionfc: 'rgb(255, 255, 255, .7)',
+  linkfs: '13px',
+  linkflow: 'row'
 };
 
 export default defaultTheme;

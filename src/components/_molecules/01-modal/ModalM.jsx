@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 // linear-gradient(146deg, #252627, #252627 54.8%, #95d5d2 55%);
@@ -28,7 +27,7 @@ const StyledModal = styled.div`
   display: -webkit-flex;
   flex-direction: column;
   justify-content: space-between;
-  
+
   .active & {
     opacity: 1;
     visibility: visible;
@@ -47,7 +46,7 @@ const StyledModal = styled.div`
   }
 `;
 
-const ModalM = props => {
+const ModalM = () => {
   return (
     <StyledModal>
       <ContactContainerA />

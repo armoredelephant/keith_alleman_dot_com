@@ -18,7 +18,8 @@ const List = styled.ul`
   }
 `;
 
-const BasicListItem = styled.li`
+// exported for testing purposes within AnimatedListM.test.jsx
+export const BasicListItem = styled.li`
   list-style: none;
   color: ${props => props.theme.sectionfc};
   font-family: ${props => props.theme.headff};

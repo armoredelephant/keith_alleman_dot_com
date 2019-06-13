@@ -30,7 +30,8 @@ describe('<FooterLinkA />', () => {
   it('Is styled with custom theme', () => {
     const customTheme = {
       clr: 'white',
-      fs: '16px'
+      fs: '16px',
+      linkfs: '16px'
     };
     wrapper = global.StyledComponents.mountWithTheme(
       // prettier-ignore

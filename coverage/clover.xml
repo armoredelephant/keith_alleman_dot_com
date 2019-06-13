@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1559761519329" clover="3.2.0">
-  <project timestamp="1559761519329" name="All files">
-    <metrics statements="220" coveredstatements="218" conditionals="52" coveredconditionals="45" methods="109" coveredmethods="108" elements="381" coveredelements="371" complexity="0" loc="220" ncloc="220" packages="14" files="27" classes="27"/>
+<coverage generated="1560453359666" clover="3.2.0">
+  <project timestamp="1560453359666" name="All files">
+    <metrics statements="236" coveredstatements="234" conditionals="66" coveredconditionals="59" methods="120" coveredmethods="119" elements="422" coveredelements="412" complexity="0" loc="236" ncloc="236" packages="14" files="28" classes="28"/>
     <package name="src">
       <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="styled-components.js" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/styled-components.js">
         <metrics statements="6" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
-        <line num="9" count="25" type="stmt"/>
+        <line num="9" count="26" type="stmt"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="14" count="25" type="stmt"/>
-        <line num="15" count="20" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="20" type="stmt"/>
+        <line num="14" count="26" type="stmt"/>
+        <line num="15" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="21" type="stmt"/>
       </file>
       <file name="theme.js" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/theme.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="25" type="stmt"/>
+        <line num="1" count="26" type="stmt"/>
       </file>
     </package>
     <package name="src.components._atoms.00-links">
-      <metrics statements="67" coveredstatements="67" conditionals="4" coveredconditionals="3" methods="45" coveredmethods="45"/>
+      <metrics statements="71" coveredstatements="71" conditionals="4" coveredconditionals="3" methods="49" coveredmethods="49"/>
       <file name="FooterLinkA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/00-links/FooterLinkA.jsx">
-        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="20" count="4" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
+        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="9" coveredmethods="9"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="14" type="stmt"/>
+        <line num="7" count="14" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="9" count="14" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="11" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+        <line num="19" count="5" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="36" count="5" type="stmt"/>
+        <line num="42" count="5" type="stmt"/>
       </file>
       <file name="GhostLinkA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/00-links/GhostLinkA.jsx">
         <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="17" coveredmethods="17"/>
@@ -53,11 +57,11 @@
         <line num="19" count="4" type="stmt"/>
         <line num="20" count="4" type="stmt"/>
         <line num="21" count="4" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="27" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
       </file>
       <file name="GithubLinkA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/00-links/GithubLinkA.jsx">
         <metrics statements="23" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="18" coveredmethods="18"/>
@@ -79,11 +83,11 @@
         <line num="22" count="4" type="stmt"/>
         <line num="23" count="4" type="stmt"/>
         <line num="24" count="4" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="29" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
         <line num="35" count="2" type="stmt"/>
-        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
       </file>
       <file name="HeaderLinkA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/00-links/HeaderLinkA.jsx">
         <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="5"/>
@@ -101,19 +105,18 @@
       </file>
     </package>
     <package name="src.components._atoms.01-list_items">
-      <metrics statements="19" coveredstatements="19" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
+      <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7"/>
       <file name="AnimatedListItemA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/01-list_items/AnimatedListItemA.jsx">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="31" count="4" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
-        <line num="42" count="3" type="stmt"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
       </file>
       <file name="HeaderListItemA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/01-list_items/HeaderListItemA.jsx">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
@@ -181,23 +184,25 @@
       </file>
     </package>
     <package name="src.components._atoms.05-wrappers">
-      <metrics statements="8" coveredstatements="8" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
+      <metrics statements="10" coveredstatements="10" conditionals="14" coveredconditionals="14" methods="7" coveredmethods="7"/>
       <file name="ListWrapperA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/05-wrappers/ListWrapperA.jsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="3" count="2" type="stmt"/>
       </file>
       <file name="SectionWrapper40A.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/05-wrappers/SectionWrapper40A.jsx">
-        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <metrics statements="3" coveredstatements="3" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
         <line num="3" count="1" type="stmt"/>
         <line num="7" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="4" type="cond" truecount="2" falsecount="0"/>
       </file>
       <file name="SectionWrapperAutoA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/05-wrappers/SectionWrapperAutoA.jsx">
-        <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="8" methods="4" coveredmethods="4"/>
+        <metrics statements="6" coveredstatements="6" conditionals="10" coveredconditionals="10" methods="5" coveredmethods="5"/>
         <line num="3" count="2" type="stmt"/>
         <line num="6" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="7" count="8" type="cond" truecount="2" falsecount="0"/>
         <line num="13" count="8" type="cond" truecount="2" falsecount="0"/>
-        <line num="18" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="8" type="cond" truecount="2" falsecount="0"/>
       </file>
     </package>
     <package name="src.components._atoms.06-paragraphs">
@@ -216,15 +221,24 @@
       </file>
     </package>
     <package name="src.components._atoms.07-containers">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="12" coveredstatements="12" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
+      <file name="ContactContainerA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/07-containers/ContactContainerA.jsx">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+      </file>
       <file name="FooterLinkContainerA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/07-containers/FooterLinkContainerA.jsx">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <metrics statements="7" coveredstatements="7" conditionals="8" coveredconditionals="8" methods="2" coveredmethods="2"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="43" count="4" type="stmt"/>
+        <line num="47" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.components._molecules.00-header">
@@ -264,20 +278,17 @@
       </file>
     </package>
     <package name="src.components._molecules.01-modal">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="ModalContainerM.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/ModalContainerM.jsx">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
       <file name="ModalM.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/01-modal/ModalM.jsx">
-        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="2" type="stmt"/>
         <line num="49" count="2" type="stmt"/>
-        <line num="54" count="2" type="stmt"/>
-        <line num="61" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components._molecules.02-body_containers">
@@ -297,24 +308,24 @@
       </file>
       <file name="ProjectContainerM.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/02-body_containers/ProjectContainerM.jsx">
         <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
         <line num="35" count="2" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
         <line num="48" count="2" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
-        <line num="90" count="1" type="stmt"/>
-        <line num="94" count="1" type="stmt"/>
-        <line num="95" count="1" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
         <line num="96" count="1" type="stmt"/>
-        <line num="97" count="1" type="stmt"/>
+        <line num="100" count="1" type="stmt"/>
+        <line num="101" count="1" type="stmt"/>
+        <line num="102" count="1" type="stmt"/>
+        <line num="103" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components._molecules.03-footer">
@@ -333,16 +344,24 @@
       </file>
     </package>
     <package name="src.components._molecules.04-list_containers">
-      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
       <file name="AnimatedListM.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_molecules/04-list_containers/AnimatedListM.jsx">
-        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="2" methods="5" coveredmethods="5"/>
         <line num="7" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
-        <line num="21" count="2" type="stmt"/>
         <line num="22" count="2" type="stmt"/>
-        <line num="25" count="4" type="stmt"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="41" count="2" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="25" count="8" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="53" count="4" type="stmt"/>
+        <line num="54" count="4" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
       </file>
     </package>
   </project>

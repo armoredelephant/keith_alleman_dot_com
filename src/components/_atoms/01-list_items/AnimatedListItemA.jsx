@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'styled-components';
-import { fadeInLeft } from 'react-animations';
-
-const fadeInAnimation = keyframes`${fadeInLeft}`;
+import styled from 'styled-components';
 
 const AnimatedListItem = styled.li`
   @keyframes fade-in-left {
@@ -22,7 +19,7 @@ const AnimatedListItem = styled.li`
   font-size: 16px;
   letter-spacing: 1.2px;
   line-height: 1.6em;
-  animation: 0.7s ${fadeInAnimation} ${props => `${props.count}s`};
+  animation: 0.7s fade-in-left ${props => `${props.count}s`};
   animation-fill-mode: forwards;
 `;
 

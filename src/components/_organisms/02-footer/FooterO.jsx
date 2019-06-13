@@ -5,7 +5,6 @@ import styled, { ThemeProvider } from 'styled-components';
 import FooterContainerM from '@M/03-footer/FooterContainerM';
 
 import FooterLinkContainerA from '@A/07-containers/FooterLinkContainerA';
-import FooterLinkA from '@A/00-links/FooterLinkA';
 
 const FooterWrapper = styled.div`
   width: 50%;
@@ -14,6 +13,11 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-flow: row;
   justify-content: center;
+
+  @media (max-width: 415px) {
+    width: 100%;
+    margin: auto 0 auto 0;
+  }
 `;
 
 const theme = {
@@ -24,7 +28,7 @@ const theme = {
   fs: '13px',
   iconsize: '18px',
   ml: '15px',
-  linkflow: 'row',
+  linkflow: 'row'
 };
 
 const FooterO = () => {

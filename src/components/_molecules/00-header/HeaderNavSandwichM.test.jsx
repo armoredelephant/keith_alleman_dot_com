@@ -27,7 +27,6 @@ describe('HeaderNavSandwichM', () => {
       activeSandwitch: true
     };
     wrapper = mount(<HeaderNavSandwichM {...props} />);
-    console.log(wrapper.debug());
     expect(wrapper.find('.nav-bar-active')).toBeTruthy();
   });
 });

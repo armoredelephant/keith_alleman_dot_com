@@ -59,7 +59,7 @@ const AboutPageO = () => {
       >
         <SectionWrapper40A
           className="about-l" // prettier-ignore
-          hidden={true}
+          hidden
           margin="50px auto 0 auto"
         >
           <ListWrapperA>

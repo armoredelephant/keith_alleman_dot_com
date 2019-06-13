@@ -20,6 +20,11 @@ const Link = styled.a`
   line-height: ${props => props.theme.btnLH};
   position: ${props => props.theme.btnPos};
   right: 175px;
+
+  @media (max-width: 375px) {
+    font-size: 11px;
+    padding: 11px 24px;
+  }
 `;
 
 const GhostLinkA = props => {

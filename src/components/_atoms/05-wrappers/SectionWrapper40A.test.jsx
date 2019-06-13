@@ -11,9 +11,13 @@ describe('<SectionWrapper40A>', () => {
   });
   it('is styled based on props', () => {
     const props = {
-      margin: 'auto'
+      margin: 'auto',
+      hidden: true
     };
     wrapper = mount(<SectionWrapper40A {...props} />);
     expect(wrapper).toHaveStyleRule('margin', 'auto');
+    expect(wrapper).toHaveStyleRule('visibility', 'hidden', {
+      media: '(max-width: 983px)'
+    });
   });
 });

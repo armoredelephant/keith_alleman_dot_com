@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 import Carousel from 're-carousel';
 
 // widgets for Carousel
@@ -47,6 +47,11 @@ const theme = {
   btnPos: 'absolute'
 };
 
+const CarouselContainer = styled.div`
+  padding: 70px 15px 0;
+  background: #252627;
+`;
+
 const ProjectsPageO = () => {
   const [projects, setProjects] = useState(null);
   const [projectKeys, setProjectKeys] = useState([]);
@@ -67,7 +72,7 @@ const ProjectsPageO = () => {
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
-      <MainRoleContainerM id="projects" vh="900px" carousel>
+      <CarouselContainer>
         <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
           {projectKeys.map((projectKey, i) => {
             const project = projects[projectKeys[i]];
@@ -94,7 +99,7 @@ const ProjectsPageO = () => {
             );
           })}
         </Carousel>
-      </MainRoleContainerM>
+      </CarouselContainer>
     </ThemeProvider>
   );
 };

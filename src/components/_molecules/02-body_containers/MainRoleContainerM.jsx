@@ -8,7 +8,6 @@ const MainRole = styled.main`
   justify-content: center;
   padding-top: 70px;
   padding: 70px 15px 0; 
-
 `;
 
 const MainRoleContainerM = props => {

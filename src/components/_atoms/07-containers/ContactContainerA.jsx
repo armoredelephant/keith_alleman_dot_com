@@ -19,7 +19,7 @@ const Bottom = styled.div`
 
 const Image = styled.img`
   border-radius: 100%;
-  margin: 15px 0 0 15px;
+  margin: 10px 0 0 10px;
   height: 130px;
   width: 130px;
   border: 2px solid #dfdfdf;

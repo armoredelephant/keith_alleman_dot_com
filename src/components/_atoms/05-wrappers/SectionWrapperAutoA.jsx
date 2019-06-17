@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 const SectionWrapperAutoA = styled.section`
   width: 50%;
-  height: auto;
+  height: 100%;
   margin: ${props => (props.margin ? props.margin : 'auto')};
   padding: ${props => (props.padding ? props.padding : '')};
   display: flex;
   flex-flow: column;
-  overflow: hidden;
+  overflow: auto;
 
   @media (max-width: 600px) {
     margin: ${props => (props.margin ? props.margin : '0')};

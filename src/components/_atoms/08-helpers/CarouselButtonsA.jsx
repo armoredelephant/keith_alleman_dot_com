@@ -36,12 +36,14 @@ const CarouselButtonsA = props => {
     <Wrapper>
       {(loop || index !== 0) && (
         <Button className="left" onClick={prevHandler}>
-          &#x2BC7;
+        ◀
+          {/* &#x2BC7; */}
         </Button>
       )}
       {(loop || index !== total - 1) && (
         <Button className="right" onClick={nextHandler}>
-          &#x2BC8;
+        ▶
+          {/* &#x2BC8; */}
         </Button>
       )}
     </Wrapper>

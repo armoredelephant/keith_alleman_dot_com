@@ -20,8 +20,8 @@ const Bottom = styled.div`
 const Image = styled.img`
   border-radius: 100%;
   margin: 15px 0 0 15px;
-  height: 140px;
-  width: 140px;
+  height: 130px;
+  width: 130px;
   border: 2px solid #dfdfdf;
 
   @media (max-width: 375px) {

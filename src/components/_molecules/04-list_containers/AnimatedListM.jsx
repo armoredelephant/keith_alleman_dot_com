@@ -10,7 +10,6 @@ const List = styled.ul`
   padding: 0;
   margin-top: 0;
   margin: 0;
-  overflow: hidden;
 
   @media (max-width: 770px) {
     width: 100%;

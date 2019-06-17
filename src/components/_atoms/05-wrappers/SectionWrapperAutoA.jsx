@@ -7,7 +7,7 @@ const SectionWrapperAutoA = styled.section`
   padding: ${props => (props.padding ? props.padding : '')};
   display: flex;
   flex-flow: column;
-  overflow: auto;
+  overflow: hidden;
 
   @media (max-width: 600px) {
     margin: ${props => (props.margin ? props.margin : '0')};

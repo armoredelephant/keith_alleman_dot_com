@@ -8,6 +8,7 @@ import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
 // placeholder
 import SectionWrapperAutoA from '@A/05-wrappers/SectionWrapperAutoA';
 import SectionHeaderA from '@A/04-headers/SectionHeaderA';
+import SectionContainerA from '@A/07-containers/SectionContainerA';
 
 // Left Side Wrapper - Atom
 import SectionWrapper40A from '@A/05-wrappers/SectionWrapper40A';
@@ -57,26 +58,28 @@ const AboutPageO = () => {
         className="about-page"
         vh="100vh"
       >
-        <SectionWrapper40A
-          className="about-l" // prettier-ignore
-          hidden
-          margin="50px auto 0 auto"
-        >
-          <ListWrapperA>
-            <SectionHeaderA
-              margin="30px 0 0 0" // prettier-ignore
-              header="Interests & Hobbies"
-              secondary="true"
-            />
-            <AnimatedListM animated items={interests} />
-            {/** Photo and design in here maybe not use grid? */}
-          </ListWrapperA>
-        </SectionWrapper40A>
-        <SectionWrapperAutoA className="about-r" margin="50px auto 0 0">
-          <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
-          <ParagraphA paragraph={paragraph} />
-          {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
-        </SectionWrapperAutoA>
+        <SectionContainerA>
+          <SectionWrapper40A
+            className="about-l" // prettier-ignore
+            hidden
+            margin="50px auto 0 auto"
+          >
+            <ListWrapperA>
+              <SectionHeaderA
+                margin="30px 0 0 0" // prettier-ignore
+                header="Interests & Hobbies"
+                secondary="true"
+              />
+              <AnimatedListM animated items={interests} />
+              {/** Photo and design in here maybe not use grid? */}
+            </ListWrapperA>
+          </SectionWrapper40A>
+          <SectionWrapperAutoA className="about-r" margin="50px auto 0 0">
+            <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
+            <ParagraphA paragraph={paragraph} />
+            {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
+          </SectionWrapperAutoA>
+        </SectionContainerA>
       </MainRoleContainerM>
     </ThemeProvider>
   );

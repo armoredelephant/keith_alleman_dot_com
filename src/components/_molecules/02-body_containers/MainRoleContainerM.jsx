@@ -4,31 +4,11 @@ import styled from 'styled-components';
 
 const MainRole = styled.main`
   background: #252627;
-  min-height: ${props => (props.vh ? props.vh : '600px')};
-  height: ${props => (props.carousel ? '900px' : '')};
-  width: 100%;
-  overflow: hidden;
-  padding-top: 70px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-bottom: ${props => props.theme.pb || ''};
   display: flex;
-  flex-flow: row;
-  justify-content: ${props => props.align || ''};
+  justify-content: center;
+  padding-top: 70px;
+  padding: 70px 15px 0; 
 
-  @media (max-width: 983px) {
-    min-height: auto;
-    &.about-page {
-      display: flex;
-      flex-flow: column;
-      margin: 0 auto;
-    }
-  }
-
-  @media (max-width: 670px) {
-    display: flex;
-    flex-flow: column;
-  }
 `;
 
 const MainRoleContainerM = props => {

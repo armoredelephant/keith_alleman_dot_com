@@ -16,11 +16,6 @@ const Container = styled.div`
   min-height: 100%;
   display: flex;
   flex-flow: row;
-  padding-bottom: 100px;
-
-  @media (max-width: 600px) {
-    margin-top: 25%;
-  }
 `;
 
 const LinkContainer = styled.div`

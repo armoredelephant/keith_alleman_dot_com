@@ -56,26 +56,24 @@ const AboutPageO = () => {
       <MainRoleContainerM
         id="about" // prettier-ignore
         className="about-page"
-        vh="100vh"
       >
         <SectionContainerA>
           <SectionWrapper40A
             className="about-l" // prettier-ignore
-            hidden
-            margin="50px auto 0 auto"
+            center={true}
+            hidden={true}
           >
             <ListWrapperA>
               <SectionHeaderA
-                margin="30px 0 0 0" // prettier-ignore
-                header="Interests & Hobbies"
+                header="Interests & Hobbies" // prettier-ignore
                 secondary="true"
               />
               <AnimatedListM animated items={interests} />
               {/** Photo and design in here maybe not use grid? */}
             </ListWrapperA>
           </SectionWrapper40A>
-          <SectionWrapperAutoA className="about-r" margin="50px auto 0 0">
-            <SectionHeaderA margin="auto 0" header={"- I'm Keith Alleman."} />
+          <SectionWrapperAutoA className="about-r">
+            <SectionHeaderA header={"- I'm Keith Alleman."} />
             <ParagraphA paragraph={paragraph} />
             {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
           </SectionWrapperAutoA>

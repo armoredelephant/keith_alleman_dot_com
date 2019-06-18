@@ -7,7 +7,15 @@ const MainRole = styled.main`
   display: flex;
   justify-content: center;
   padding-top: 70px;
-  padding: 70px 15px 0; 
+  padding: 70px 15px 70px;
+
+  &:last-of-type {
+    padding: 70px 15px 20px;
+  }
+  
+  @media (max-width: 483px) {
+    padding: 70px 15px 0;
+  };
 `;
 
 const MainRoleContainerM = props => {

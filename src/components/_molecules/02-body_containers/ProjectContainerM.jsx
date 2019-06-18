@@ -5,6 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 import SectionHeaderA from '@A/04-headers/SectionHeaderA';
 import SectionWrapperAutoA from '@A/05-wrappers/SectionWrapperAutoA';
+import SectionWrapper40A from '@A/05-wrappers/SectionWrapper40A';
 import ListWrapperA from '@A/05-wrappers/ListWrapperA';
 import AnimatedListM from '@M/04-list_containers/AnimatedListM';
 import ParagraphA from '@A/06-paragraphs/ParagraphA';
@@ -13,7 +14,6 @@ import GithubLinkA from '@A/00-links/GithubLinkA';
 
 const Container = styled.div`
   background-color: ${props => props.theme.bg};
-  min-height: 100%;
   display: flex;
   flex-flow: row;
 `;
@@ -35,7 +35,6 @@ const Title = styled.h1`
 const Used = styled.h3`
   color: ${props => props.theme.primarycolor};
   letter-spacing: ${props => props.theme.ls};
-  margin-top: 10px;
   text-align: center;
 `;
 
@@ -44,7 +43,7 @@ const ProjectContainerM = props => {
   return (
     <Container>
       {/** Project Info below */}
-      <SectionWrapperAutoA margin="70px 0 0 100px">
+      <SectionWrapperAutoA>
         <ScrollAnimation animateIn="fadeIn">
           <Title>{name}</Title>
           <Used>{used}</Used>
@@ -56,22 +55,19 @@ const ProjectContainerM = props => {
         </ScrollAnimation>
       </SectionWrapperAutoA>
       {/** Skills below */}
-      <SectionWrapperAutoA
+      <SectionWrapper40A
         hidden // prettier-ignore
-        margin="70px 0 0 0"
-        padding="0 0 0 13%"
       >
         <ScrollAnimation animateIn="fadeIn">
           <ListWrapperA>
             <SectionHeaderA
-              margin="10px 0 0 0" // prettier-ignore
-              header="Skills Built"
+              header="Skills Built" // prettier-ignore
               secondary="true"
             />
             <AnimatedListM items={items} />
           </ListWrapperA>
         </ScrollAnimation>
-      </SectionWrapperAutoA>
+      </SectionWrapper40A>
     </Container>
   );
 };

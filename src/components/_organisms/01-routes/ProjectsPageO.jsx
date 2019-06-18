@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import styled, { ThemeProvider } from 'styled-components';
-import Carousel from 're-carousel';
+// import Carousel from 're-carousel';
+import Carousel from '@M/05-carousel/Carousel';
 
 // widgets for Carousel
 import IndicatorDots from '@A/08-helpers/IndicatorDotsA';
-import CarouselButtonsA from '@A/08-helpers/CarouselButtonsA';
+// import CarouselButtonsA from '@A/08-helpers/CarouselButtonsA';
+import CarouselButtonsA from '@A/10-buttons/CarouselButtonsA';
 
 // <Main role='main'> container - Molecule
 import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
@@ -47,11 +49,6 @@ const theme = {
   btnPos: 'absolute'
 };
 
-const CarouselContainer = styled.div`
-  padding: 70px 15px 0;
-  background: #252627;
-`;
-
 const ProjectsPageO = () => {
   const [projects, setProjects] = useState(null);
   const [projectKeys, setProjectKeys] = useState([]);
@@ -69,11 +66,14 @@ const ProjectsPageO = () => {
 
   // NEED A FUNCTION THAT GRABS THE SKILLS FROM EACH
 
+  // Instead of mapoing through all projects and loading, just do first of index.
+  // On click will update the one to display?
+
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
-      <CarouselContainer>
-        <Carousel widgets={[IndicatorDots, CarouselButtonsA]}>
+      <MainRoleContainerM id='projects'>
+        <Carousel widget={CarouselButtonsA}>
           {projectKeys.map((projectKey, i) => {
             const project = projects[projectKeys[i]];
             const {
@@ -94,12 +94,13 @@ const ProjectsPageO = () => {
                 linkUrl={linkUrl}
                 name={name}
                 used={used}
+                flexOrder={i}
                 visit={visit}
               />
             );
           })}
         </Carousel>
-      </CarouselContainer>
+      </MainRoleContainerM>
     </ThemeProvider>
   );
 };

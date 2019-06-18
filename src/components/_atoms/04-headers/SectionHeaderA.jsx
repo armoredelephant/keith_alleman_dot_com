@@ -3,34 +3,28 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const SectionHeaderWrapper = styled.div`
-  max-height: ${props => (props.secondary ? '75px' : '')};
-  height: ${props => props.theme.headheight};
-  text-align: ${props => (props.align ? props.align : '')};
-  margin: ${props => (props.center ? 'auto' : '')};
+  text-align: ${props => props.align && props.align};
   display: flex;
 `;
 
 const StyledHeader = styled.h2`
   white-space: nowrap;
   overflow: hidden;
-  text-align: ${props => (props.center ? 'center' : '')};
-  margin: ${props => (props.margin ? props.margin : 'auto')};
+  text-align: ${props => props.center && 'center'};
   font-family: ${props => props.theme.headff};
   letter-spacing: ${props => props.theme.ls};
   color: ${props => props.theme.primarycolor};
-  font-style: ${props => (props.secondary ? props.theme.secondaryfst : '')};
-  padding-bottom: ${props => (props.secondary ? props.theme.paddingb : '')};
+  font-style: ${props => props.secondary && props.theme.secondaryfst};
   font-size: ${props =>
     props.secondary // prettier-ignore
       ? props.theme.secondaryfs
       : props.theme.headfs};
 
   @media (max-width: 983px) {
-    margin: ${props => (props.secondary ? '' : 'auto 0')};
     font-size: ${props =>
-      props.secondary // prettier-ignore
-        ? props.theme.secondaryfs
-        : props.theme.mobilefont};
+    props.secondary // prettier-ignore
+      ? props.theme.secondaryfs
+      : props.theme.mobilefont};
   }
 `;
 

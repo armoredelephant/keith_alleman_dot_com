@@ -19,10 +19,8 @@ const Image = styled.img`
   border: 2px solid #dfdfdf;
 
   @media (max-width: 375px) {
-    @media (max-height: 550px) {
       height: 90px;
       width: 90px;
-    }
   }
 
   @media (max-width: 983px) {

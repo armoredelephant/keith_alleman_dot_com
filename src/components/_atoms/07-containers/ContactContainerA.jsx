@@ -19,13 +19,17 @@ const Image = styled.img`
   border: 2px solid #dfdfdf;
 
   @media (max-width: 375px) {
-    height: 100px;
-    width: 100px;
+    @media (max-height: 550px) {
+      height: 100px;
+      width: 100px;
+    }
   }
 
   @media (max-width: 983px) {
-    height: 100px;
-    width: 100px;
+    @media (max-height: 550px) {
+      height: 100px;
+      width: 100px;
+    }
   }
 `;
 

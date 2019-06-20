@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const MainRole = styled.main`
+const MainRole = styled.section`
   background: #252627;
+  height: 800px;
   display: flex;
   justify-content: center;
   padding-top: 70px;
@@ -21,7 +22,7 @@ const MainRole = styled.main`
 const MainRoleContainerM = props => {
   const { children } = props;
   return (
-    <MainRole {...props} role="main">
+    <MainRole {...props}>
       {children}
     </MainRole>
   );

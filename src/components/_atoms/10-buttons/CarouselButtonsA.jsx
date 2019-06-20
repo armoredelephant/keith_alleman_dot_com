@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const ButtonWrapper = styled.div`
     display: flex;
-    width: 100%;
 `;
 
 const Button = styled.div`
@@ -19,6 +18,7 @@ const Button = styled.div`
 
   &.left {
     left: 0;
+    margin-left: 10x;
   }
 
   &.right {

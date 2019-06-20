@@ -16,7 +16,7 @@ const Slider = styled.div`
     height: 100%;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: hidden;
+    overflow: hidden;
 `;
 
 const ChildContainer = styled.div`

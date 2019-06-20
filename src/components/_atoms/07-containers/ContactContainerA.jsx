@@ -20,15 +20,15 @@ const Image = styled.img`
 
   @media (max-width: 375px) {
     @media (max-height: 550px) {
-      height: 100px;
-      width: 100px;
+      height: 90px;
+      width: 90px;
     }
   }
 
   @media (max-width: 983px) {
     @media (max-height: 550px) {
-      height: 100px;
-      width: 100px;
+      height: 90px;
+      width: 90px;
     }
   }
 `;

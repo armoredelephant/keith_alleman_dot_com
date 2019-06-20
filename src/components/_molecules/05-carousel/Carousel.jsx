@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const CarouselContainer = styled.div`
     width: 100%;
+    max-width: 1280px;
     height: 100%;
-    padding: 50px 15px 0;
+    padding: 50px 8px 0;
     display: flex;
     flex-flow: column;
     background: #252627;
 `;
 
-const CarouselWrapper = styled.div`
+const Slider = styled.div`
     background: #252627;
     display: flex;
     flex-wrap: nowrap;
@@ -21,8 +22,9 @@ const ChildContainer = styled.div`
     display: flex;
     flex: 0 0 auto;
     width: 100%;
-    order: ${props => props.flexOrder};
     position: relative;
+    transform: translateX(${props => props.x});
+    transition-duration: .7s;
 `;
 
 const Carousel = (props) => {
@@ -30,28 +32,42 @@ const Carousel = (props) => {
     const lastIndex = children.length - 1;
     const Button = widget;
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [moveBy, setMoveBy] = useState('0%');
+
+    const sliderRef = useRef(null);
+
+    const determineTranslate = string => {
+        const current = moveBy.replace(/[%]/g, "");
+        return parseInt(current, 10);
+    }
 
     const prevHandler = () => {
         let i = currentIndex;
         setCurrentIndex(i -= 1);
+        let n = determineTranslate(moveBy)
+        setMoveBy(`${n += 100}%`);
     };
 
     const nextHandler = () => {
         let i = currentIndex;
         setCurrentIndex(i += 1);
+        let n = determineTranslate(moveBy)
+        setMoveBy(`${n -= 100}%`);
     };
 
     return (
         <CarouselContainer>
-            <CarouselWrapper>
-                {children.map(child => {
+            <Slider ref={sliderRef}>
+                {children.map((child, i) => {
                     return (
-                        <ChildContainer flexOrder={child.flexOrder}>
+                        <ChildContainer
+                            x={moveBy} // prettier-ignore
+                            key={i}>
                             {child}
                         </ChildContainer>
                     );
                 })}
-            </CarouselWrapper>
+            </Slider>
             {widget &&
                 <Button
                     nextHandler={nextHandler}
@@ -67,5 +83,5 @@ const Carousel = (props) => {
 export default Carousel;
 
 /**
- * store 
+ * store
  */

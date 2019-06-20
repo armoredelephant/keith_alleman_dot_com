@@ -50,7 +50,7 @@ const CarouselButtonsA = props => {
   return (
     <ButtonWrapper>
       {(index !== 0) &&
-        <Button className='left' onClick={prevHandler}>◀</Button>
+        <Button className='left' onClick={prevHandler}>&lt;</Button>
       }
       {/* Radio Buttons */}
       {(total < 2) ?
@@ -62,7 +62,7 @@ const CarouselButtonsA = props => {
         </StyledDiv>
       }
       {(index !== count) &&
-        <Button className='right' onClick={nextHandler}>▶</Button>
+        <Button className='right' onClick={nextHandler}>&gt;</Button>
       }
     </ButtonWrapper>
   );

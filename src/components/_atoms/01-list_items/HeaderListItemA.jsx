@@ -14,7 +14,7 @@ const StyledHeaderSpan = styled.span`
   padding-left: 15px;
 
   @media (min-width: 720px) {
-    visibility: ${props => (props.last === 'true' ? 'hidden' : 'visible')};
+    display: ${props => props.last === 'true' && 'none'};
   }
 `;
 

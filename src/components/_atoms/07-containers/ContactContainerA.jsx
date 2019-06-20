@@ -4,24 +4,18 @@ import styled from 'styled-components';
 import FooterLinkContainerA from '@A/07-containers/FooterLinkContainerA';
 
 const Top = styled.div`
-  min-height: fit-content;
-  width: 100%;
-  padding-right: 60%;
-  flex-shrink: 2;
+  padding: 10px 0 0 10px;
+  flex: 1
 `;
 
 const Bottom = styled.div`
-  height: 536px;
-  min-height: fit-content;
-  width: 100%;
-  margin-bottom: 8%;
+  flex: 1;
 `;
 
 const Image = styled.img`
   border-radius: 100%;
-  margin: 12px 0 0 12px;
-  height: 130px;
-  width: 130px;
+  max-height: 130px;
+  max-width: 130px;
   border: 2px solid #dfdfdf;
 
   @media (max-width: 375px) {
@@ -29,26 +23,33 @@ const Image = styled.img`
     width: 100px;
   }
 
-  @media (max-width: 415px) {
+  @media (max-width: 983px) {
     height: 100px;
     width: 100px;
   }
 `;
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  flex: 1 0 100%;
+  justify-content: space-between;
+`;
+
 const ContactContainerA = () => {
   return (
-    <React.Fragment>
+    <Wrapper>
       <Top>
         <Image src="/resources/images/01.jpg" />
       </Top>
+      {/** possibly needs a <ContactLinkContainerA /> */}
       <Bottom>
-        {/** possibly needs a <ContactLinkContainerA /> */}
         <FooterLinkContainerA
           column // prettier-ignore
           contact
         />
       </Bottom>
-    </React.Fragment>
+    </Wrapper>
   );
 };
 

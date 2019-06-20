@@ -25,6 +25,7 @@ const LinkContainer = styled.div`
   justify-content: space-around;
   align-self: flex-end;
   width: 300px;
+  margin-top: 50px;
 `;
 
 const Title = styled.h1`

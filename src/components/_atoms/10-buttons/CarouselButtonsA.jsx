@@ -18,7 +18,6 @@ const Button = styled.div`
 
   &.left {
     left: 0;
-    margin-left: 10x;
   }
 
   &.right {

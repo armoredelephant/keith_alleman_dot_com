@@ -13,6 +13,7 @@ const CarouselContainer = styled.div`
 
 const Slider = styled.div`
     background: #252627;
+    height: 100%;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: hidden;

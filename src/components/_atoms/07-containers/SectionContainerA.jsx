@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    width: 1280px;
+    width: 100%;
+    max-width: 1280px;
     display: flex;
     flex-flow: row;
 

@@ -42,7 +42,8 @@ const Used = styled.h3`
 const ContentWrapper = styled.div`
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
 `;
 
 const ProjectContainerM = props => {

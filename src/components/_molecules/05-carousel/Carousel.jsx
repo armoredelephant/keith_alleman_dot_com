@@ -5,7 +5,7 @@ const CarouselContainer = styled.div`
     width: 100%;
     max-width: 1280px;
     height: 100%;
-    padding: 50px 8px 0;
+    padding: 50px 0 0;
     display: flex;
     flex-flow: column;
     background: #252627;

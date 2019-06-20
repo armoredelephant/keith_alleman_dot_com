@@ -19,7 +19,6 @@ const Link = styled.a`
   outline: ${props => props.theme.btnOutline};
   line-height: ${props => props.theme.btnLH};
   position: ${props => props.theme.btnPos};
-  right: 175px;
 
   @media (max-width: 375px) {
     font-size: 11px;

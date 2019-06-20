@@ -6,7 +6,6 @@ const StyledParagraph = styled.p`
   height: 100%;
   margin: 0;
   overflow: hidden;
-  width: ${props => props.theme.pwidth};
   white-space: no-wrap;
   line-height: 140%;
   letter-spacing: 1.5px;
@@ -15,11 +14,6 @@ const StyledParagraph = styled.p`
   font-size: 16px;
   text-indent: 2em;
   text-align: justify;
-
-  @media (max-width: 983px) {
-    margin: 0;
-    width: 100%;
-  }
 `;
 
 const ParagraphA = props => {

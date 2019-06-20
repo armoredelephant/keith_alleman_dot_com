@@ -19,11 +19,12 @@ const Container = styled.div`
 `;
 
 const LinkContainer = styled.div`
-  height: 75px;
   display: flex;
   flex-flow: row;
-  margin-top: 30px;
   position: relative;
+  justify-content: space-around;
+  align-self: flex-end;
+  width: 300px;
 `;
 
 const Title = styled.h1`
@@ -38,6 +39,12 @@ const Used = styled.h3`
   text-align: center;
 `;
 
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+`;
+
 const ProjectContainerM = props => {
   const { description, items, linkGithub, linkUrl, name, used, visit } = props;
   return (
@@ -45,13 +52,15 @@ const ProjectContainerM = props => {
       {/** Project Info below */}
       <SectionWrapperAutoA>
         <ScrollAnimation animateIn="fadeIn">
-          <Title>{name}</Title>
-          <Used>{used}</Used>
-          <ParagraphA paragraph={description} />
-          <LinkContainer>
-            <GithubLinkA url={linkGithub} />
-            {visit ? <GhostLinkA url={linkUrl} /> : ''}
-          </LinkContainer>
+          <ContentWrapper>
+            <Title>{name}</Title>
+            <Used>{used}</Used>
+            <ParagraphA paragraph={description} />
+            <LinkContainer>
+              <GithubLinkA url={linkGithub} />
+              {visit && <GhostLinkA url={linkUrl} />}
+            </LinkContainer>
+          </ContentWrapper>
         </ScrollAnimation>
       </SectionWrapperAutoA>
       {/** Skills below */}

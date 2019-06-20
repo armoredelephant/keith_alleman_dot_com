@@ -46,7 +46,6 @@ const theme = {
   btnCursor: 'pointer',
   btnOutline: 'none',
   btnLH: 'normal',
-  btnPos: 'absolute'
 };
 
 const ProjectsPageO = () => {

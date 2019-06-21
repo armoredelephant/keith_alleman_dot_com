@@ -4,25 +4,16 @@ import styled from 'styled-components';
 
 const ButtonWrapper = styled.div`
     display: flex;
+    justify-content: space-between;
+    flex-flow: row no-wrap;
 `;
 
 const Button = styled.div`
-  width: 30px;
-  height: 30px;
   cursor: pointer;
   user-select: none;
-  position: absolute;
   font-size: 30px;
   font-family: sans-serif;
   color: rgba(255, 255, 255, 0.8);
-
-  &.left {
-    left: 0;
-  }
-
-  &.right {
-    right: 0;
-  }
 `;
 
 const Dot = styled.span`

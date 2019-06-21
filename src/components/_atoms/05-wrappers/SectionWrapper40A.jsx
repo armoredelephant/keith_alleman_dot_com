@@ -6,7 +6,7 @@ const SectionWrapper40A = styled.div`
   align-self: ${props => props.center && 'center'};
   justify-content: center;
 
-  @media (max-width: 983px) {
+  @media (max-width: 700px) {
     display: ${props => props.hidden && 'none'};
   }
 `;

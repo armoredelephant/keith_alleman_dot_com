@@ -14,7 +14,7 @@ const StyledHeaderSpan = styled.span`
   padding-left: 15px;
 
   @media (min-width: 720px) {
-    display: ${props => props.last === 'true' && 'none'};
+    display: ${props => props.last && 'none'};
   }
 `;
 
@@ -31,10 +31,10 @@ const HeaderListItemA = props => {
 export default HeaderListItemA;
 
 HeaderListItemA.propTypes = {
-  last: PropTypes.string,
+  last: PropTypes.bool,
   name: PropTypes.string
 };
 HeaderListItemA.defaultProps = {
-  last: 'false',
+  last: false,
   name: 'About'
 };

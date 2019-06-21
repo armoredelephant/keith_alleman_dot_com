@@ -86,7 +86,7 @@ const HeaderO = () => {
               <HeaderListItemA
                 key={count}
                 name={link}
-                last={index === links.length - 1 && 'true'}
+                last={index === links.length - 1 && true}
               />
             );
           })}

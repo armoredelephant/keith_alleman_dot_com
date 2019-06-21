@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
+import styled from 'styled-components';
 import Axios from 'axios';
 
 // <Main role='main'> container - Molecule

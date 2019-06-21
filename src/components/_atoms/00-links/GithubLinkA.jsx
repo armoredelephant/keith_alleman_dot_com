@@ -21,6 +21,7 @@ const Link = styled.a`
   cursor: ${props => props.theme.btnCursor};
   outline: ${props => props.theme.btnOutline};
   line-height: ${props => props.theme.btnLH};
+  order: 2;
 
   @media (max-width: 375px) {
     font-size: 11px;

@@ -4,8 +4,6 @@ import styled, { ThemeProvider } from 'styled-components';
 // import Carousel from 're-carousel';
 import Carousel from '@M/05-carousel/Carousel';
 
-// widgets for Carousel
-import IndicatorDots from '@A/08-helpers/IndicatorDotsA';
 // import CarouselButtonsA from '@A/08-helpers/CarouselButtonsA';
 import CarouselButtonsA from '@A/10-buttons/CarouselButtonsA';
 

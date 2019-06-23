@@ -9,15 +9,16 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.div`
+  display: inline-block;
   cursor: pointer;
   user-select: none;
   font-size: 30px;
   font-family: sans-serif;
-  color: rgba(255, 255, 255, 0.8);
+  color: ${props => props.hidden ? props.theme.bg : 'rgba(255, 255, 255, 0.8)'};
+  visibility: ${props => props.hidden && 'hidden'};
 `;
 
 const Dot = styled.span`
-  display: inline-block;
   height: 8px;
   width: 8px;
   border-radius: 4px;
@@ -39,9 +40,13 @@ const CarouselButtonsA = props => {
 
   return (
     <ButtonWrapper>
-      {(index !== 0) &&
-        <Button className='left' onClick={prevHandler}>&lt;</Button>
-      }
+      <Button
+        className='left'
+        hidden={index === 0 && true}
+        onClick={prevHandler}
+      >
+        &lt;
+      </Button>
       {/* Radio Buttons */}
       {(total < 2) ?
         <StyledDiv />
@@ -51,9 +56,13 @@ const CarouselButtonsA = props => {
           })}
         </StyledDiv>
       }
-      {(index !== count) &&
-        <Button className='right' onClick={nextHandler}>&gt;</Button>
-      }
+      <Button
+        className='right'
+        onClick={nextHandler}
+        hidden={index === count && true}
+      >
+        &gt;
+      </Button>
     </ButtonWrapper>
   );
 }

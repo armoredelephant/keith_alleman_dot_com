@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledParagraph = styled.p`
-  height: 100%;
-  margin: 0;
   overflow: hidden;
   white-space: no-wrap;
   line-height: 140%;

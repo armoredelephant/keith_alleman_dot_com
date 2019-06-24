@@ -46,7 +46,7 @@ const ContactContainerA = () => {
       <Bottom>
         <FooterLinkContainerA
           column // prettier-ignore
-          contact
+          contact={true}
         />
       </Bottom>
     </Wrapper>

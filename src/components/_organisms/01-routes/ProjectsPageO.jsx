@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Axios from 'axios';
 import styled, { ThemeProvider } from 'styled-components';
 // import Carousel from 're-carousel';
@@ -46,9 +46,15 @@ const theme = {
   btnLH: 'normal',
 };
 
+const ScrollAnimation = styled.div`
+
+`;
+
 const ProjectsPageO = () => {
   const [projects, setProjects] = useState(null);
   const [projectKeys, setProjectKeys] = useState([]);
+
+  const projectRef = useRef(null);
 
   const fetchData = async url => {
     const result = await Axios.get(url);
@@ -61,6 +67,10 @@ const ProjectsPageO = () => {
     fetchData('/resources/stubs/projects.json');
   }, []);
 
+  useEffect(() => {
+    if (projectRef) console.log(projectRef)
+  },[projectRef])
+
   // NEED A FUNCTION THAT GRABS THE SKILLS FROM EACH
 
   // Instead of mapoing through all projects and loading, just do first of index.
@@ -69,35 +79,37 @@ const ProjectsPageO = () => {
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
-      <SectionContainerM id='projects'>
-        <Carousel widget={CarouselButtonsA}>
-          {projectKeys.map((projectKey, i) => {
-            const project = projects[projectKeys[i]];
-            const {
-              name, // prettiter-ignore
-              used,
-              description,
-              linkGithub,
-              linkUrl,
-              skills,
-              visit
-            } = project;
-            return (
-              <ProjectContainerM
-                key={projectKey}
-                description={description}
-                items={skills}
-                linkGithub={linkGithub}
-                linkUrl={linkUrl}
-                name={name}
-                used={used}
-                flexOrder={i}
-                visit={visit}
-              />
-            );
-          })}
-        </Carousel>
-      </SectionContainerM>
+      <ScrollAnimation>
+        <SectionContainerM id='projects'>
+          <Carousel widget={CarouselButtonsA}>
+            {projectKeys.map((projectKey, i) => {
+              const project = projects[projectKeys[i]];
+              const {
+                name, // prettiter-ignore
+                used,
+                description,
+                linkGithub,
+                linkUrl,
+                skills,
+                visit
+              } = project;
+              return (
+                <ProjectContainerM
+                  key={projectKey}
+                  description={description}
+                  items={skills}
+                  linkGithub={linkGithub}
+                  linkUrl={linkUrl}
+                  name={name}
+                  used={used}
+                  flexOrder={i}
+                  visit={visit}
+                />
+              );
+            })}
+          </Carousel>
+        </SectionContainerM>
+      </ScrollAnimation>
     </ThemeProvider>
   );
 };

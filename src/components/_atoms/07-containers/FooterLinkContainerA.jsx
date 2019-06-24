@@ -26,12 +26,12 @@ const LinkContainerA = props => {
       />
       <FooterLinkA // prettier-ignore
         destination="https://github.com/armoredelephant"
-        icon={contact ? '' : 'fab fa-github'}
+        icon={!contact && 'fab fa-github'}
         name={contact && 'Github'}
       />
       <FooterLinkA
         destination="https://www.linkedin.com/in/keith-alleman-b9b14487"
-        icon={contact ? '' : 'fab fa-linkedin'}
+        icon={!contact && 'fab fa-linkedin'}
         name={contact && 'LinkedIn'}
       />
     </LinkContainer>

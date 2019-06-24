@@ -6,14 +6,7 @@ const Container = styled.div`
     max-width: 1280px;
     display: flex;
     flex-flow: row;
-
-    @media (max-width: 983px) {
-        &.about-page {
-        }
-    }
-
-    @media (max-width: 670px) {
-    }
+    overflow: hidden;
 `;
 
 const SectionContainerA = props => {

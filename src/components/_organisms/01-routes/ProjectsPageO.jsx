@@ -8,7 +8,7 @@ import Carousel from '@M/05-carousel/Carousel';
 import CarouselButtonsA from '@A/10-buttons/CarouselButtonsA';
 
 // <Main role='main'> container - Molecule
-import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
+import SectionContainerM from '@M/02-body_containers/SectionContainerM';
 import ProjectContainerM from '@M/02-body_containers/ProjectContainerM';
 
 // placeholder
@@ -69,7 +69,7 @@ const ProjectsPageO = () => {
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
-      <MainRoleContainerM id='projects'>
+      <SectionContainerM id='projects'>
         <Carousel widget={CarouselButtonsA}>
           {projectKeys.map((projectKey, i) => {
             const project = projects[projectKeys[i]];
@@ -97,7 +97,7 @@ const ProjectsPageO = () => {
             );
           })}
         </Carousel>
-      </MainRoleContainerM>
+      </SectionContainerM>
     </ThemeProvider>
   );
 };

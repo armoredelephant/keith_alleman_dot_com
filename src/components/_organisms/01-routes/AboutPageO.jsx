@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Axios from 'axios';
 
 // <Main role='main'> container - Molecule
-import MainRoleContainerM from '@M/02-body_containers/MainRoleContainerM';
+import SectionContainerM from '@M/02-body_containers/SectionContainerM';
 
 // placeholder
 import SectionWrapperAutoA from '@A/05-wrappers/SectionWrapperAutoA';
@@ -54,9 +54,10 @@ const AboutPageO = () => {
   if (!interests || !paragraph) return null;
   return (
     <ThemeProvider theme={theme}>
-      <MainRoleContainerM
+      <SectionContainerM
         id="about" // prettier-ignore
         className="about-page"
+        fixed={true}
       >
         <SectionContainerA>
           <SectionWrapper40A
@@ -79,7 +80,7 @@ const AboutPageO = () => {
             {/** <DescriptionParagraphA>text</DescriptionParagraph> */}
           </SectionWrapperAutoA>
         </SectionContainerA>
-      </MainRoleContainerM>
+      </SectionContainerM>
     </ThemeProvider>
   );
 };

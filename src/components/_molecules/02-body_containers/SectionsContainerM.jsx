@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const MainRole = styled.section`
+const Section = styled.section`
   background: #252627;
-  height: 800px;
+  height: ${props => props.fixed && '800px'};
   display: flex;
   justify-content: center;
   padding-top: 70px;
@@ -19,24 +19,24 @@ const MainRole = styled.section`
   };
 `;
 
-const MainRoleContainerM = props => {
+const SectionContainerM = props => {
   const { children } = props;
   return (
-    <MainRole {...props}>
+    <Section {...props}>
       {children}
-    </MainRole>
+    </Section>
   );
 };
 
-export default MainRoleContainerM;
+export default SectionContainerM;
 
-MainRoleContainerM.propTypes = {
+SectionContainerM.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.element, // prettier-ignore
     PropTypes.arrayOf(PropTypes.element)
   ])
 };
 
-MainRoleContainerM.defaultProps = {
+SectionContainerM.defaultProps = {
   children: <div />
 };

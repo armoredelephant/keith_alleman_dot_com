@@ -2,15 +2,15 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import 'jest-styled-components';
 
-import MainRoleContainerM from './MainRoleContainerM';
+import SectionContainerM from './SectionContainerM';
 
-describe('MainRoleContainerM', () => {
+describe('SectionContainerM', () => {
   let props;
   let wrapper;
   // enzyme
   it('renders', () => {
     // enzyme
-    wrapper = shallow(<MainRoleContainerM />);
+    wrapper = shallow(<SectionContainerM />);
     expect(wrapper).toBeTruthy(); // jest
   });
 
@@ -20,7 +20,7 @@ describe('MainRoleContainerM', () => {
       carousel: true,
       vh: '100vh'
     };
-    wrapper = mount(<MainRoleContainerM {...props} />);
+    wrapper = mount(<SectionContainerM {...props} />);
     expect(wrapper).toHaveStyleRule('justify-content', 'space-between');
     expect(wrapper).toHaveStyleRule('height', '900px');
   });
@@ -31,12 +31,12 @@ describe('MainRoleContainerM', () => {
       carousel: false,
       vh: '100vh'
     };
-    wrapper = mount(<MainRoleContainerM {...props} />);
+    wrapper = mount(<SectionContainerM {...props} />);
     expect(wrapper).toHaveStyleRule('min-height', '100vh');
   });
 
   it('renders justify-content /wo prop', () => {
-    wrapper = mount(<MainRoleContainerM />);
+    wrapper = mount(<SectionContainerM />);
     expect(wrapper).toHaveStyleRule('justify-content', undefined);
   });
 });

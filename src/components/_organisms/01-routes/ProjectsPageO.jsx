@@ -64,7 +64,6 @@ const ProjectsPageO = () => {
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
-      <ScrollAnimation>
         <SectionContainerM id='projects'>
           <Carousel widget={CarouselButtonsA}>
             {projectKeys.map((projectKey, i) => {
@@ -94,7 +93,6 @@ const ProjectsPageO = () => {
             })}
           </Carousel>
         </SectionContainerM>
-      </ScrollAnimation>
     </ThemeProvider>
   );
 };

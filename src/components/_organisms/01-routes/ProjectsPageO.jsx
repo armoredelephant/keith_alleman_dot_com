@@ -46,15 +46,9 @@ const theme = {
   btnLH: 'normal',
 };
 
-const ScrollAnimation = styled.div`
-
-`;
-
 const ProjectsPageO = () => {
   const [projects, setProjects] = useState(null);
   const [projectKeys, setProjectKeys] = useState([]);
-
-  const projectRef = useRef(null);
 
   const fetchData = async url => {
     const result = await Axios.get(url);
@@ -66,10 +60,6 @@ const ProjectsPageO = () => {
   useEffect(() => {
     fetchData('/resources/stubs/projects.json');
   }, []);
-
-  useEffect(() => {
-    if (projectRef) console.log(projectRef)
-  },[projectRef])
 
   if (!projects) return null;
   return (

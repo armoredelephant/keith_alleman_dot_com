@@ -22,7 +22,7 @@ const LinkContainer = styled.div`
   display: flex;
   flex-flow: row;
   position: relative;
-  justify-content: space-around;
+  justify-content: ${props => props.single ? 'flex-end' : 'space-around'};
   align-self: flex-end;
   width: 300px;
   margin-top: 50px;
@@ -58,7 +58,7 @@ const ProjectContainerM = props => {
             <Title>{name}</Title>
             <Used>{used}</Used>
             <ParagraphA paragraph={description} />
-            <LinkContainer>
+            <LinkContainer single={!visit && true}>
               <GithubLinkA url={linkGithub} />
               {visit && <GhostLinkA url={linkUrl} />}
             </LinkContainer>

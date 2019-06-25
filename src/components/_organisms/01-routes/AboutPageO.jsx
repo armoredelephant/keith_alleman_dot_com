@@ -62,7 +62,7 @@ const AboutPageO = () => {
         <SectionContainerA>
           <SectionWrapper40A
             className="about-l" // prettier-ignore
-            center={true}
+            align={true}
             hidden={true}
           >
             <ListWrapperA>

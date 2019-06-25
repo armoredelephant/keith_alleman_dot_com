@@ -17,15 +17,16 @@
             ]
         },
         "playlistrandomizer": {
-            "name": "tbd",
+            "name": "WORK IN PROG",
             "used": "React & Node.JS",
-            "description": "This is a web app that works with an authenticated spotify account, and will access the user's saved playlists. The user can set a timer and when the time is up, it will select another playlist to play at random.  This project was thought up to save me from having to change the spotify playlist at work on a regular bases for management. Through this project I learned more about the importance of reading through documentation and following along through tutorials they provide for their APIs. I also learned a lot about user authentication and tokens.",
+            "description": "This web app will work with an authenticated spotify account, and will access the user's saved playlists. The user can set a timer and when the time is up, it will select another playlist to play at random.  This project was thought up to save me from having to change the spotify playlist at work on a regular bases. Through this project I learned more about the importance of reading through documentation and following along through tutorials provided for APIs. I also learned a lot about user authentication and tokens.",
             "linkGithub": "https://github.com/armoredelephant/playlist_randomizer",
             "visit": true,
             "linkUrl": "tbd",
             "skills": [
-                "one",
-                "two"
+                "Authentication",
+                "Documentation",
+                "Media Player"
             ]
         },
         "evihelp": {
@@ -44,7 +45,7 @@
         "evisignature": {
             "name": "eviCore Signature Creator",
             "used": "Vanilla Javascript",
-            "description": "This was the first web app that I developed, and is very basic. I utilized bootstrap and plain javascript to create a tool that users could build their Outlook signatures with. They would visit the page during orientation and fill in their information to create a signature. From there they would simply copy the signature that was created with our template and add it to their Outlook. I learned quite a bit about bootstrap and refactoring for functionality accross older browsers (we used IE8 & IE10 still). It was a great project to get my feet wet with and was regularly used for new hire classes within the company. This app was hosted on one of our internal servers using WAMP.",
+            "description": "This was the first web app that I developed. I utilized bootstrap & javascript to create a tool that allowed users to build an Outlook signature. I learned quite a bit about bootstrap and refactoring for functionality accross older browsers (we used IE8 & IE10 still). It was a great project to get my feet wet with and was regularly used for new hire classes within the company. This app was hosted on one of our internal servers using WAMP.",
             "linkGithub": "https://github.com/armoredelephant/signature",
             "visit": false,
             "linkUrl": null,

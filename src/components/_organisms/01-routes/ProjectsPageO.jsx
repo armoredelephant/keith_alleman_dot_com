@@ -71,11 +71,6 @@ const ProjectsPageO = () => {
     if (projectRef) console.log(projectRef)
   },[projectRef])
 
-  // NEED A FUNCTION THAT GRABS THE SKILLS FROM EACH
-
-  // Instead of mapoing through all projects and loading, just do first of index.
-  // On click will update the one to display?
-
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>

@@ -4,12 +4,16 @@ import styled from 'styled-components';
 import FooterLinkContainerA from '@A/07-containers/FooterLinkContainerA';
 
 const Top = styled.div`
-  padding: 10px 0 0 10px;
+  padding: 5px 0 0 5px;
   display: flex;
   height: 100px;
   flex-flow: row;
   justify-content: space-between;
   flex: 1
+
+  @media (min-width: 900px) {
+    padding: 10px 0 0 10px;
+  }
 `;
 
 const Bottom = styled.div`
@@ -17,19 +21,19 @@ const Bottom = styled.div`
 `;
 
 const Spacer = styled.div`
-  flex: 3;
+  flex: 3 1 80%;
 `;
 
 const ImageContainer = styled.div`
-  flex: 1;
+  flex: 1 3 20%;
   justify-content: center;
 `;
 
 const Image = styled.img`
   display: flex;
   border-radius: 100%;
-  max-height: 130px;
-  max-width: 130px;
+  max-height: 120px;
+  max-width: 120px;
   border: 2px solid #dfdfdf;
 `;
 

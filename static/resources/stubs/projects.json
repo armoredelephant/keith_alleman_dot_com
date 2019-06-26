@@ -32,7 +32,7 @@
         "evihelp": {
             "name": "eviHelp",
             "used": "React & Node.JS",
-            "description": "This was a website I build to provide easy access to remote workers. The idea was for them to be able to easily access support documents from their personal mobile devices. There is a fully integrated admin dashboard to allow adding, editing, and removal of help articles. I initially decided it was not something the company would probably use due to PHI, but it was a good beginner projectl. I learned a lot about working with APIs, Google's Firebase, and really reading through documentation.",
+            "description": "This was a website I built to provide easy access to remote workers. The idea was for them to be able to easily access support documents from their personal mobile devices. There is a fully integrated admin dashboard to allow adding, editing, and removal of help articles. I initially decided it was not something the company would probably use due to PHI, but it was a good beginner projectl. I learned a lot about working with APIs, Google's Firebase, and really reading through documentation.",
             "linkGithub": "https://github.com/armoredelephant/evi_support_full",
             "visit": false,
             "linkUrl": null,

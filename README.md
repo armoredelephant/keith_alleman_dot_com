@@ -4,10 +4,11 @@ I built this project to display my work while also providing some insight into t
 
 ## Skills
 
+* React
+* Styled-Components
+* React Hooks
 * Animations
 * Testing (enzyme & jest)
 * Linting
-* React Hooks
-* Styled-Components
 * Atomic Design
 

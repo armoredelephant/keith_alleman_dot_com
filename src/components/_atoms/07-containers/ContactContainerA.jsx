@@ -5,6 +5,10 @@ import FooterLinkContainerA from '@A/07-containers/FooterLinkContainerA';
 
 const Top = styled.div`
   padding: 10px 0 0 10px;
+  display: flex;
+  height: 100px;
+  flex-flow: row;
+  justify-content: space-between;
   flex: 1
 `;
 
@@ -12,21 +16,21 @@ const Bottom = styled.div`
   flex: 1;
 `;
 
+const Spacer = styled.div`
+  flex: 3;
+`;
+
+const ImageContainer = styled.div`
+  flex: 1;
+  justify-content: center;
+`;
+
 const Image = styled.img`
+  display: flex;
   border-radius: 100%;
   max-height: 130px;
   max-width: 130px;
   border: 2px solid #dfdfdf;
-
-  @media (max-width: 375px) {
-      height: 90px;
-      width: 90px;
-  }
-
-  @media (max-width: 983px) {
-      height: 90px;
-      width: 90px;
-  }
 `;
 
 const Wrapper = styled.div`
@@ -40,7 +44,10 @@ const ContactContainerA = () => {
   return (
     <Wrapper>
       <Top>
-        <Image src="/resources/images/01.jpg" />
+        <ImageContainer>
+          <Image src="/resources/images/01.jpg" />
+        </ImageContainer>
+        <Spacer />
       </Top>
       {/** possibly needs a <ContactLinkContainerA /> */}
       <Bottom>

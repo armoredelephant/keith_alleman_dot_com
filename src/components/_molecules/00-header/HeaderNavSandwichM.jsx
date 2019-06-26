@@ -68,6 +68,12 @@ const SandwichBar = styled.div`
         from { width: 0; }
         to { width: 30px; }
     }
+
+    :nth-of-type(3) {
+      width: 17px;
+      margin-left: auto;
+      margin-right: 5px;
+    }
     
     @media (min-width: 900px) {
         .nav-bar-animation & {
@@ -79,9 +85,6 @@ const SandwichBar = styled.div`
     
             :nth-of-type(3) {
                 animation: 0.6s linear grow-short
-                width: 17px;
-                margin-left: auto;
-                margin-right: 5px;
             }
         }
     

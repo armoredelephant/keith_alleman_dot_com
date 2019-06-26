@@ -25,21 +25,23 @@ const StyledHeaderSandwich = styled.a`
     display: inline-block;
   }
 
-  &.nav-bar-animation {
-    &:hover div {
-      :nth-of-type(1) {
-        transform: translateY(6px) rotate(90deg);
-        -webkit-transform: translateY(6px) rotate(90deg);
-        width: 30px;
-      }
+  @media (min-width: 900px) {
+    &.nav-bar-animation {
+      &:hover div {
+        :nth-of-type(1) {
+          transform: translateY(6px) rotate(90deg);
+          -webkit-transform: translateY(6px) rotate(90deg);
+          width: 30px;
+        }
 
-      :nth-of-type(2) {
-        width: 30px;
-      }
+        :nth-of-type(2) {
+          width: 30px;
+        }
 
-      :nth-of-type(3) {
-        width: 0;
-        margin-left: auto;
+        :nth-of-type(3) {
+          width: 0;
+          margin-left: auto;
+        }
       }
     }
   }
@@ -65,41 +67,43 @@ const SandwichBar = styled.div`
     @keyframes grow {
         from { width: 0; }
         to { width: 30px; }
-    }    
-
-    .nav-bar-animation & {
-        animation-direction: alternate;
-        transition: 0.6s all ease;
-        -webkit-transition: 0.6s all ease;
-        animation-direction: alternate;
-        animation: 0.6s ease-in grow;
-
-        :nth-of-type(3) {
-            animation: 0.6s linear grow-short
-            width: 17px;
-            margin-left: auto;
-            margin-right: 5px;
-        }
     }
-
-    .nav-bar-active & {
-        transition: 0.4s all ease;
-        -webkit-transition: 0.4s all ease;
-        z-index: 2;
-
-        :nth-of-type(1) {
-            transform: translate(0, 7px) rotate(135deg);
-            -webkit-transform: translate(0, 7px) rotate(135deg);
+    
+    @media (min-width: 900px) {
+        .nav-bar-animation & {
+            animation-direction: alternate;
+            transition: 0.6s all ease;
+            -webkit-transition: 0.6s all ease;
+            animation-direction: alternate;
+            animation: 0.6s ease-in grow;
+    
+            :nth-of-type(3) {
+                animation: 0.6s linear grow-short
+                width: 17px;
+                margin-left: auto;
+                margin-right: 5px;
+            }
         }
-
-        :nth-of-type(2) {
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-        }
-
-        :nth-of-type(3) {
-            width: 0px;
-            margin-left: 0;
+    
+        .nav-bar-active & {
+            transition: 0.4s all ease;
+            -webkit-transition: 0.4s all ease;
+            z-index: 2;
+    
+            :nth-of-type(1) {
+                transform: translate(0, 7px) rotate(135deg);
+                -webkit-transform: translate(0, 7px) rotate(135deg);
+            }
+    
+            :nth-of-type(2) {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+    
+            :nth-of-type(3) {
+                width: 0px;
+                margin-left: 0;
+            }
         }
     }
 `;

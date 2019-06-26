@@ -25,23 +25,21 @@ const StyledHeaderSandwich = styled.a`
     display: inline-block;
   }
 
-  @media (min-width: 900px) {
-    &.nav-bar-animation {
-      &:hover div {
-        :nth-of-type(1) {
-          transform: translateY(6px) rotate(90deg);
-          -webkit-transform: translateY(6px) rotate(90deg);
-          width: 30px;
-        }
+  &.nav-bar-animation {
+    &:hover div {
+      :nth-of-type(1) {
+        transform: translateY(6px) rotate(90deg);
+        -webkit-transform: translateY(6px) rotate(90deg);
+        width: 30px;
+      }
 
-        :nth-of-type(2) {
-          width: 30px;
-        }
+      :nth-of-type(2) {
+        width: 30px;
+      }
 
-        :nth-of-type(3) {
-          width: 0;
-          margin-left: auto;
-        }
+      :nth-of-type(3) {
+        width: 0;
+        margin-left: auto;
       }
     }
   }

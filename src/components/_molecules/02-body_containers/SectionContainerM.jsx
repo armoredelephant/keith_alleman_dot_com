@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   background: #252627;
-  height: ${props => props.fixed && '800px'};
+  min-height: ${props => props.fixed && '800px'};
   display: flex;
   justify-content: center;
   padding-top: 70px;

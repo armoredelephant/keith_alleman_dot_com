@@ -5,9 +5,6 @@ const SectionWrapperAutoA = styled.section`
   flex-flow: column;
   flex: 3;
 
-  @media (max-width: 600px) {
-  }
-
   @media (max-width: 700px) {
     display: ${props => props.hidden && 'none'};
   }

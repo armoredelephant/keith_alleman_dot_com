@@ -30,7 +30,7 @@ describe('HeaderListItemA', () => {
       </MemoryRouter>
     );
     expect(wrapper.find('span')).toHaveStyleRule('color', '#95d5d2');
-    expect(wrapper.find('span')).toHaveStyleRule('visibility', 'hidden', {
+    expect(wrapper.find('span')).toHaveStyleRule('display', 'none', {
       media: '(min-width: 720px)'
     });
   });

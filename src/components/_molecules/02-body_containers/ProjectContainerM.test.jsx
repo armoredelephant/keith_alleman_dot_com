@@ -31,7 +31,6 @@ describe('<ProjectContainerM />', () => {
       'background-color', // prettier-ignore
       'black'
     );
-    expect(wrapper.find('LinkContainer')).toHaveStyleRule('height', '75px');
     expect(wrapper.find('Title')).toHaveStyleRule('color', 'white');
     expect(wrapper.find('Used')).toHaveStyleRule('color', 'white');
     expect(wrapper.find(GhostLinkA)).toBeTruthy();

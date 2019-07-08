@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import styled, { ThemeProvider } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 // import Carousel from 're-carousel';
 import Carousel from '@M/05-carousel/Carousel';
 
@@ -44,6 +44,7 @@ const theme = {
   btnCursor: 'pointer',
   btnOutline: 'none',
   btnLH: 'normal',
+  btnClr: 'rgba(255, 255, 255, 0.8)'
 };
 
 const ProjectsPageO = () => {
@@ -64,35 +65,35 @@ const ProjectsPageO = () => {
   if (!projects) return null;
   return (
     <ThemeProvider theme={theme}>
-        <SectionContainerM id='projects'>
-          <Carousel widget={CarouselButtonsA}>
-            {projectKeys.map((projectKey, i) => {
-              const project = projects[projectKeys[i]];
-              const {
-                name, // prettiter-ignore
-                used,
-                description,
-                linkGithub,
-                linkUrl,
-                skills,
-                visit
-              } = project;
-              return (
-                <ProjectContainerM
-                  key={projectKey}
-                  description={description}
-                  items={skills}
-                  linkGithub={linkGithub}
-                  linkUrl={linkUrl}
-                  name={name}
-                  used={used}
-                  flexOrder={i}
-                  visit={visit}
-                />
-              );
-            })}
-          </Carousel>
-        </SectionContainerM>
+      <SectionContainerM id="projects">
+        <Carousel widget={CarouselButtonsA}>
+          {projectKeys.map((projectKey, i) => {
+            const project = projects[projectKeys[i]];
+            const {
+              name, // prettiter-ignore
+              used,
+              description,
+              linkGithub,
+              linkUrl,
+              skills,
+              visit
+            } = project;
+            return (
+              <ProjectContainerM
+                key={projectKey}
+                description={description}
+                items={skills}
+                linkGithub={linkGithub}
+                linkUrl={linkUrl}
+                name={name}
+                used={used}
+                flexOrder={i}
+                visit={visit}
+              />
+            );
+          })}
+        </Carousel>
+      </SectionContainerM>
     </ThemeProvider>
   );
 };

@@ -9,9 +9,7 @@ const Top = styled.div`
   height: 100px;
   flex-flow: row;
   justify-content: space-between;
-  flex: 1
-
-  @media (min-width: 900px) {
+  flex: 1 @media (min-width: 900px) {
     padding: 10px 0 0 10px;
   }
 `;
@@ -57,7 +55,7 @@ const ContactContainerA = () => {
       <Bottom>
         <FooterLinkContainerA
           column // prettier-ignore
-          contact={true}
+          contact
         />
       </Bottom>
     </Wrapper>

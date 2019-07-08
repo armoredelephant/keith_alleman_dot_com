@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
-import styled from 'styled-components';
+
 import Axios from 'axios';
 
 // <Main role='main'> container - Molecule
@@ -57,13 +57,13 @@ const AboutPageO = () => {
       <SectionContainerM
         id="about" // prettier-ignore
         className="about-page"
-        fixed={true}
+        fixed
       >
         <SectionContainerA>
           <SectionWrapper40A
             className="about-l" // prettier-ignore
-            align={true}
-            hidden={true}
+            align
+            hidden
           >
             <ListWrapperA>
               <SectionHeaderA

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import PropTypes from 'prop-types';
 
 const ButtonWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row no-wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row no-wrap;
 `;
 
 const Button = styled.div`
@@ -14,7 +14,7 @@ const Button = styled.div`
   user-select: none;
   font-size: 30px;
   font-family: sans-serif;
-  color: ${props => props.hidden ? props.theme.bg : 'rgba(255, 255, 255, 0.8)'};
+  color: ${props => (props.hidden ? props.theme.bg : props.theme.btnClr)};
   visibility: ${props => props.hidden && 'hidden'};
 `;
 
@@ -36,28 +36,30 @@ const StyledDiv = styled.div`
 
 const CarouselButtonsA = props => {
   const { count, index, nextHandler, prevHandler, total } = props;
-  const keyArray = [];
-
   return (
     <ButtonWrapper>
       <Button
-        className='left'
+        className="left" // prettier-ignore
         hidden={index === 0 && true}
         onClick={prevHandler}
       >
         &lt;
       </Button>
       {/* Radio Buttons */}
-      {(total < 2) ?
+      {total < 2 ? (
         <StyledDiv />
-        : <StyledDiv>
+      ) : (
+        <StyledDiv>
           {Array(...Array(total)).map((x, i) => {
-            return <Dot key={keyArray[i]} selected={index === i} />;
+            const rdmKey = Math.random()
+              .toString(36)
+              .substring(7);
+            return <Dot key={rdmKey} selected={index === i} />;
           })}
         </StyledDiv>
-      }
+      )}
       <Button
-        className='right'
+        className="right" // prettier-ignore
         onClick={nextHandler}
         hidden={index === count && true}
       >
@@ -65,6 +67,22 @@ const CarouselButtonsA = props => {
       </Button>
     </ButtonWrapper>
   );
-}
+};
 
 export default CarouselButtonsA;
+
+CarouselButtonsA.propTypes = {
+  count: PropTypes.number,
+  index: PropTypes.number,
+  nextHandler: PropTypes.func,
+  prevHandler: PropTypes.func,
+  total: PropTypes.number
+};
+
+CarouselButtonsA.defaultProps = {
+  count: 1,
+  index: 1,
+  nextHandler: () => {},
+  prevHandler: () => {},
+  total: 1
+};

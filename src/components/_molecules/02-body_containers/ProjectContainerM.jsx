@@ -22,7 +22,7 @@ const LinkContainer = styled.div`
   display: flex;
   flex-flow: row;
   position: relative;
-  justify-content: ${props => props.single ? 'flex-end' : 'space-around'};
+  justify-content: ${props => (props.single ? 'flex-end' : 'space-around')};
   align-self: flex-end;
   width: 300px;
   margin-top: 50px;

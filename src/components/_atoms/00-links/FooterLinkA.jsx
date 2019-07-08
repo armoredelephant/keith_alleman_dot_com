@@ -35,14 +35,8 @@ export default IconLinkA;
 
 IconLinkA.propTypes = {
   destination: PropTypes.string,
-  icon: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool
-  ]),
-  name: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.bool
-  ])
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  name: PropTypes.oneOfType([PropTypes.string, PropTypes.bool])
 };
 
 IconLinkA.defaultProps = {

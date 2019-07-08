@@ -83,7 +83,7 @@ const HeaderO = () => {
           {links.map((link, index) => {
             const count = index + 1;
             return (
-              <HeaderListItemA
+              <HeaderListItemA // prettier-ignore
                 key={count}
                 name={link}
                 last={index === links.length - 1 && true}

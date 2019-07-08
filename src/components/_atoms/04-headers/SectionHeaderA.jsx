@@ -22,9 +22,9 @@ const StyledHeader = styled.h2`
 
   @media (max-width: 983px) {
     font-size: ${props =>
-    props.secondary // prettier-ignore
-      ? props.theme.secondaryfs
-      : props.theme.mobilefont};
+      props.secondary // prettier-ignore
+        ? props.theme.secondaryfs
+        : props.theme.mobilefont};
   }
 `;
 

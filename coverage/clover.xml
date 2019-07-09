@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1562611857818" clover="3.2.0">
-  <project timestamp="1562611857818" name="All files">
-    <metrics statements="226" coveredstatements="224" conditionals="46" coveredconditionals="39" methods="106" coveredmethods="105" elements="378" coveredelements="368" complexity="0" loc="226" ncloc="226" packages="14" files="28" classes="28"/>
+<coverage generated="1562698480091" clover="3.2.0">
+  <project timestamp="1562698480092" name="All files">
+    <metrics statements="240" coveredstatements="238" conditionals="58" coveredconditionals="51" methods="113" coveredmethods="110" elements="411" coveredelements="399" complexity="0" loc="240" ncloc="240" packages="15" files="29" classes="29"/>
     <package name="src">
       <metrics statements="7" coveredstatements="5" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
       <file name="styled-components.js" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/styled-components.js">
         <metrics statements="6" coveredstatements="4" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
-        <line num="9" count="26" type="stmt"/>
+        <line num="9" count="27" type="stmt"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="14" count="26" type="stmt"/>
-        <line num="15" count="20" type="cond" truecount="2" falsecount="0"/>
-        <line num="16" count="20" type="stmt"/>
+        <line num="14" count="27" type="stmt"/>
+        <line num="15" count="21" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="21" type="stmt"/>
       </file>
       <file name="theme.js" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/theme.js">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="26" type="stmt"/>
+        <line num="1" count="27" type="stmt"/>
       </file>
     </package>
     <package name="src.components._atoms.00-links">
@@ -230,6 +230,26 @@
         <line num="17" count="2" type="stmt"/>
         <line num="43" count="4" type="stmt"/>
         <line num="47" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components._atoms.10-buttons">
+      <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="5"/>
+      <file name="CarouselButtonsA.jsx" path="/home/mcithegod/Projects/keith_alleman_dot_com/src/components/_atoms/10-buttons/CarouselButtonsA.jsx">
+        <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="12" methods="7" coveredmethods="5"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="17" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="27" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+        <line num="39" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="74" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components._molecules.00-header">

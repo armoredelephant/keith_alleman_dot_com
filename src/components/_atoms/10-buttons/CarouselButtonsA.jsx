@@ -8,7 +8,7 @@ const ButtonWrapper = styled.div`
   flex-flow: row no-wrap;
 `;
 
-const Button = styled.div`
+export const Button = styled.div`
   display: inline-block;
   cursor: pointer;
   user-select: none;

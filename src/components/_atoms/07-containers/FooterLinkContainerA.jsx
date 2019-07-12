@@ -21,7 +21,7 @@ const LinkContainerA = props => {
         name="Contact"
       />
       <FooterLinkA // prettier-ignore
-        destination="https://github.com"
+        destination="https://drive.google.com/file/d/1k_q2OxGxyCfBN_VcZ6RNbyoX2c16fLM2/view?usp=sharing"
         name="Resume"
       />
       <FooterLinkA // prettier-ignore

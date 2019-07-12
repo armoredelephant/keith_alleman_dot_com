@@ -17,7 +17,7 @@
             ]
         },
         "playlistrandomizer": {
-            "name": "WORK IN PROG",
+            "name": "WORK IN PROGRESS",
             "used": "React & Node.JS",
             "description": "This web app will work with an authenticated spotify account, and will access the user's saved playlists. The user can set a timer and when the time is up, it will select another playlist to play at random.  This project was thought up to save me from having to change the spotify playlist at work on a regular bases. Through this project I learned more about the importance of reading through documentation and following along through tutorials provided for APIs. I also learned a lot about user authentication and tokens.",
             "linkGithub": "https://github.com/armoredelephant/playlist_randomizer",

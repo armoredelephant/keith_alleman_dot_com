@@ -18,7 +18,7 @@ const Container = styled.div`
   flex-flow: row;
 `;
 
-const LinkContainer = styled.div`
+export const LinkContainer = styled.div`
   display: flex;
   flex-flow: row;
   position: relative;

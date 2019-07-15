@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 
 import GhostLinkA from '@A/00-links/GhostLinkA';
-import ProjectContainerM from './ProjectContainerM';
+import ProjectContainerM, { LinkContainer } from './ProjectContainerM';
 
 describe('<ProjectContainerM />', () => {
   let customTheme;
@@ -37,9 +37,12 @@ describe('<ProjectContainerM />', () => {
   });
   it('renders /w false visit prop', () => {
     props = {
+      items: [1, 2],
       visit: false
     };
-    wrapper = shallow(<ProjectContainerM {...props} />);
+    wrapper = mount(<ProjectContainerM {...props} />);
+    console.log(wrapper.debug());
+    expect(wrapper.find(LinkContainer)).toHaveStyleRule('justify-content', 'flex-end');
     expect(wrapper.props().visit).toBeFalsy();
   });
 });

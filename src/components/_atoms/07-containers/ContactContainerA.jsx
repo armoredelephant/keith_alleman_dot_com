@@ -47,7 +47,7 @@ const ContactContainerA = () => {
     <Wrapper>
       <Top>
         <ImageContainer>
-          <Image src="/resources/images/01.jpg" />
+          <Image src="/resources/images/03.jpg" />
         </ImageContainer>
         <Spacer />
       </Top>

@@ -30,7 +30,7 @@ const ChildContainer = styled.div`
   transition-duration: 0.7s;
 `;
 
-const Carousel = props => {
+const CarouselM = props => {
   const { widget, children } = props;
   const lastIndex = children.length - 1;
   const Button = widget;
@@ -88,9 +88,9 @@ const Carousel = props => {
   );
 };
 
-export default Carousel;
+export default CarouselM;
 
-Carousel.propTypes = {
+CarouselM.propTypes = {
   widget: PropTypes.oneOfType([
     // prettier-ignore
     PropTypes.element,
@@ -103,6 +103,6 @@ Carousel.propTypes = {
   ]).isRequired
 };
 
-Carousel.defaultProps = {
+CarouselM.defaultProps = {
   widget: <CarouselButtonsA />
 };

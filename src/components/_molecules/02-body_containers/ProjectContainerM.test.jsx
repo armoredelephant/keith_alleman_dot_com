@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import GhostLinkA from '@A/00-links/GhostLinkA';
 import ProjectContainerM, { LinkContainer } from './ProjectContainerM';

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import { ThemeProvider } from 'styled-components';
 // import Carousel from 're-carousel';
-import Carousel from '@M/05-carousel/Carousel';
+import CarouselM from '@M/05-carousel/CarouselM';
 
 // import CarouselButtonsA from '@A/08-helpers/CarouselButtonsA';
 import CarouselButtonsA from '@A/10-buttons/CarouselButtonsA';
@@ -66,7 +66,7 @@ const ProjectsPageO = () => {
   return (
     <ThemeProvider theme={theme}>
       <SectionContainerM id="projects">
-        <Carousel widget={CarouselButtonsA}>
+        <CarouselM widget={CarouselButtonsA}>
           {projectKeys.map((projectKey, i) => {
             const project = projects[projectKeys[i]];
             const {
@@ -92,7 +92,7 @@ const ProjectsPageO = () => {
               />
             );
           })}
-        </Carousel>
+        </CarouselM>
       </SectionContainerM>
     </ThemeProvider>
   );

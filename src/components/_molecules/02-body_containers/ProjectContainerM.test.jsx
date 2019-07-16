@@ -41,8 +41,8 @@ describe('<ProjectContainerM />', () => {
       visit: false
     };
     wrapper = mount(<ProjectContainerM {...props} />);
-    console.log(wrapper.debug());
-    expect(wrapper.find(LinkContainer)).toHaveStyleRule('justify-content', 'flex-end');
+    expect(wrapper.find(LinkContainer)) // prettier-ignore
+      .toHaveStyleRule('justify-content', 'flex-end');
     expect(wrapper.props().visit).toBeFalsy();
   });
 });

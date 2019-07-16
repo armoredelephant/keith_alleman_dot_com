@@ -11,7 +11,7 @@ describe('<SectionWrapperAutoA />', () => {
   });
   it('is being styled with props', () => {
     const props = {
-      hidden: true,
+      hidden: true
     };
 
     wrapper = mount(<SectionWrapperAutoA {...props} />);

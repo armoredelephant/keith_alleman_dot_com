@@ -17,7 +17,7 @@ describe('SectionContainerM', () => {
   it('renders justify-content /w prop', () => {
     props = {
       carousel: true,
-      fixed: true,
+      fixed: true
     };
     wrapper = mount(<SectionContainerM {...props} />);
     expect(wrapper).toHaveStyleRule('min-height', '800px');

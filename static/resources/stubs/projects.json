@@ -24,10 +24,11 @@
             "visit": true,
             "linkUrl": "http://www.hunt-conductor.com",
             "skills": [
-                "useContext/useReducer/Immer",
+                "useContext",
+                "useReducer",
+                "Immer",
                 "React Hooks",
-                "Firebase",
-                "Styled Components"
+                "Firebase"
             ]
         },
         "evihelp": {

@@ -24,9 +24,9 @@ const theme = {
   bg: '#95d5d2',
   clr: '#252627',
   ff: 'Montserrat, sans-serif',
-  linkfs: '13px',
-  fs: '13px',
-  iconsize: '18px',
+  linkfs: '1em',
+  fs: '1em',
+  iconsize: '1.125em',
   ml: '15px',
   linkflow: 'row'
 };

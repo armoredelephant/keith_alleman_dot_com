@@ -6,6 +6,7 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-flow: row no-wrap;
+  margin-top: 15px;
 `;
 
 export const Button = styled.div`
@@ -49,15 +50,15 @@ const CarouselButtonsA = props => {
       {total < 2 ? (
         <StyledDiv />
       ) : (
-        <StyledDiv>
-          {Array(...Array(total)).map((x, i) => {
-            const rdmKey = Math.random()
-              .toString(36)
-              .substring(7);
-            return <Dot key={rdmKey} selected={index === i} />;
-          })}
-        </StyledDiv>
-      )}
+          <StyledDiv>
+            {Array(...Array(total)).map((x, i) => {
+              const rdmKey = Math.random()
+                .toString(36)
+                .substring(7);
+              return <Dot key={rdmKey} selected={index === i} />;
+            })}
+          </StyledDiv>
+        )}
       <Button
         className="right" // prettier-ignore
         onClick={nextHandler}
@@ -82,7 +83,7 @@ CarouselButtonsA.propTypes = {
 CarouselButtonsA.defaultProps = {
   count: 1,
   index: 1,
-  nextHandler: () => {},
-  prevHandler: () => {},
+  nextHandler: () => { },
+  prevHandler: () => { },
   total: 1
 };

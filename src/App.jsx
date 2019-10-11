@@ -1,5 +1,13 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding-bottom: 100px;
+`;
 
 // Shared - Organisms
 import HeaderO from '@O/00-header/HeaderO';
@@ -16,15 +24,19 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop>
+        {/* <Container> */}
         <HeaderO />
-        <AboutPageO />
-        <ProjectsPageO />
+        <Container>
+          <AboutPageO />
+          <ProjectsPageO />
+        </Container>
         {/* <WorkPageO /> */}
         {/* <Route exact path="/" component={LandingPageO} />
-        <Route exact path="/about" component={AboutPageO} />
-        <Route exact path="/projects" component={ProjectsPageO} />
-        <Route exact path="/work" component={WorkPageO} /> */}
+          <Route exact path="/about" component={AboutPageO} />
+          <Route exact path="/projects" component={ProjectsPageO} />
+          <Route exact path="/work" component={WorkPageO} /> */}
         <FooterO />
+        {/* </Container> */}
       </ScrollToTop>
     </Router>
   );

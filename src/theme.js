@@ -7,11 +7,11 @@ const defaultTheme = {
   headheight: '100px',
   headff: 'Montserrat, sans-serif',
   headfs: '32px',
-  fs: '13px',
+  fs: '1em',
   ff: 'Montserrat, sans-serif',
   clr: '#252627',
   sectionfc: 'rgb(255, 255, 255, .7)',
-  linkfs: '13px',
+  linkfs: '1em',
   linkflow: 'row'
 };
 

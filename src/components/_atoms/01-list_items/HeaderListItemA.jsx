@@ -5,15 +5,15 @@ import styled from 'styled-components';
 import HeaderLinkA from '@A/00-links/HeaderLinkA';
 
 const StyledHeaderListItem = styled.li`
-  margin-right: 15px;
+  margin-right: .938em;
 `;
 
 const StyledHeaderSpan = styled.span`
   color: ${props => props.theme.secondarycolor};
   margin: 0;
-  padding-left: 15px;
+  padding-left: .938em;
 
-  @media (min-width: 720px) {
+  @media (min-width: 45.000em) {
     display: ${props => props.last && 'none'};
   }
 `;

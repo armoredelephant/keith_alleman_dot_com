@@ -16,8 +16,8 @@ const AnimatedListItem = styled.li`
   list-style: none;
   color: ${props => props.theme.sectionfc};
   font-family: ${props => props.theme.headff};
-  font-size: 16px;
-  letter-spacing: 1.2px;
+  font-size: 1.000em;
+  letter-spacing: .075em;
   line-height: 1.6em;
   animation: 0.7s fade-in-left ${props => `${props.count}s`};
   animation-fill-mode: forwards;

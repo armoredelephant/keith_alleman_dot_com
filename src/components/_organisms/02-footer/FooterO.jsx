@@ -14,7 +14,7 @@ const FooterWrapper = styled.div`
   flex-flow: row;
   justify-content: center;
 
-  @media (max-width: 415px) {
+  @media (max-width: 25.938em) {
     width: 100%;
     margin: auto 0 auto 0;
   }
@@ -27,7 +27,7 @@ const theme = {
   linkfs: '1em',
   fs: '1em',
   iconsize: '1.125em',
-  ml: '15px',
+  ml: '0.938em',
   linkflow: 'row'
 };
 

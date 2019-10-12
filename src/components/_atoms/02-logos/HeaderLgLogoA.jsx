@@ -12,7 +12,7 @@ const HeaderLgLogoA = styled(Link)`
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   color: ${props => props.theme.primarycolor};
-  padding-bottom: 2px;
+  padding-bottom: 0.125em;
   overflow-x: hidden;
   position: relative;
   display: inline-flex;
@@ -26,20 +26,20 @@ const HeaderLgLogoA = styled(Link)`
     }
   }
 
-  @media (max-width: 670px) {
+  @media (max-width: 41.875em) {
     visibility: visible;
     opacity: 0;
     animation: 1s ${fadeInAnimation};
     color: ${props => props.theme.primarycolor};
-    font-size: 20px;
+    font-size: 1.250em;
     text-align: center;
-    letter-spacing: 1.3px;
+    letter-spacing: 0.081em;
     margin: auto 0;
-    margin-left: 20px;
+    margin-left: 1.250em;
     width: 100%;
     white-space: nowrap;
     text-transform: uppercase;
-    border-bottom: 1px solid ${props => props.theme.secondarycolor};
+    border-bottom: 0.063em solid ${props => props.theme.secondarycolor};
     animation: 1.5s linear fade-in-logo;
     animation-fill-mode: forwards;
   }

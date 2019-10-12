@@ -6,25 +6,25 @@ const ButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   flex-flow: row no-wrap;
-  margin-top: 15px;
+  margin-top: 0.938em;
 `;
 
 export const Button = styled.div`
   display: inline-block;
   cursor: pointer;
   user-select: none;
-  font-size: 30px;
+  font-size: 1.875em;
   font-family: sans-serif;
   color: ${props => (props.hidden ? props.theme.bg : props.theme.btnClr)};
   visibility: ${props => props.hidden && 'hidden'};
 `;
 
 const Dot = styled.span`
-  height: 8px;
-  width: 8px;
-  border-radius: 4px;
+  height: .5em;
+  width: .5em;
+  border-radius: .25em;
   background-color: white;
-  margin: 7px 5px;
+  margin: .438em .313em;
   opacity: ${props => (props.selected ? '1' : '0.3')};
   transition-duration: 300ms;
 `;

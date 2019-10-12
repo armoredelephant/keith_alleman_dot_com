@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Container = styled.div`
   width: 100%;
-  max-width: 1280px;
+  max-width: 80em;
   display: flex;
   flex-flow: row;
   overflow: hidden;

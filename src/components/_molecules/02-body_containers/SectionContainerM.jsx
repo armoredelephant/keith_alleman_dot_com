@@ -4,18 +4,18 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   background: #252627;
-  min-height: ${props => props.fixed && '800px'};
+  min-height: ${props => props.fixed && '50em'};
   display: flex;
   justify-content: center;
-  padding-top: 70px;
-  padding: 70px 15px 70px;
+  padding-top: 4.375em;
+  padding: 4.375em .938em 4.375em;
 
   &:last-of-type {
-    padding: 70px 15px 20px;
+    padding: 4.375em .938em 1.250em;
   }
 
-  @media (max-width: 483px) {
-    padding: 70px 15px 0;
+  @media (max-width: 30.188em) {
+    padding: 4.375em .938em 0;
   }
 `;
 

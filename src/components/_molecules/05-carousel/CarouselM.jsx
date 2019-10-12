@@ -6,8 +6,8 @@ import CarouselButtonsA from '@A/10-buttons/CarouselButtonsA';
 
 const CarouselContainer = styled.div`
   width: 100%;
-  max-width: 1280px;
-  padding: 50px 0 0;
+  max-width: 80em;
+  padding: 3.125em 0 0;
   display: flex;
   flex-flow: column;
   background: #252627;

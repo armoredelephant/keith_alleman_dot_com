@@ -6,14 +6,14 @@ const StyledHeaderSandwich = styled.a`
   transition: 275ms all ease;
   -webkit-transition: 275ms all ease;
   cursor: pointer;
-  padding: 10px 0;
-  margin-right: 15px;
-  height: 40px;
-  width: 35px;
+  padding: .625em 0;
+  margin-right: .938em;
+  height: 2.500em;
+  width: 2.188em;
   box-sizing: border-box;
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: .938em;
+  right: .938em;
   border: none;
   z-index: 2;
 
@@ -25,17 +25,17 @@ const StyledHeaderSandwich = styled.a`
     display: inline-block;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 56.250em) {
     &.nav-bar-animation {
       &:hover div {
         :nth-of-type(1) {
-          transform: translateY(6px) rotate(90deg);
-          -webkit-transform: translateY(6px) rotate(90deg);
-          width: 30px;
+          transform: translateY(.375em) rotate(90deg);
+          -webkit-transform: translateY(.375em) rotate(90deg);
+          width: 1.875em;
         }
 
         :nth-of-type(2) {
-          width: 30px;
+          width: 1.875em;
         }
 
         :nth-of-type(3) {
@@ -52,11 +52,11 @@ const SandwichBar = styled.div`
   background: #fff;
   box-sizing: border-box;
   display: block;
-  font-size: 18px;
-  height: 3px;
-  width: 30px;
-  line-height: 28.8px;
-  margin-bottom: 4px;
+  font-size: 1.125em;
+  height: .188em;
+  width: 1.875em;
+  line-height: 1.800em;
+  margin-bottom: .250em;
   position: relative;
 
   @keyframes grow-short {
@@ -64,7 +64,7 @@ const SandwichBar = styled.div`
       width: 0;
     }
     to {
-      width: 17px;
+      width: 1.063em;
     }
   }
 
@@ -73,17 +73,17 @@ const SandwichBar = styled.div`
       width: 0;
     }
     to {
-      width: 30px;
+      width: 1.875em;
     }
   }
 
   :nth-of-type(3) {
-    width: 17px;
+    width: 1.063em;
     margin-left: auto;
-    margin-right: 5px;
+    margin-right: .090em;
   }
 
-  @media (min-width: 900px) {
+  @media (min-width: 56.250em) {
     .nav-bar-animation & {
       animation-direction: alternate;
       transition: 0.6s all ease;
@@ -102,8 +102,8 @@ const SandwichBar = styled.div`
       z-index: 2;
 
       :nth-of-type(1) {
-        transform: translate(0, 7px) rotate(135deg);
-        -webkit-transform: translate(0, 7px) rotate(135deg);
+        transform: translate(0, .438em) rotate(135deg);
+        -webkit-transform: translate(0, .438em) rotate(135deg);
       }
 
       :nth-of-type(2) {
@@ -112,7 +112,7 @@ const SandwichBar = styled.div`
       }
 
       :nth-of-type(3) {
-        width: 0px;
+        width: 0;
         margin-left: 0;
       }
     }

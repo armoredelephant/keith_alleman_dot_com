@@ -8,22 +8,22 @@ const HeaderSmLogoA = styled(Link)`
     visibility: hidden;
     text-decoration: none;
     color: ${props => props.theme.primarycolor};
-    padding-bottom: 2px;
+    padding-bottom: 0.125em;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     position: relative;
     display: inline-flex;
 
-    @media (min-width: 670px) {
+    @media (min-width: 41.875em) {
         visibility: visible;
         animation: 1s ${fadeInAnimation};
-        font-size: 20px;
-        padding-right: 15px;
-        border-right: 2px solid ${props => props.theme.secondarycolor};
+        font-size: 1.250em;
+        padding-right: 0.938em;
+        border-right: 0.125em solid ${props => props.theme.secondarycolor};
         text-align: center;
-        letter-spacing: .8px;
+        letter-spacing: 0.050em;
         margin: auto 0;
-        margin-left: 20px;
+        margin-left: 1.250em;
     }
 }
 `;

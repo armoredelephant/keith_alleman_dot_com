@@ -6,7 +6,7 @@ import ParagraphA from '@A/06-paragraphs/ParagraphA';
 
 const FooterContainer = styled.footer`
   width: 100%;
-  height: 100px;
+  height: 6.250em;
   font-family: ${props => props.theme.ff};
   background: ${props => props.theme.bg};
   color: ${props => props.theme.clr};

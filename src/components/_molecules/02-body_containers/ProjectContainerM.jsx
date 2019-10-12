@@ -24,8 +24,8 @@ export const LinkContainer = styled.div`
   position: relative;
   justify-content: ${props => (props.single ? 'flex-end' : 'space-around')};
   align-self: flex-end;
-  width: 300px;
-  margin-top: 50px;
+  width: 18.750em;
+  margin-top: 3.125em;
 `;
 
 const Title = styled.h1`

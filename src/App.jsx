@@ -6,7 +6,7 @@ const Container = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: space-between;
-  padding-bottom: 100px;
+  padding-bottom: 6.25em;
 `;
 
 // Shared - Organisms

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const StyledHeaderLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.primarycolor};
-  padding-bottom: 2px;
+  padding-bottom: .125em;
   overflow-x: hidden;
   position: relative;
   display: inline-flex;
@@ -23,7 +23,7 @@ const StyledHeaderLink = styled(Link)`
       position: absolute;
       bottom: 0;
       left: 0;
-      height: 1px;
+      height: .063em;
       background: ${props => props.theme.secondarycolor};
       width: 100%;
       transform: translate3d(-110%, 0, 0);
@@ -39,7 +39,7 @@ const StyledHeaderLink = styled(Link)`
   }
 
   &.section-link-active {
-    border-bottom-width: 1px;
+    border-bottom-width: .063em;
     border-bottom-style: solid;
     border-bottom-color: ${props => props.theme.secondarycolor};
   }

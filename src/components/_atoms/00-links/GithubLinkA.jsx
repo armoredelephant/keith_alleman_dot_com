@@ -14,7 +14,7 @@ const Link = styled.a`
   letter-spacing: ${props => props.theme.btnLS};
   color: ${props => props.theme.bg};
   background: ${props => props.theme.primarycolor};
-  border: 2px solid ${props => props.theme.primarycolor};
+  border: .125em solid ${props => props.theme.primarycolor};
   border-radius: ${props => props.theme.btnBorderRadius};
   text-align: ${props => props.theme.btnTA};
   text-decoration: ${props => props.theme.btnTD};
@@ -23,9 +23,9 @@ const Link = styled.a`
   line-height: ${props => props.theme.btnLH};
   order: 2;
 
-  @media (max-width: 375px) {
-    font-size: 11px;
-    padding: 11px 24px;
+  @media (max-width: 23.438em) {
+    font-size: .688em;
+    padding: .688em 1.500em;
   }
 `;
 

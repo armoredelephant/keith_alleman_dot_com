@@ -10,7 +10,7 @@ const fadeInAnimation = keyframes`${fadeInDown}`;
 const HeaderNav = styled.nav`
   visiblity: hidden;
 
-  @media (min-width: 670px) {
+  @media (min-width: 41.875em) {
     margin: auto;
     visibility: visible;
     animation: 1s ${fadeInAnimation};
@@ -20,7 +20,7 @@ const HeaderNav = styled.nav`
 const ListContainer = styled.ul`
   visibility: hidden;
 
-  @media (min-width: 670px) {
+  @media (min-width: 41.875em) {
     visibility: visible;
     margin: auto;
     display: flex;
@@ -28,7 +28,7 @@ const ListContainer = styled.ul`
     flex-flow: row;
     justify-content: flex-end;
     text-align: center;
-    letter-spacing: 1.8px;
+    letter-spacing: .113em;
   }
 `;
 

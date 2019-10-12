@@ -6,10 +6,10 @@ const StyledParagraph = styled.p`
   overflow: hidden;
   white-space: no-wrap;
   line-height: 140%;
-  letter-spacing: 1.5px;
+  letter-spacing: 0.113em;
   color: ${props => props.theme.sectionfc};
   font-family: ${props => props.theme.headff};
-  font-size: 16px;
+  font-size: 1em;
   text-indent: 2em;
   text-align: justify;
 `;

@@ -22,18 +22,18 @@ import AnimatedListM from '@M/04-list_containers/AnimatedListM';
 import ParagraphA from '@A/06-paragraphs/ParagraphA';
 
 const theme = {
-  headheight: '100px',
+  headheight: '6.250em',
   headff: 'Montserrat, sans-serif',
-  headfs: '38px',
-  ls: '1.5px',
+  headfs: '2.375em',
+  ls: '0.094em',
   primarycolor: '#dfdfdf',
   secondarycolor: '#b7b7b7',
-  secondaryfs: '18px',
+  secondaryfs: '1.125em',
   secondaryfst: 'italic',
-  border: '1px solid #95d5d2',
-  paddingb: '3px',
+  border: '.063em solid #95d5d2',
+  paddingb: '.188em',
   sectionfc: 'rgb(255, 255, 255, .7)',
-  mobilefont: '25px',
+  mobilefont: '1.563em',
   pwidth: '80%'
 };
 

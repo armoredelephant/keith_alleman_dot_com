@@ -13,7 +13,7 @@ const StyledModal = styled.div`
   color: #fff;
   top: 0;
   left: auto;
-  right: calc(-40% - 15px);
+  right: calc(-40% - .938em);
   width: 40%;
   min-height: 100%;
   opacity: 0;
@@ -33,15 +33,15 @@ const StyledModal = styled.div`
     visibility: visible;
     right: 0;
     z-index: 1;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .063em .063em 0 rgba(0, 0, 0, 0.1);
     transition-delay: 0.7s;
   }
 
-  @media (max-width: 1199px) {
+  @media (max-width: 74.938em) {
     width: 50%;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 37.500em) {
     width: 100%;
   }
 `;

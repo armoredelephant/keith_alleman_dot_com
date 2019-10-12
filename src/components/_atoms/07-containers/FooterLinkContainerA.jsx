@@ -7,7 +7,7 @@ import FooterLinkA from '@A/00-links/FooterLinkA';
 const LinkContainer = styled.div`
   display: flex;
   text-align: right;
-  margin-right: 30px;
+  margin-right: 1.875em;
   overflow: hidden;
   flex-flow: ${props => props.theme.linkflow};
 `;

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
-import AnimatedListItemA from '@A/01-list_items/AnimatedListItemA';
+import AnimatedListItemA from "@A/01-list_items/AnimatedListItemA";
 
 const List = styled.ul`
   list-style-type: none;
@@ -16,7 +16,7 @@ export const BasicListItem = styled.li`
   color: ${props => props.theme.sectionfc};
   font-family: ${props => props.theme.headff};
   font-size: 1em;
-  letter-spacing: .075em;
+  letter-spacing: 0.075em;
   line-height: 1.6em;
 `;
 

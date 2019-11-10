@@ -71,7 +71,7 @@ const AboutPageO = () => {
           >
             <HeaderContainerA>
               <SectionHeaderA
-                header="Currently Project" // prettier-ignore
+                header="Current Project" // prettier-ignore
                 secondary="true"
               />
             </HeaderContainerA>

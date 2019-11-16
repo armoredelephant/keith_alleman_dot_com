@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const IconLink = styled.a`
   font-family: ${props => props.theme.ff};
@@ -10,9 +10,16 @@ const IconLink = styled.a`
   margin-top: ${props => props.theme.mt};
   font-weight: ${props => props.theme.fw};
   text-decoration: none;
+  padding-bottom: 0.125em;
+  overflow-x: hidden;
 
   &:visited {
     color: ${props => props.theme.clr};
+  }
+
+  &:active,
+  &:hover {
+    color: ${props => props.theme.primarycolor};
   }
 `;
 
@@ -24,7 +31,7 @@ const IconLinkA = props => {
   const { destination, icon, name } = props;
   return (
     // prettier-ignore
-    <IconLink href={destination}>
+    <IconLink className='section-link' href={destination}>
       {icon ? (
         <Icon className={icon} />
       ) : `${name}`}
@@ -40,7 +47,7 @@ IconLinkA.propTypes = {
 };
 
 IconLinkA.defaultProps = {
-  destination: '#',
-  icon: '',
-  name: ''
+  destination: "#",
+  icon: "",
+  name: ""
 };

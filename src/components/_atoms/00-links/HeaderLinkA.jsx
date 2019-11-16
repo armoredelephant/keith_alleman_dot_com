@@ -1,16 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { HashLink as Link } from 'react-router-hash-link';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import { HashLink as Link } from "react-router-hash-link";
+import styled from "styled-components";
 
 const StyledHeaderLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.primarycolor};
-  padding-bottom: .125em;
+  padding-bottom: 0.125em;
   overflow-x: hidden;
   position: relative;
   display: inline-flex;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   &:active,
   &:hover {
@@ -19,11 +19,11 @@ const StyledHeaderLink = styled(Link)`
 
   &.section-link {
     &:after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 0;
       left: 0;
-      height: .063em;
+      height: 0.063em;
       background: ${props => props.theme.secondarycolor};
       width: 100%;
       transform: translate3d(-110%, 0, 0);
@@ -39,7 +39,7 @@ const StyledHeaderLink = styled(Link)`
   }
 
   &.section-link-active {
-    border-bottom-width: .063em;
+    border-bottom-width: 0.063em;
     border-bottom-style: solid;
     border-bottom-color: ${props => props.theme.secondarycolor};
   }
@@ -54,8 +54,8 @@ const HeaderLinkA = props => {
       to={`/#${page}`}
       className={
         window.location.pathname === `/${page}` // prettier-ignore
-          ? 'section-link-active'
-          : 'section-link'
+          ? "section-link-active"
+          : "section-link"
       }
     >
       {name}
@@ -66,4 +66,4 @@ const HeaderLinkA = props => {
 export default HeaderLinkA;
 
 HeaderLinkA.propTypes = { name: PropTypes.string };
-HeaderLinkA.defaultProps = { name: 'About' };
+HeaderLinkA.defaultProps = { name: "About" };

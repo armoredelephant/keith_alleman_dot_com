@@ -1,61 +1,47 @@
 {
-    "projects": {
-        "keithalleman": {
-            "name": "KeithAlleman.com",
-            "used": "React",
-            "description": "This is the website you're currently viewing. I built this project to display my work while also providing some insight into the person behind the work. I learned about integrating animations into my web pages with this app and using stubs within the app for cases where I don't need to store data in a larger secure database.",
-            "linkGithub": "https://github.com/armoredelephant/keith_alleman_dot_com",
-            "visit": true,
-            "linkUrl": "http://wwww.keithalleman.com",
-            "skills": [
-                "Animations",
-                "Testing",
-                "Linting",
-                "React Hooks",
-                "Styled Components",
-                "Atomic Design"
-            ]
-        },
-        "huntconductor": {
-            "name": "hunt-conductor.com",
-            "used": "React",
-            "description": "This app was designed to assist with scouting for hunt trains in Final Fantasy XIV. Instead of using a spreadsheet and having to copy over coordinates for marks, I wanted to be able to just open a map and click their coordinates. I also wanted the route to be optimized, so I made sure to calculate the distance of each mark from the closest teleport.",
-            "linkGithub": "https://github.com/armoredelephant/hunt_train",
-            "visit": true,
-            "linkUrl": "http://www.hunt-conductor.com",
-            "skills": [
-                "useContext",
-                "useReducer",
-                "Immer",
-                "React Hooks",
-                "Firebase"
-            ]
-        },
-        "evihelp": {
-            "name": "eviHelp",
-            "used": "React & Node.JS",
-            "description": "This was a website I built to provide easy access to remote workers. The idea was for them to be able to easily access support documents from their personal mobile devices. There is a fully integrated admin dashboard to allow adding, editing, and removal of help articles. I initially decided it was not something the company would probably use due to PHI, but it was a good beginner projectl. I learned a lot about working with APIs, Google's Firebase, and really reading through documentation.",
-            "linkGithub": "https://github.com/armoredelephant/evi_support_full",
-            "visit": false,
-            "linkUrl": null,
-            "skills": [
-                "Backend",
-                "Firebase",
-                "Following Documentation"
-            ]
-        },
-        "evisignature": {
-            "name": "eviCore Signature Creator",
-            "used": "Vanilla Javascript",
-            "description": "This was the first web app that I developed. I utilized bootstrap & javascript to create a tool that allowed users to build an Outlook signature. I learned quite a bit about bootstrap and refactoring for functionality accross older browsers (we used IE8 & IE10 still). It was a great project to get my feet wet with and was regularly used for new hire classes within the company. This app was hosted on one of our internal servers using WAMP.",
-            "linkGithub": "https://github.com/armoredelephant/signature",
-            "visit": false,
-            "linkUrl": null,
-            "skills": [
-                "Compatibility",
-                "WAMP",
-                "Bootstrap"
-            ]
-        }
+  "projects": {
+    "keithalleman": {
+      "name": "KeithAlleman.com",
+      "used": "React",
+      "description": "This is the website you're currently viewing. I built this project to display my work while also providing some insight into the person behind the work. I learned about integrating animations into my web pages with this app and using stubs within the app for cases where I don't need to store data in a larger secure database.",
+      "linkGithub": "https://github.com/armoredelephant/keith_alleman_dot_com",
+      "visit": true,
+      "linkUrl": "https://www.keithalleman.com",
+      "skills": [
+        "Animations",
+        "Testing",
+        "Linting",
+        "React Hooks",
+        "Styled Components",
+        "Atomic Design"
+      ]
+    },
+    "huntconductor": {
+      "name": "hunt-conductor.com",
+      "used": "React",
+      "description": "This app was designed to assist with scouting for hunt trains in Final Fantasy XIV. Instead of using a spreadsheet and having to copy over coordinates for marks, I wanted to be able to just open a map and click their coordinates. I also wanted the route to be optimized, so I made sure to calculate the distance of each mark from the closest teleport.",
+      "linkGithub": "https://github.com/armoredelephant/hunt_train",
+      "visit": true,
+      "linkUrl": "http://www.hunt-conductor.com",
+      "skills": ["useContext", "useReducer", "Immer", "React Hooks", "Firebase"]
+    },
+    "evihelp": {
+      "name": "eviHelp",
+      "used": "React & Node.JS",
+      "description": "This was a website I built to provide easy access to remote workers. The idea was for them to be able to easily access support documents from their personal mobile devices. There is a fully integrated admin dashboard to allow adding, editing, and removal of help articles. I initially decided it was not something the company would probably use due to PHI, but it was a good beginner projectl. I learned a lot about working with APIs, Google's Firebase, and really reading through documentation.",
+      "linkGithub": "https://github.com/armoredelephant/evi_support_full",
+      "visit": false,
+      "linkUrl": null,
+      "skills": ["Backend", "Firebase", "Following Documentation"]
+    },
+    "evisignature": {
+      "name": "eviCore Signature Creator",
+      "used": "Vanilla Javascript",
+      "description": "This was the first web app that I developed. I utilized bootstrap & javascript to create a tool that allowed users to build an Outlook signature. I learned quite a bit about bootstrap and refactoring for functionality accross older browsers (we used IE8 & IE10 still). It was a great project to get my feet wet with and was regularly used for new hire classes within the company. This app was hosted on one of our internal servers using WAMP.",
+      "linkGithub": "https://github.com/armoredelephant/signature",
+      "visit": false,
+      "linkUrl": null,
+      "skills": ["Compatibility", "WAMP", "Bootstrap"]
     }
+  }
 }

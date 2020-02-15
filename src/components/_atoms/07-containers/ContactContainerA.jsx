@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import FooterLinkContainerA from '@A/07-containers/FooterLinkContainerA';
+import FooterLinkContainerA from "@A/07-containers/FooterLinkContainerA";
 
 const Bottom = styled.div`
   flex: 1;

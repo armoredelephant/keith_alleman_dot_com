@@ -21,7 +21,7 @@ const LinkContainerA = props => {
         name="Contact"
       />
       <FooterLinkA // prettier-ignore
-        destination="https://bit.ly/2QsvLng"
+        destination="https://bit.ly/31YDvRI"
         name="Resume"
       />
       <FooterLinkA // prettier-ignore

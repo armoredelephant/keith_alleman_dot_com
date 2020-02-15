@@ -1,5 +1,32 @@
 {
   "projects": {
+    "deploymentapp": {
+      "name": "Deployment app",
+      "used": "React with Typescript",
+      "description": "This app was created to store my hardware deployments at my current job. I created this to allow my team to easily search for hardware we deployed, while also making it easier to deploy multiple items to multiple users from one page.",
+      "linkGithub": "https://github.com/armoredelephant/deployment-fe",
+      "visit": false,
+      "linkUrl": null,
+      "skills": [
+        "React",
+        "Typescript",
+        "Apollo GraphQL",
+        "Formik",
+        "TypeORM",
+        "TypeGraphQL",
+        "Yup",
+        "Apollo Server Express"
+      ]
+    },
+    "huntconductor": {
+      "name": "hunt-conductor.com",
+      "used": "React",
+      "description": "This app was designed to assist with scouting for hunt trains in Final Fantasy XIV. Instead of using a spreadsheet and having to copy over coordinates for marks, I wanted to be able to just open a map and click their coordinates. I also wanted the route to be optimized, so I made sure to calculate the distance of each mark from the closest teleport.",
+      "linkGithub": "https://github.com/armoredelephant/hunt_train",
+      "visit": true,
+      "linkUrl": "http://www.hunt-conductor.com",
+      "skills": ["useContext", "useReducer", "Immer", "React Hooks", "Firebase"]
+    },
     "keithalleman": {
       "name": "KeithAlleman.com",
       "used": "React",
@@ -15,15 +42,6 @@
         "Styled Components",
         "Atomic Design"
       ]
-    },
-    "huntconductor": {
-      "name": "hunt-conductor.com",
-      "used": "React",
-      "description": "This app was designed to assist with scouting for hunt trains in Final Fantasy XIV. Instead of using a spreadsheet and having to copy over coordinates for marks, I wanted to be able to just open a map and click their coordinates. I also wanted the route to be optimized, so I made sure to calculate the distance of each mark from the closest teleport.",
-      "linkGithub": "https://github.com/armoredelephant/hunt_train",
-      "visit": true,
-      "linkUrl": "http://www.hunt-conductor.com",
-      "skills": ["useContext", "useReducer", "Immer", "React Hooks", "Firebase"]
     },
     "evihelp": {
       "name": "eviHelp",

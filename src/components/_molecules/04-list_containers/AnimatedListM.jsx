@@ -8,19 +8,22 @@ const List = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 `;
 
 // exported for testing purposes within AnimatedListM.test.jsx
 export const BasicListItem = styled.li`
   list-style: none;
-  color: ${props => props.theme.sectionfc};
-  font-family: ${props => props.theme.headff};
+  color: ${(props) => props.theme.sectionfc};
+  font-family: ${(props) => props.theme.headff};
   font-size: 1em;
   letter-spacing: 0.075em;
   line-height: 1.6em;
 `;
 
-const AnimatedListM = props => {
+const AnimatedListM = (props) => {
   const { animated, items } = props;
   if (animated) {
     return (
@@ -53,9 +56,9 @@ export default AnimatedListM;
 
 AnimatedListM.propTypes = {
   animated: PropTypes.bool,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 AnimatedListM.defaultProps = {
-  animated: false
+  animated: false,
 };

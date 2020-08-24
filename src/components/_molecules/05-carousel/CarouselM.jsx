@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React, { useState, useRef } from "react";
+import styled from "styled-components";
+import PropTypes from "prop-types";
 
-import CarouselButtonsA from '@A/10-buttons/CarouselButtonsA';
+import CarouselButtonsA from "@A/10-buttons/CarouselButtonsA";
 
 const CarouselContainer = styled.div`
   width: 100%;
@@ -23,24 +23,25 @@ const Slider = styled.div`
 
 const ChildContainer = styled.div`
   display: flex;
+  justify-content: center;
   flex: 0 0 auto;
   width: 100%;
   position: relative;
-  transform: translateX(${props => props.x});
+  transform: translateX(${(props) => props.x});
   transition-duration: 0.7s;
 `;
 
-const CarouselM = props => {
+const CarouselM = (props) => {
   const { widget, children } = props;
   const lastIndex = children.length - 1;
   const Button = widget;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [moveBy, setMoveBy] = useState('0%');
+  const [moveBy, setMoveBy] = useState("0%");
 
   const sliderRef = useRef(null);
 
   const determineTranslate = () => {
-    const current = moveBy.replace(/[%]/g, '');
+    const current = moveBy.replace(/[%]/g, "");
     return parseInt(current, 10);
   };
 
@@ -61,10 +62,8 @@ const CarouselM = props => {
   return (
     <CarouselContainer>
       <Slider ref={sliderRef}>
-        {children.map(child => {
-          const rdmKey = Math.random()
-            .toString(36)
-            .substring(7);
+        {children.map((child) => {
+          const rdmKey = Math.random().toString(36).substring(7);
           return (
             <ChildContainer
               x={moveBy} // prettier-ignore
@@ -94,15 +93,15 @@ CarouselM.propTypes = {
   widget: PropTypes.oneOfType([
     // prettier-ignore
     PropTypes.element,
-    PropTypes.func
+    PropTypes.func,
   ]),
   children: PropTypes.oneOfType([
     // prettier-ignore
     PropTypes.element,
-    PropTypes.arrayOf(PropTypes.element)
-  ]).isRequired
+    PropTypes.arrayOf(PropTypes.element),
+  ]).isRequired,
 };
 
 CarouselM.defaultProps = {
-  widget: <CarouselButtonsA />
+  widget: <CarouselButtonsA />,
 };

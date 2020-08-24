@@ -36,7 +36,7 @@ const theme = {
   paddingb: ".188em",
   sectionfc: "rgb(255, 255, 255, .7)",
   mobilefont: "1.563em",
-  pwidth: "80%"
+  pwidth: "80%",
 };
 
 const AboutPageO = () => {
@@ -79,7 +79,11 @@ const AboutPageO = () => {
               <ParagraphA paragraph={project} />
             </ParagraphContainerA>
             <ListWrapperA>
-              <SectionHeaderA header="Utilizing:" secondary="true" />
+              <SectionHeaderA
+                center={true}
+                header="Utilizing:"
+                secondary="true"
+              />
               <AnimatedListM animated items={technologies} />
             </ListWrapperA>
           </SectionWrapper40A>

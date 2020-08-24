@@ -1,34 +1,35 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
 
 const SectionHeaderWrapper = styled.div`
-  text-align: ${props => props.align && props.align};
+  text-align: ${(props) => props.align && props.align};
   display: flex;
+  justify-content: ${(props) => props.center && "center"};
 `;
 
 const StyledHeader = styled.h2`
   white-space: nowrap;
   overflow: hidden;
-  text-align: ${props => props.center && 'center'};
-  font-family: ${props => props.theme.headff};
-  letter-spacing: ${props => props.theme.ls};
-  color: ${props => props.theme.primarycolor};
-  font-style: ${props => props.secondary && props.theme.secondaryfst};
-  font-size: ${props =>
+  text-align: ${(props) => props.center && "center"};
+  font-family: ${(props) => props.theme.headff};
+  letter-spacing: ${(props) => props.theme.ls};
+  color: ${(props) => props.theme.primarycolor};
+  font-style: ${(props) => props.secondary && props.theme.secondaryfst};
+  font-size: ${(props) =>
     props.secondary // prettier-ignore
       ? props.theme.secondaryfs
       : props.theme.headfs};
 
   @media (max-width: 58.625em) {
-    font-size: ${props =>
-    props.secondary // prettier-ignore
-      ? props.theme.secondaryfs
-      : props.theme.mobilefont};
+    font-size: ${(props) =>
+      props.secondary // prettier-ignore
+        ? props.theme.secondaryfs
+        : props.theme.mobilefont};
   }
 `;
 
-const SectionHeaderA = props => {
+const SectionHeaderA = (props) => {
   const { header } = props;
   return (
     <SectionHeaderWrapper {...props}>
@@ -40,4 +41,4 @@ const SectionHeaderA = props => {
 export default SectionHeaderA;
 
 SectionHeaderA.propTypes = { header: PropTypes.string };
-SectionHeaderA.defaultProps = { header: 'header' };
+SectionHeaderA.defaultProps = { header: "header" };

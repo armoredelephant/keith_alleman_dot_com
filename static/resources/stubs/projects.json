@@ -2,16 +2,17 @@
   "projects": {
     "ddastudios": {
       "name": "Digital Dark Age Studios",
-      "used": "NextJS with Typescript",
+      "used": "Next.js with Typescript",
       "description": "A new website for Digital Dark Age Studios LLC.",
       "linkGithub": null,
       "visit": true,
       "linkUrl": "https://digitaldarkagestudios.com",
       "skills": [
         "React",
-        "NextJS",
+        "Next.js",
         "Typescript",
         "Firebase",
+        "Video.js",
         "React Hook Form",
         "Jest",
         "React Testing Library"

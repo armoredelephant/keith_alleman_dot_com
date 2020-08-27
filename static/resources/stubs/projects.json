@@ -6,7 +6,7 @@
       "description": "A new website for Digital Dark Age Studios LLC.",
       "linkGithub": null,
       "visit": true,
-      "linkUrl": "https://digitaldarkagestudios.com",
+      "linkUrl": "https://dd-studios-liart.vercel.app/",
       "skills": [
         "React",
         "Next.js",
